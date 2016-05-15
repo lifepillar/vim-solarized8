@@ -233,12 +233,15 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 if      (g:solarized_visibility=="high")  " visibility
     exe "hi! SpecialKey" .s:fmt_revr   .s:fg_red    .s:bg_none
     exe "hi! NonText"    .s:fmt_bold   .s:fg_red    .s:bg_none
+    exe "hi! CursorLineNr"   .s:fmt_bold   .s:fg_red .s:bg_base02
 elseif  (g:solarized_visibility=="low")  " visibility
     exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none
+    exe "hi! CursorLineNr" s:fmt_bold   .s:fg_base01 .s:bg_base02
 else
     exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none
+    exe "hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_base02
 endif
 if g:solarized_statusline == 'low'
   if &background == "dark"
