@@ -88,8 +88,8 @@ hi! Pmenu ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gu
 hi! PmenuSel ctermfg=12 guifg=#839496 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuSbar ctermfg=8 guifg=#002b36 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuThumb ctermfg=10 guifg=#586e75 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! TabLine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 guisp=#586e75
-hi! TabLineFill ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 guisp=#586e75
+hi! TabLine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 guisp=#586e75 cterm=NONE gui=NONE
+hi! TabLineFill ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 guisp=#586e75 cterm=NONE gui=NONE
 hi! TabLineSel ctermfg=12 guifg=#839496 ctermbg=8 guibg=#002b36 guisp=#586e75 cterm=NONE,reverse gui=NONE,reverse
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5
 hi! CursorLine cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5 guisp=#073642
