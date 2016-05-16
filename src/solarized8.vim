@@ -268,7 +268,7 @@ else
 endif
 call s:put('endif')
 if g:solarized_contrast == "lifepillar"
-  call s:put("hi! StatusLineNC"  .s:fg_base02 .s:bg_base01  s:fmt_revbb)
+  call s:put("hi! StatusLineNC" . s:fg_base02 . s:bg_base01 . s:fmt_revbb)
 else
   " Changed by Lifepillar: lighter colors for disabled status line
   if g:solarized_background == "dark"
