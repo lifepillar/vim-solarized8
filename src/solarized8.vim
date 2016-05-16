@@ -6,7 +6,7 @@ fun! s:put(line)
   call append(line('$'), a:line)
 endf
 
-let g:solarized_contrast    = get(g:, "solarized_contrast", "")    " low, normal, lifepillar, high
+let g:solarized_contrast    = get(g:, "solarized_contrast", "")    " low, normal, flat, high
 let g:solarized_visibility  = get(g:, "solarized_visibility", "")  " low, normal, high
 let g:solarized_diffmode    = get(g:, "solarized_diffmode", "")    " low, normal, high
 let g:solarized_statusline  = get(g:, "solarized_statusline", "")  " low, normal
@@ -76,7 +76,7 @@ if g:solarized_contrast == "low"
   let s:back        = s:base02
   let s:ou          = ",underline"
 endif
-if g:solarized_contrast == "lifepillar"
+if g:solarized_contrast == "flat"
   let s:ou          = ",underline"
 endif
 exe "let s:bg_none      = ' ctermbg=NONE guibg=NONE'"
@@ -267,7 +267,7 @@ else
   call s:put("  hi! StatusLine"     .s:fg_base1 .s:bg_base02.s:fmt_revbb)
 endif
 call s:put('endif')
-if g:solarized_contrast == "lifepillar"
+if g:solarized_contrast == "flat"
   call s:put("hi! StatusLineNC" . s:fg_base02 . s:bg_base01 . s:fmt_revbb)
 else
   " Changed by Lifepillar: lighter colors for disabled status line
@@ -287,7 +287,7 @@ call s:put("hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none)
 call s:put("hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none)
 call s:put("hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02)
 call s:put("hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none)
-if g:solarized_contrast == "lifepillar"
+if g:solarized_contrast == "flat"
   call s:put("hi! VertSplit"      .s:fmt_none   .s:fg_base02 .s:bg_base02)
 else
   " Changed by Lifepillar: lighter vertical bars:
@@ -330,7 +330,7 @@ call s:put("hi! TabLine"        .s:fg_base0  .s:bg_base02  .s:sp_base0)
 call s:put("hi! TabLineFill"    .s:fg_base0  .s:bg_base02  .s:sp_base0)
 call s:put("hi! TabLineSel"     .s:fg_base01 .s:bg_base2   .s:sp_base0  .s:fmt_revbbu)
 call s:put("hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02)
-if g:solarized_contrast == 'lifepillar'
+if g:solarized_contrast == "flat"
   call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base03  .s:sp_base1)
 else
   call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1)
