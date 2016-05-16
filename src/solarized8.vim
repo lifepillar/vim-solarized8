@@ -1,4 +1,4 @@
-" Name:     Solarized vim colorscheme for Vim 8
+" Name:     Solarized colorscheme for Vim 8
 " Author:   Lifepillar <lifepillar@lifepillar.me>
 " License:  OSI approved MIT license (see end of this file)
 
