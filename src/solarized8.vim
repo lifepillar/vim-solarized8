@@ -224,18 +224,26 @@ call s:put("hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none)
 "
 "}}}
 " Lifepillar's mode highlighting {{{
-if g:solarized_background == "dark"
-  call s:put("hi! NormalMode" . s:fg_base0  .s:bg_base3. s:fmt_revbb)
-  call s:put("hi! InsertMode" . s:fg_cyan   .s:bg_base3. s:fmt_revbb)
-  call s:put("hi! ReplaceMode". s:fg_orange .s:bg_base3. s:fmt_revbb)
-  call s:put("hi! VisualMode" . s:fg_magenta.s:bg_base3. s:fmt_revbb)
-  call s:put("hi! CommandMode". s:fg_magenta.s:bg_base3. s:fmt_revbb)
+if g:solarized_contrast == "flat"
+  " NormalMode set together with StatusLine (see below)
+  call s:put("hi! InsertMode" . s:bg_cyan   .s:fg_base02. s:fmt_revbb)
+  call s:put("hi! ReplaceMode". s:bg_orange .s:fg_base02. s:fmt_revbb)
+  call s:put("hi! VisualMode" . s:bg_magenta.s:fg_base02. s:fmt_revbb)
+  call s:put("hi! CommandMode". s:bg_magenta.s:fg_base02. s:fmt_revbb)
 else
-  call s:put("hi! NormalMode"  .s:fg_base1  .s:bg_base03. s:fmt_revbb)
-  call s:put("hi! InsertMode"  .s:fg_cyan   .s:bg_base03. s:fmt_revbb)
-  call s:put("hi! ReplaceMode" .s:fg_orange .s:bg_base03. s:fmt_revbb)
-  call s:put("hi! VisualMode"  .s:fg_magenta.s:bg_base03. s:fmt_revbb)
-  call s:put("hi! CommandMode" .s:fg_magenta.s:bg_base03. s:fmt_revbb)
+  if g:solarized_background == "dark"
+    call s:put("hi! NormalMode" . s:fg_base0  .s:bg_base3. s:fmt_revbb)
+    call s:put("hi! InsertMode" . s:fg_cyan   .s:bg_base3. s:fmt_revbb)
+    call s:put("hi! ReplaceMode". s:fg_orange .s:bg_base3. s:fmt_revbb)
+    call s:put("hi! VisualMode" . s:fg_magenta.s:bg_base3. s:fmt_revbb)
+    call s:put("hi! CommandMode". s:fg_magenta.s:bg_base3. s:fmt_revbb)
+  else
+    call s:put("hi! NormalMode"  .s:fg_base1  .s:bg_base03. s:fmt_revbb)
+    call s:put("hi! InsertMode"  .s:fg_cyan   .s:bg_base03. s:fmt_revbb)
+    call s:put("hi! ReplaceMode" .s:fg_orange .s:bg_base03. s:fmt_revbb)
+    call s:put("hi! VisualMode"  .s:fg_magenta.s:bg_base03. s:fmt_revbb)
+    call s:put("hi! CommandMode" .s:fg_magenta.s:bg_base03. s:fmt_revbb)
+  endif
 endif
 " }}}
 " Extended highlighting "{{{
@@ -254,17 +262,27 @@ call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none)
 call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_base02)
 call s:put('endif')
 call s:put('if get(g:, "solarized_statusline", "") == "low"')
-if g:solarized_background == "dark"
-  call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
+if g:solarized_contrast == "flat"
+  call s:put("  hi! NormalMode"     .s:fg_base02  .s:bg_base1 .s:fmt_revbb)
+  call s:put("  hi! StatusLine"     .s:fg_base02  .s:bg_base1 .s:fmt_revbb)
 else
-  call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
+  if g:solarized_background == "dark"
+    call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
+  else
+    call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
+  endif
 endif
 call s:put('else')
-if g:solarized_background == "dark"
-  " Changed by Lifepillar: slightly darker status line, light foreground
-  call s:put("  hi! StatusLine"     .s:fg_base0  .s:bg_base02.s:fmt_revbb)
+if g:solarized_contrast == "flat"
+  call s:put("  hi! NormalMode"     .s:fg_base02 .s:bg_base2 . s:fmt_revbb)
+  call s:put("  hi! StatusLine"     .s:fg_base02 .s:bg_base2 .s:fmt_revbb)
 else
-  call s:put("  hi! StatusLine"     .s:fg_base1 .s:bg_base02.s:fmt_revbb)
+  if g:solarized_background == "dark"
+    " Changed by Lifepillar: slightly darker status line, light foreground
+    call s:put("  hi! StatusLine"     .s:fg_base0  .s:bg_base02.s:fmt_revbb)
+  else
+    call s:put("  hi! StatusLine"     .s:fg_base1 .s:bg_base02.s:fmt_revbb)
+  endif
 endif
 call s:put('endif')
 if g:solarized_contrast == "flat"

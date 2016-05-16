@@ -22,11 +22,10 @@ hi! Underlined cterm=NONE gui=NONE ctermfg=13 guifg=#6c71c4 ctermbg=NONE guibg=N
 hi! Ignore cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE
 hi! Error cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
 hi! Todo cterm=NONE,bold gui=NONE,bold ctermfg=5 guifg=#d33682 ctermbg=NONE guibg=NONE
-hi! NormalMode ctermfg=12 guifg=#839496 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! InsertMode ctermfg=6 guifg=#2aa198 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! ReplaceMode ctermfg=9 guifg=#cb4b16 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! VisualMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! CommandMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
+hi! InsertMode ctermbg=6 guibg=#2aa198 ctermfg=0 guifg=#073642 cterm=NONE,reverse gui=NONE,reverse
+hi! ReplaceMode ctermbg=9 guibg=#cb4b16 ctermfg=0 guifg=#073642 cterm=NONE,reverse gui=NONE,reverse
+hi! VisualMode ctermbg=5 guibg=#d33682 ctermfg=0 guifg=#073642 cterm=NONE,reverse gui=NONE,reverse
+hi! CommandMode ctermbg=5 guibg=#d33682 ctermfg=0 guifg=#073642 cterm=NONE,reverse gui=NONE,reverse
 if get(g:, "solarized_visibility", "") == "high"
   hi! SpecialKey cterm=NONE,reverse gui=NONE,reverse ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
@@ -41,9 +40,11 @@ else
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642
 endif
 if get(g:, "solarized_statusline", "") == "low"
-  hi! StatusLine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+  hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLine ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
 else
-  hi! StatusLine ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
+  hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLine ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 endif
 hi! StatusLineNC ctermfg=0 guifg=#073642 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
 hi! Visual ctermfg=10 guifg=#586e75 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
