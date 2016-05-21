@@ -31,14 +31,17 @@ if get(g:, "solarized_visibility", "") == "high"
   hi! SpecialKey cterm=NONE,reverse gui=NONE,reverse ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=0 guibg=#073642
+  hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=3 guifg=#b58900 ctermbg=NONE guibg=NONE
 elseif get(g:, "solarized_visibility", "") == "low"
   hi! SpecialKey cterm=NONE,bold gui=NONE,bold ctermfg=0 guifg=#073642 ctermbg=NONE guibg=NONE
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=0 guifg=#073642 ctermbg=NONE guibg=NONE
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=10 guifg=#586e75 ctermbg=0 guibg=#073642
+  hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=10 guifg=#586e75 ctermbg=NONE guibg=NONE
 else
   hi! SpecialKey cterm=NONE,bold gui=NONE,bold ctermfg=11 guifg=#657b83 ctermbg=0 guibg=#073642
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=11 guifg=#657b83 ctermbg=NONE guibg=NONE
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642
+  hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=3 guifg=#b58900 ctermbg=NONE guibg=NONE
 endif
 if get(g:, "solarized_statusline", "") == "low"
   hi! StatusLine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
@@ -56,7 +59,6 @@ hi! ModeMsg cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE
 hi! LineNr cterm=NONE gui=NONE ctermfg=10 guifg=#586e75 ctermbg=0 guibg=#073642
 hi! Question cterm=NONE,bold gui=NONE,bold ctermfg=6 guifg=#2aa198 ctermbg=NONE guibg=NONE
 hi! VertSplit cterm=NONE gui=NONE ctermfg=10 guifg=#586e75 ctermbg=10 guibg=#586e75
-hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=3 guifg=#b58900 ctermbg=NONE guibg=NONE
 hi! VisualNOS ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
 hi! WarningMsg cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
 hi! WildMenu ctermfg=7 guifg=#eee8d5 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse

@@ -251,14 +251,25 @@ for s:solarized_background in ["dark", "light"]
     call s:put("  hi! SpecialKey" .s:fmt_revr   .s:fg_red    .s:bg_none)
     call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_red    .s:bg_none)
     call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red .s:bg_base02)
+    if s:solarized_background == "dark"
+      call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
+    else
+      call s:put("  hi! Title"          .s:fmt_bold   .s:fg_orange    .s:bg_none)
+    endif
     call s:put('elseif get(g:, "solarized_visibility", "") == "low"')
     call s:put("  hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none)
     call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none)
     call s:put("  hi! CursorLineNr". s:fmt_bold   .s:fg_base01 .s:bg_base02)
+    call s:put("  hi! Title"          .s:fmt_bold   .s:fg_base01    .s:bg_none)
     call s:put('else')
     call s:put("  hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02)
     call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none)
     call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_base02)
+    if s:solarized_background == "dark"
+      call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
+    else
+      call s:put("  hi! Title"          .s:fmt_bold   .s:fg_orange    .s:bg_none)
+    endif
     call s:put('endif')
     call s:put('if get(g:, "solarized_statusline", "") == "low"')
     if s:solarized_contrast == "flat"
@@ -315,11 +326,6 @@ for s:solarized_background in ["dark", "light"]
     else
       " Changed by Lifepillar: lighter vertical bars:
       call s:put("hi! VertSplit"      .s:fmt_none   .s:fg_base01  .s:bg_base01)
-    endif
-    if s:solarized_background == "dark"
-      call s:put("hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
-    else
-      call s:put("hi! Title"          .s:fmt_bold   .s:fg_orange    .s:bg_none)
     endif
     call s:put("hi! VisualNOS"      .s:fg_none    .s:bg_base02    .s:fmt_revbb)
     call s:put("hi! WarningMsg"     .s:fmt_bold   .s:fg_orange    .s:bg_none)
