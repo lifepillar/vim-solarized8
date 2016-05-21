@@ -65,3 +65,28 @@ The following options were not available in the original Solarized:
 
 These options may be used with any `solarized8_*` variant.
 
+
+## Tips
+
+If you want to quickly toggle between dark and light background, you may define
+a mapping like the following:
+
+```
+nnoremap  <leader>B :<c-u>exe "colors" (get(g:, "colors_name", "") =~# "dark"
+    \ ? substitute(g:colors_name, 'dark', 'light', '')
+    \ : substitute(g:colors_name, 'light', 'dark', '')
+    \ )<cr>
+```
+
+To tune the contrast level you may use the following snippet:
+
+```
+fun! Solarized8Contrast(delta)
+  let l:schemes = map(["_low", "_flat", "", "_high"], '"solarized8_".(&background).v:val')
+  exe "colors" l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 4 + 4) % 4]
+endf
+
+nmap <leader>- :<c-u>call Solarized8Contrast(-v:count1)<cr>
+nmap <leader>+ :<c-u>call Solarized8Contrast(+v:count1)<cr>
+```
+
