@@ -270,7 +270,15 @@ hi! pandocMetadata ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE cterm=NONE gu
 hi! pandocMetadataKey ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 hi! pandocMetadata ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE cterm=NONE,bold gui=NONE,bold
 hi! link pandocMetadataTitle pandocMetadata
-
+if get(g:, "solarized_term_italics", 0) != 0
+  hi Comment cterm=italic
+  hi gitcommitComment cterm=italic
+  hi htmlSpecialTagName cterm=italic
+  hi pandocComment cterm=italic
+  hi pandocEmphasisDefinition cterm=italic
+  hi pandocEmphasisTable cterm=italic
+  hi pandocEmphasis cterm=italic
+endif
 " License "{{{
 " ---------------------------------------------------------------------
 "

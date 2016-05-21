@@ -656,6 +656,17 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! link pandocMetadataTitle pandocMetadata")
 
     "}}}
+    " Terminal italic {{{
+    call s:put('if get(g:, "solarized_term_italics", 0) != 0')
+    call s:put('  hi Comment cterm=italic')
+    call s:put('  hi gitcommitComment cterm=italic')
+    call s:put('  hi htmlSpecialTagName cterm=italic')
+    call s:put('  hi pandocComment cterm=italic')
+    call s:put('  hi pandocEmphasisDefinition cterm=italic')
+    call s:put('  hi pandocEmphasisTable cterm=italic')
+    call s:put('  hi pandocEmphasis cterm=italic')
+    call s:put('endif')
+    "}}}
     call s:put('" License "{{{')
     call s:put('" ---------------------------------------------------------------------')
     call s:put('"')
