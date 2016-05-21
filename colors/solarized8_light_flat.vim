@@ -85,10 +85,10 @@ hi! SpellBad cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE cte
 hi! SpellCap cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#6c71c4
 hi! SpellRare cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#2aa198
 hi! SpellLocal cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#b58900
-hi! Pmenu ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+hi! Pmenu ctermfg=7 guifg=#eee8d5 ctermbg=11 guibg=#657b83 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuSel ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
-hi! PmenuSbar ctermfg=0 guifg=#073642 ctermbg=11 guibg=#657b83 cterm=NONE,reverse gui=NONE,reverse
-hi! PmenuThumb ctermfg=11 guifg=#657b83 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
+hi! PmenuSbar ctermfg=7 guifg=#eee8d5 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
+hi! PmenuThumb ctermfg=12 guifg=#839496 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 hi! TabLine ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 guisp=#657b83 cterm=NONE gui=NONE
 hi! TabLineFill ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 guisp=#657b83 cterm=NONE gui=NONE
 hi! TabLineSel ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642 guisp=#657b83 cterm=NONE,reverse gui=NONE,reverse
