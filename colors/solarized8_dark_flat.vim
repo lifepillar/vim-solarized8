@@ -42,11 +42,11 @@ endif
 if get(g:, "solarized_statusline", "") == "low"
   hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLine ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
-  hi! TabLineSel ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLineSel ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
 else
   hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLine ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
-  hi! TabLineSel ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLineSel ctermfg=7 guifg=#eee8d5 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
 endif
 hi! StatusLineNC ctermfg=0 guifg=#073642 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
 hi! Visual ctermfg=10 guifg=#586e75 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse

@@ -90,7 +90,7 @@ hi! PmenuSbar ctermfg=7 guifg=#eee8d5 ctermbg=12 guibg=#839496 cterm=NONE,revers
 hi! PmenuThumb ctermfg=12 guifg=#839496 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
 hi! TabLine ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
 hi! TabLineFill ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
-hi! TabLineSel ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+hi! TabLineSel ctermfg=7 guifg=#eee8d5 ctermbg=10 guibg=#586e75 cterm=NONE gui=NONE
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642
 hi! CursorLine cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642 guisp=#93a1a1
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642

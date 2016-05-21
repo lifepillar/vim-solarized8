@@ -262,9 +262,9 @@ for s:solarized_background in ["dark", "light"]
     call s:put('endif')
     call s:put('if get(g:, "solarized_statusline", "") == "low"')
     if s:solarized_contrast == "flat"
-      call s:put("  hi! NormalMode"     .s:fg_base02  .s:bg_base1 .s:fmt_revbb)
-      call s:put("  hi! StatusLine"     .s:fg_base02  .s:bg_base1 .s:fmt_revbb)
-      call s:put("  hi! TabLineSel"     .s:fg_base02  .s:bg_base1 .s:fmt_revbb)
+      call s:put("  hi! NormalMode"     .s:fg_base02  .s:bg_base1  .s:fmt_revbb)
+      call s:put("  hi! StatusLine"     .s:fg_base02  .s:bg_base1  .s:fmt_revbb)
+      call s:put("  hi! TabLineSel"     .s:fg_base1   .s:bg_base02 .s:fmt_none)
     else " no flat
       if s:solarized_background == "dark"
         if s:solarized_contrast == "high"
@@ -278,9 +278,9 @@ for s:solarized_background in ["dark", "light"]
     endif
     call s:put('else') " solarized_statusline !=# 'low'
     if s:solarized_contrast == "flat"
-      call s:put("  hi! NormalMode"     .s:fg_base02 .s:bg_base2 . s:fmt_revbb)
-      call s:put("  hi! StatusLine"     .s:fg_base02 .s:bg_base2 .s:fmt_revbb)
-      call s:put("  hi! TabLineSel"     .s:fg_base02 .s:bg_base2 .s:fmt_revbb)
+      call s:put("  hi! NormalMode"     .s:fg_base02 .s:bg_base2  . s:fmt_revbb)
+      call s:put("  hi! StatusLine"     .s:fg_base02 .s:bg_base2  .s:fmt_revbb)
+      call s:put("  hi! TabLineSel"     .s:fg_base2  .s:bg_base02 .s:fmt_none)
     else
       if s:solarized_background == "dark"
         " Changed by Lifepillar: slightly darker status line, light foreground
@@ -378,7 +378,7 @@ for s:solarized_background in ["dark", "light"]
     else
       call s:put("hi! TabLine"        .s:fg_base0  .s:bg_base02  .s:fmt_none)
       call s:put("hi! TabLineFill"    .s:fg_base0  .s:bg_base02  .s:fmt_none)
-      call s:put("hi! TabLineSel"     .s:fg_base01 .s:bg_base2 .s:fmt_revbb)
+      call s:put("hi! TabLineSel"     .s:fg_base2  .s:bg_base01  .s:fmt_none)
     endif
     call s:put("hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02)
     if s:solarized_contrast == "flat"
