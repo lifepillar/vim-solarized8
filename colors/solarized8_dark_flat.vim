@@ -60,7 +60,7 @@ hi! VertSplit cterm=NONE gui=NONE ctermfg=0 guifg=#073642 ctermbg=0 guibg=#07364
 hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
 hi! VisualNOS ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
 hi! WarningMsg cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
-hi! WildMenu ctermfg=7 guifg=#eee8d5 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
+hi! WildMenu ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 hi! Folded cterm=NONE,bold gui=NONE,bold ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 guisp=#002b36
 hi! FoldColumn cterm=NONE gui=NONE ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642
 if get(g:, "solarized_diffmode", "") == "high"
