@@ -316,9 +316,9 @@ for s:solarized_background in ["dark", "light"]
       " Changed by Lifepillar: lighter vertical bars:
       call s:put("hi! VertSplit"      .s:fmt_none   .s:fg_base01  .s:bg_base01)
     endif
-    call s:put("hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none)
-    call s:put("hi! VisualNOS"      .s:fg_none   .s:bg_base02 .s:fmt_revbb)
-    call s:put("hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none)
+    call s:put("hi! Title"          .s:fmt_bold   .s:fg_orange    .s:bg_none)
+    call s:put("hi! VisualNOS"      .s:fg_none    .s:bg_base02    .s:fmt_revbb)
+    call s:put("hi! WarningMsg"     .s:fmt_bold   .s:fg_orange    .s:bg_none)
     if s:solarized_contrast == "flat"
       if s:solarized_background == "dark"
         call s:put("hi! WildMenu"       .s:fg_base02 .s:bg_base2   .s:fmt_revbb)

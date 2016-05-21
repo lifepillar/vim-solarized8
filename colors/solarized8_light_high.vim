@@ -58,7 +58,7 @@ hi! Question cterm=NONE,bold gui=NONE,bold ctermfg=6 guifg=#2aa198 ctermbg=NONE 
 hi! VertSplit cterm=NONE gui=NONE ctermfg=12 guifg=#839496 ctermbg=12 guibg=#839496
 hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
 hi! VisualNOS ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
-hi! WarningMsg cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
+hi! WarningMsg cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
 hi! WildMenu ctermfg=8 guifg=#002b36 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 hi! Folded cterm=NONE,bold gui=NONE,bold ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 guisp=#fdf6e3
 hi! FoldColumn cterm=NONE gui=NONE ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5
