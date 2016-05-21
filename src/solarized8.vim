@@ -325,7 +325,7 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! WarningMsg"     .s:fmt_bold   .s:fg_orange    .s:bg_none)
     if s:solarized_contrast == "flat"
       if s:solarized_background == "dark"
-        call s:put("hi! WildMenu"       .s:fg_base02 .s:bg_base2   .s:fmt_revbb)
+        call s:put("hi! WildMenu"       .s:fg_base00 .s:bg_base2   .s:fmt_revbb)
       else
         call s:put("hi! WildMenu"       .s:fg_base01 .s:bg_base03  .s:fmt_revbb)
       endif
@@ -360,7 +360,7 @@ for s:solarized_background in ["dark", "light"]
     if s:solarized_contrast == "flat"
       if s:solarized_background == "dark"
         call s:put("hi! Pmenu"          .s:fg_base02 .s:bg_base0   .s:fmt_revbb)
-        call s:put("hi! PmenuSel"       .s:fg_base02 .s:bg_base2   .s:fmt_revbb)
+        call s:put("hi! PmenuSel"       .s:fg_base00 .s:bg_base2   .s:fmt_revbb)
         call s:put("hi! PmenuSbar"      .s:fg_base02 .s:bg_base01  .s:fmt_revbb)
         call s:put("hi! PmenuThumb"     .s:fg_base01 .s:bg_base03  .s:fmt_revbb)
       else " flat, light

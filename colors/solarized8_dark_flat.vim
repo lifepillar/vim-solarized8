@@ -62,7 +62,7 @@ hi! VertSplit cterm=NONE gui=NONE ctermfg=0 guifg=#073642 ctermbg=0 guibg=#07364
 hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=3 guifg=#b58900 ctermbg=NONE guibg=NONE
 hi! VisualNOS ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
 hi! WarningMsg cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
-hi! WildMenu ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+hi! WildMenu ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 hi! Folded cterm=NONE,bold gui=NONE,bold ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 guisp=#002b36
 hi! FoldColumn cterm=NONE gui=NONE ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642
 if get(g:, "solarized_diffmode", "") == "high"
@@ -88,7 +88,7 @@ hi! SpellCap cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE cte
 hi! SpellRare cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#2aa198
 hi! SpellLocal cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#b58900
 hi! Pmenu ctermfg=0 guifg=#073642 ctermbg=12 guibg=#839496 cterm=NONE,reverse gui=NONE,reverse
-hi! PmenuSel ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+hi! PmenuSel ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuSbar ctermfg=0 guifg=#073642 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuThumb ctermfg=10 guifg=#586e75 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
   hi! TabLine ctermbg=0 guibg=#073642 ctermfg=10 guifg=#586e75 cterm=NONE gui=NONE
