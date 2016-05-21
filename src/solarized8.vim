@@ -344,10 +344,17 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! SpellRare"      .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_cyan)
     call s:put("hi! SpellLocal"     .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_yellow)
     if s:solarized_contrast == "flat"
-      call s:put("hi! Pmenu"          .s:fg_base02 .s:bg_base0   .s:fmt_revbb)
-      call s:put("hi! PmenuSel"       .s:fg_base01 .s:bg_base2   .s:fmt_revbb)
-      call s:put("hi! PmenuSbar"      .s:fg_base02 .s:bg_base01  .s:fmt_revbb)
-      call s:put("hi! PmenuThumb"     .s:fg_base00 .s:bg_base03  .s:fmt_revbb)
+      if s:solarized_background == "dark"
+        call s:put("hi! Pmenu"          .s:fg_base02 .s:bg_base0   .s:fmt_revbb)
+        call s:put("hi! PmenuSel"       .s:fg_base02 .s:bg_base2   .s:fmt_revbb)
+        call s:put("hi! PmenuSbar"      .s:fg_base02 .s:bg_base01  .s:fmt_revbb)
+        call s:put("hi! PmenuThumb"     .s:fg_base01 .s:bg_base03  .s:fmt_revbb)
+      else " flat, light
+        call s:put("hi! Pmenu"          .s:fg_base02 .s:bg_base0   .s:fmt_revbb)
+        call s:put("hi! PmenuSel"       .s:fg_base01 .s:bg_base03  .s:fmt_revbb)
+        call s:put("hi! PmenuSbar"      .s:fg_base02 .s:bg_base01  .s:fmt_revbb)
+        call s:put("hi! PmenuThumb"     .s:fg_base00 .s:bg_base03  .s:fmt_revbb)
+      endif
     else
       call s:put("hi! Pmenu"          .s:fg_base0  .s:bg_base02  .s:fmt_revbb)
       call s:put("hi! PmenuSel"       .s:fg_base01 .s:bg_base2   .s:fmt_revbb)
