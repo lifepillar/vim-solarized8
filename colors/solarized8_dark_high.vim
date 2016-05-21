@@ -41,7 +41,7 @@ else
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642
 endif
 if get(g:, "solarized_statusline", "") == "low"
-  hi! StatusLine ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLine ctermfg=11 guifg=#657b83 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 else
   hi! StatusLine ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
 endif

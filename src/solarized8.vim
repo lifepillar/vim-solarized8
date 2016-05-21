@@ -266,7 +266,11 @@ for s:solarized_background in ["dark", "light"]
       call s:put("  hi! StatusLine"     .s:fg_base02  .s:bg_base1 .s:fmt_revbb)
     else
       if s:solarized_background == "dark"
-        call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
+        if s:solarized_contrast == "high"
+          call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
+        else
+          call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
+        endif
       else
         call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
       endif
