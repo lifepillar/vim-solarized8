@@ -382,8 +382,8 @@ for s:solarized_background in ["dark", "light"]
       call s:put("hi! PmenuThumb"     .s:fg_base0  .s:bg_base03  .s:fmt_revbb)
     endif
     if s:solarized_contrast ==# "flat"
-      call s:put("  hi! TabLine"        . s:bg_base02 . s:fg_base01 . s:fmt_none)
-      call s:put("  hi! TabLineFill"    . s:bg_base02 . s:fg_base01 . s:fmt_none)
+      call s:put("hi! TabLine"        . s:bg_base02 . s:fg_base01 . s:fmt_none)
+      call s:put("hi! TabLineFill"    . s:bg_base02 . s:fg_base01 . s:fmt_none)
       " TabLineSel is set together with StatusLine (see below)
     else
       call s:put("hi! TabLine"        .s:fg_base0  .s:bg_base02  .s:fmt_none)
