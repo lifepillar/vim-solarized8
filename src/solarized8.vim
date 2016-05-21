@@ -369,9 +369,17 @@ for s:solarized_background in ["dark", "light"]
       call s:put("hi! PmenuSbar"      .s:fg_base2  .s:bg_base0   .s:fmt_revbb)
       call s:put("hi! PmenuThumb"     .s:fg_base0  .s:bg_base03  .s:fmt_revbb)
     endif
-    call s:put("hi! TabLine"        .s:fg_base0  .s:bg_base02  .s:sp_base0 .s:fmt_none)
-    call s:put("hi! TabLineFill"    .s:fg_base0  .s:bg_base02  .s:sp_base0 .s:fmt_none)
-    call s:put("hi! TabLineSel"     .s:fg_base01 .s:bg_base2   .s:sp_base0  .s:fmt_revbbu)
+    call s:put("hi! TabLine"        .s:fg_base0  .s:bg_base02  .s:fmt_none)
+    call s:put("hi! TabLineFill"    .s:fg_base0  .s:bg_base02  .s:fmt_none)
+    if s:solarized_contrast == "flat"
+      if s:solarized_background == "dark"
+        call s:put("hi! TabLineSel"     .s:fg_base02 .s:bg_base2   .s:fmt_revbb)
+      else
+        call s:put("hi! TabLineSel"     .s:fg_base01 .s:bg_base03  .s:fmt_revbb)
+      endif
+    else
+      call s:put("hi! TabLineSel"     .s:fg_base01 .s:bg_base2 .s:fmt_revbb)
+    endif
     call s:put("hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02)
     if s:solarized_contrast == "flat"
       call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base03  .s:sp_base1)
