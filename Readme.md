@@ -72,7 +72,7 @@ If you want to quickly toggle between dark and light background, you may define
 a mapping like the following:
 
 ```
-nnoremap  <leader>B :<c-u>exe "colors" (get(g:, "colors_name", "") =~# "dark"
+nnoremap  <leader>B :<c-u>exe "colors" (g:colors_name =~# "dark"
     \ ? substitute(g:colors_name, 'dark', 'light', '')
     \ : substitute(g:colors_name, 'light', 'dark', '')
     \ )<cr>
