@@ -27,9 +27,9 @@ hi! ReplaceMode ctermbg=9 guibg=#cb4b16 ctermfg=0 guifg=#073642 cterm=NONE,rever
 hi! VisualMode ctermbg=5 guibg=#d33682 ctermfg=0 guifg=#073642 cterm=NONE,reverse gui=NONE,reverse
 hi! CommandMode ctermbg=5 guibg=#d33682 ctermfg=0 guifg=#073642 cterm=NONE,reverse gui=NONE,reverse
 if get(g:, "solarized_visibility", "") == "high"
-  hi! SpecialKey cterm=NONE,reverse gui=NONE,reverse ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
-  hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
-  hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=0 guibg=#073642
+  hi! SpecialKey cterm=NONE,reverse gui=NONE,reverse ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
+  hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
+  hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=0 guibg=#073642
   hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=3 guifg=#b58900 ctermbg=NONE guibg=NONE
 elseif get(g:, "solarized_visibility", "") == "low"
   hi! SpecialKey cterm=NONE,bold gui=NONE,bold ctermfg=0 guifg=#073642 ctermbg=NONE guibg=NONE

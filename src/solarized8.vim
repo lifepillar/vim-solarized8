@@ -248,9 +248,15 @@ for s:solarized_background in ["dark", "light"]
     " Extended highlighting "{{{
     " ---------------------------------------------------------------------
     call s:put('if get(g:, "solarized_visibility", "") == "high"')
-    call s:put("  hi! SpecialKey" .s:fmt_revr   .s:fg_red    .s:bg_none)
-    call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_red    .s:bg_none)
-    call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red .s:bg_base02)
+    if s:solarized_background ==# "dark"
+      call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_orange    .s:bg_none)
+      call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_orange    .s:bg_none)
+      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange    .s:bg_base02)
+    else
+      call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_red    .s:bg_none)
+      call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_red    .s:bg_none)
+      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red    .s:bg_base02)
+    endif
     if s:solarized_background == "dark"
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
     else
