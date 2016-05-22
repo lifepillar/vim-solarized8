@@ -45,10 +45,11 @@ else
 endif
 if get(g:, "solarized_statusline", "") == "low"
   hi! StatusLine ctermfg=11 guifg=#657b83 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLineNC ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 else
   hi! StatusLine ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLineNC ctermfg=11 guifg=#657b83 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
 endif
-hi! StatusLineNC ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 hi! Visual ctermfg=11 guifg=#657b83 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
 hi! Directory cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE
 hi! ErrorMsg cterm=NONE,reverse gui=NONE,reverse ctermfg=1 guifg=#dc322f ctermbg=15 guibg=#fdf6e3

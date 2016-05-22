@@ -289,33 +289,29 @@ for s:solarized_background in ["dark", "light"]
         else
           call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
         endif
+        call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
       else " light
         call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
+        call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base02  .s:fmt_revbb)
       endif
     endif
     call s:put('else') " solarized_statusline !=# 'low'
     if s:solarized_contrast == "flat"
-      call s:put("  hi! NormalMode"     .s:fg_base02 .s:bg_base2  . s:fmt_revbb)
+      call s:put("  hi! NormalMode"     .s:fg_base02 .s:bg_base2  .s:fmt_revbb)
       call s:put("  hi! StatusLine"     .s:fg_base02 .s:bg_base2  .s:fmt_revbb)
       call s:put("  hi! TabLineSel"     .s:fg_base2  .s:bg_base02 .s:fmt_none)
-    else
+    else " no low, no flat
       if s:solarized_background == "dark"
-        " Changed by Lifepillar: slightly darker status line, light foreground
-        call s:put("  hi! StatusLine"     .s:fg_base0  .s:bg_base02.s:fmt_revbb)
+        call s:put("  hi! StatusLine"     .s:fg_base0  .s:bg_base02 .s:fmt_revbb)
+        call s:put("  hi! StatusLineNC"   .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
       else
-        call s:put("  hi! StatusLine"     .s:fg_base1 .s:bg_base02.s:fmt_revbb)
+        call s:put("  hi! StatusLine"     .s:fg_base1  .s:bg_base02 .s:fmt_revbb)
+        call s:put("  hi! StatusLineNC"   .s:fg_base00 .s:bg_base02 .s:fmt_revbb)
       endif
     endif
     call s:put('endif')
     if s:solarized_contrast == "flat"
-      call s:put("hi! StatusLineNC" . s:fg_base02 . s:bg_base01 . s:fmt_revbb)
-    else
-      " Changed by Lifepillar: lighter colors for disabled status line
-      if s:solarized_background == "dark"
-        call s:put("hi! StatusLineNC" .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
-      else
-        call s:put("hi! StatusLineNC" .s:fg_base01 .s:bg_base02  .s:fmt_revbb)
-      endif
+      call s:put("hi! StatusLineNC"   .s:fg_base02 .s:bg_base01 .s:fmt_revbb)
     endif
     call s:put("hi! Visual"         .s:fg_base01 .s:bg_base03 .s:fmt_revbb)
     call s:put("hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none)
