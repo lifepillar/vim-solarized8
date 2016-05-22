@@ -90,3 +90,6 @@ nmap <leader>- :<c-u>call Solarized8Contrast(-v:count1)<cr>
 nmap <leader>+ :<c-u>call Solarized8Contrast(+v:count1)<cr>
 ```
 
+If you want to tweak the colors yourself, edit `src/solarized8.vim`, then `:source`
+it to recreate the colorschemes.
+
