@@ -22,11 +22,6 @@ hi! Underlined cterm=NONE gui=NONE ctermfg=13 guifg=#6c71c4 ctermbg=NONE guibg=N
 hi! Ignore cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE
 hi! Error cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
 hi! Todo cterm=NONE,bold gui=NONE,bold ctermfg=5 guifg=#d33682 ctermbg=NONE guibg=NONE
-hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! InsertMode ctermfg=6 guifg=#2aa198 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! ReplaceMode ctermfg=9 guifg=#cb4b16 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! VisualMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! CommandMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 if get(g:, "solarized_visibility", "") == "high"
   hi! SpecialKey cterm=NONE,reverse gui=NONE,reverse ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
@@ -43,6 +38,11 @@ else
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5
   hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
 endif
+hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
+hi! InsertMode ctermfg=6 guifg=#2aa198 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
+hi! ReplaceMode ctermfg=9 guifg=#cb4b16 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
+hi! VisualMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
+hi! CommandMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 if get(g:, "solarized_statusline", "") == "low"
   hi! StatusLine ctermfg=12 guifg=#839496 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLineNC ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
