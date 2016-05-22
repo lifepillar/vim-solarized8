@@ -346,7 +346,11 @@ for s:solarized_background in ["dark", "light"]
         call s:put("hi! WildMenu"       .s:fg_base01 .s:bg_base03  .s:fmt_revbb)
       endif
     else
-      call s:put("hi! WildMenu"       .s:fg_base2  .s:bg_base02 .s:fmt_revbb)
+      if s:solarized_contrast == "high"
+        call s:put("hi! WildMenu"       .s:bg_base2  .s:fg_base02 .s:fmt_revbb)
+      else
+        call s:put("hi! WildMenu"       .s:fg_base2  .s:bg_base02 .s:fmt_revbb)
+      endif
     endif
     call s:put("hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03)
     call s:put("hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02)
