@@ -283,25 +283,17 @@ for s:solarized_background in ["dark", "light"]
       call s:put("  hi! StatusLine"     .s:fg_base02  .s:bg_base1  .s:fmt_revbb)
       call s:put("  hi! TabLineSel"     .s:fg_base1   .s:bg_base02 .s:fmt_none)
     else " no flat
-      call s:put("  hi! StatusLine"   .s:fg_base01 .s:bg_base2  .s:fmt_revbb)
-      call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
-      " if s:solarized_background == "dark"
-      "   if s:solarized_contrast == "high"
-      "     call s:put("  hi! StatusLine"   .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
-      "     call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
-      "   else
-      "     call s:put("  hi! StatusLine"   .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
-      "     call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
-      "   endif
-      " else " light
-      "   if s:solarized_contrast == "high"
-      "     call s:put("  hi! StatusLine"   .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
-      "     call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base2   .s:fmt_revbb)
-      "   else
-      "     call s:put("  hi! StatusLine"   .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
-      "     call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base02  .s:fmt_revbb)
-      "   endif
-      " endif
+      if s:solarized_background == "dark"
+        if s:solarized_contrast == "high"
+          call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
+        else
+          call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
+        endif
+        call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
+      else " light
+        call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
+        call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base02  .s:fmt_revbb)
+      endif
     endif
     call s:put('else') " solarized_statusline !=# 'low'
     if s:solarized_contrast == "flat"
