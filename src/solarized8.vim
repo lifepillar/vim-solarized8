@@ -281,18 +281,24 @@ for s:solarized_background in ["dark", "light"]
     if s:solarized_contrast == "flat"
       call s:put("  hi! NormalMode"     .s:fg_base02  .s:bg_base1  .s:fmt_revbb)
       call s:put("  hi! StatusLine"     .s:fg_base02  .s:bg_base1  .s:fmt_revbb)
+      call s:put("hi! StatusLineNC"   .s:fg_base02 .s:bg_base01 .s:fmt_revbb)
       call s:put("  hi! TabLineSel"     .s:fg_base1   .s:bg_base02 .s:fmt_none)
     else " no flat
       if s:solarized_background == "dark"
         if s:solarized_contrast == "high"
           call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
+          call s:put("  hi! StatusLineNC"   .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
         else
           call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=7 guibg=#eee8d5" .s:fmt_revbb)
+          call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
         endif
-        call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
       else " light
-        call s:put("  hi! StatusLine"     .s:fg_base01 ." ctermbg=15 guibg=#fdf6e3" .s:fmt_revbb)
-        call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base02  .s:fmt_revbb)
+        if s:solarized_contrast == "low"
+          call s:put("  hi! StatusLine"     .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
+        else
+          call s:put("  hi! StatusLine"     .s:fg_base01 .s:bg_base03 .s:fmt_revbb)
+        endif
+        call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base1   .s:fmt_revbb)
       endif
     endif
     call s:put('else') " solarized_statusline !=# 'low'
@@ -310,9 +316,6 @@ for s:solarized_background in ["dark", "light"]
       endif
     endif
     call s:put('endif')
-    if s:solarized_contrast == "flat"
-      call s:put("hi! StatusLineNC"   .s:fg_base02 .s:bg_base01 .s:fmt_revbb)
-    endif
     call s:put("hi! Visual"         .s:fg_base01 .s:bg_base03 .s:fmt_revbb)
     call s:put("hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none)
     " Changed by Lifepillar: ErrorMsg is always white on red, never black on red (pesky)
