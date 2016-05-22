@@ -46,9 +46,15 @@ endif
 if get(g:, "solarized_statusline", "") == "low"
   hi! StatusLine ctermfg=14 guifg=#93a1a1 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLineNC ctermfg=14 guifg=#93a1a1 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLine ctermfg=14 guifg=#93a1a1 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
+  hi! TabLineFill ctermfg=14 guifg=#93a1a1 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
+  hi! TabLineSel ctermfg=7 guifg=#eee8d5 ctermbg=14 guibg=#93a1a1 cterm=NONE gui=NONE
 else
   hi! StatusLine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLineNC ctermfg=12 guifg=#839496 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLine ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
+  hi! TabLineFill ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
+  hi! TabLineSel ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE gui=NONE
 endif
 hi! Visual ctermfg=14 guifg=#93a1a1 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 hi! Directory cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE
@@ -91,9 +97,6 @@ hi! Pmenu ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gu
 hi! PmenuSel ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuSbar ctermfg=0 guifg=#073642 ctermbg=11 guibg=#657b83 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuThumb ctermfg=11 guifg=#657b83 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
-hi! TabLine ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
-hi! TabLineFill ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
-hi! TabLineSel ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE gui=NONE
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5
 hi! CursorLine cterm=NONE,underline gui=NONE,underline ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5 guisp=#586e75
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5

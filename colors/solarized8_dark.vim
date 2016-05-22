@@ -46,9 +46,15 @@ endif
 if get(g:, "solarized_statusline", "") == "low"
   hi! StatusLine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLineNC ctermfg=10 guifg=#586e75 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLine ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
+  hi! TabLineFill ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
+  hi! TabLineSel ctermfg=7 guifg=#eee8d5 ctermbg=10 guibg=#586e75 cterm=NONE gui=NONE
 else
   hi! StatusLine ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLineNC ctermfg=10 guifg=#586e75 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLine ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
+  hi! TabLineFill ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
+  hi! TabLineSel ctermfg=7 guifg=#eee8d5 ctermbg=10 guibg=#586e75 cterm=NONE gui=NONE
 endif
 hi! Visual ctermfg=10 guifg=#586e75 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
 hi! Directory cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE
@@ -91,9 +97,6 @@ hi! Pmenu ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE,reverse gu
 hi! PmenuSel ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuSbar ctermfg=7 guifg=#eee8d5 ctermbg=12 guibg=#839496 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuThumb ctermfg=12 guifg=#839496 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
-hi! TabLine ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
-hi! TabLineFill ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
-hi! TabLineSel ctermfg=7 guifg=#eee8d5 ctermbg=10 guibg=#586e75 cterm=NONE gui=NONE
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642
 hi! CursorLine cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642 guisp=#93a1a1
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642

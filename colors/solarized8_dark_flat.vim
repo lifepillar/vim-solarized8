@@ -45,11 +45,16 @@ endif
 if get(g:, "solarized_statusline", "") == "low"
   hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLine ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
-hi! StatusLineNC ctermfg=0 guifg=#073642 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLineNC ctermfg=0 guifg=#073642 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLine ctermbg=0 guibg=#073642 ctermfg=10 guifg=#586e75 cterm=NONE gui=NONE
+  hi! TabLineFill ctermbg=0 guibg=#073642 ctermfg=10 guifg=#586e75 cterm=NONE gui=NONE
   hi! TabLineSel ctermfg=14 guifg=#93a1a1 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
 else
   hi! NormalMode ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLine ctermfg=0 guifg=#073642 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLineNC ctermfg=0 guifg=#073642 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLine ctermbg=0 guibg=#073642 ctermfg=10 guifg=#586e75 cterm=NONE gui=NONE
+  hi! TabLineFill ctermbg=0 guibg=#073642 ctermfg=10 guifg=#586e75 cterm=NONE gui=NONE
   hi! TabLineSel ctermfg=7 guifg=#eee8d5 ctermbg=0 guibg=#073642 cterm=NONE gui=NONE
 endif
 hi! Visual ctermfg=10 guifg=#586e75 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
@@ -93,8 +98,6 @@ hi! Pmenu ctermfg=0 guifg=#073642 ctermbg=12 guibg=#839496 cterm=NONE,reverse gu
 hi! PmenuSel ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuSbar ctermfg=0 guifg=#073642 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuThumb ctermfg=10 guifg=#586e75 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
-hi! TabLine ctermbg=0 guibg=#073642 ctermfg=10 guifg=#586e75 cterm=NONE gui=NONE
-hi! TabLineFill ctermbg=0 guibg=#073642 ctermfg=10 guifg=#586e75 cterm=NONE gui=NONE
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642
 hi! CursorLine cterm=NONE,underline gui=NONE,underline ctermfg=NONE guifg=NONE ctermbg=8 guibg=#002b36 guisp=#93a1a1
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642
