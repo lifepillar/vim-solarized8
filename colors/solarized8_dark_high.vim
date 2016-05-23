@@ -89,7 +89,7 @@ else
 endif
 hi! SignColumn cterm=NONE gui=NONE ctermfg=14 guifg=#93a1a1 ctermbg=NONE guibg=NONE
 hi! Conceal cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE
-hi! SpellBad cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#dc322f
+hi! SpellBad cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#d33682
 hi! SpellCap cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#6c71c4
 hi! SpellRare cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#2aa198
 hi! SpellLocal cterm=NONE,undercurl gui=NONE,undercurl ctermfg=NONE guifg=NONE ctermbg=NONE guibg=NONE guisp=#b58900

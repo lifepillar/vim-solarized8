@@ -385,7 +385,11 @@ for s:solarized_background in ["dark", "light"]
     " Changed by Lifepillar: set s:bg_none for SignColumn:
     call s:put("hi! SignColumn"     .s:fmt_none   .s:fg_base0  .s:bg_none)
     call s:put("hi! Conceal"        .s:fmt_none   .s:fg_blue   .s:bg_none)
-    call s:put("hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red)
+    if s:solarized_background == "dark"
+      call s:put("hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_magenta)
+    else
+      call s:put("hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red)
+    endif
     call s:put("hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet)
     call s:put("hi! SpellRare"      .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_cyan)
     call s:put("hi! SpellLocal"     .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_yellow)
