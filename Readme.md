@@ -11,16 +11,22 @@ The reason for the existence of this project is that the original Solarized
 theme does not define `guifg` and `guibg` in terminal Vim, which means that gui
 colors cannot be used with versions of Vim supporting true-color terminals.
 
-This colorscheme works **out of the box** if you use:
+This color scheme works **out of the box** if you use:
 
-- NeoVim with true-color support enabled, or
-- Vim 7.4.1799 or later with `termguicolors` on,
+- Vim 7.4.1799 or later,
+- NeoVim,
 
-*and* a true-color enabled terminal (e.g., iTerm). It also works in MacVim and other
-GUI versions, of course.
+**and** a true-color enabled terminal (e.g., [iTerm2](https://www.iterm2.com)).
+Just add the following line to your `.vimrc`:
 
-For terminals not supporting true colors, the requirement is the same as for
-the other colorschemes: your terminal ASCII colors must be set to the Solarized
+```
+set termguicolors
+```
+
+The color scheme also works in MacVim, gVim, etc…: no configuration is needed.
+
+For terminals not supporting true colors, the requirement is the same as for the
+other color schemes: your terminal ASCII colors must be set to the Solarized
 palette. The ugly degraded 256-color variant has been removed.
 
 
@@ -34,7 +40,7 @@ recommend that you use them. Just clone this repo inside `pack/*/opt`, e.g.:
 
 Otherwise, use your favourite installation method.
 
-There are actually 8 optimized colorschemes:
+There are actually 8 optimized color schemes:
 
 - `solarized8_dark` and `solarized8_light`: the default Solarized theme;
 - `solarized8_dark_low` and `solarized8_light_low`: low-contrast variant;
@@ -91,5 +97,5 @@ nmap <leader>+ :<c-u>call Solarized8Contrast(+v:count1)<cr>
 ```
 
 If you want to tweak the colors yourself, edit `src/solarized8.vim`, then `:source`
-it to recreate the colorschemes.
+it to recreate the color schemes.
 
