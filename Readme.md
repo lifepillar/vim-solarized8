@@ -23,7 +23,7 @@ Just add the following line to your `.vimrc`:
 set termguicolors
 ```
 
-The color scheme also works in MacVim, gVim, etc…: no configuration is needed.
+Solarized8 also works in MacVim, gVim, etc…: no configuration is needed.
 
 For terminals not supporting true colors, the requirement is the same as for the
 other color schemes: your terminal ASCII colors must be set to the Solarized
