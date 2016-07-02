@@ -46,8 +46,8 @@ To use any of them, put a line like the following in your `.vimrc`:
 
     colorscheme solarized8_dark
 
-**Note:** if you use Vim packages, there is no need to `packadd
-solarized8_dark`. Keep your `runtimepath` clean!
+**Note:** if you use Vim packages, there is no need to `packadd solarized8`.
+Keep your `runtimepath` clean!
 
 
 ## Configuration
