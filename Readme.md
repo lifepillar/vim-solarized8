@@ -13,7 +13,7 @@ colors cannot be used with versions of Vim supporting true-color terminals.
 
 This color scheme works **out of the box** if you use:
 
-- Vim 7.4.1799 or later,
+- Vim 7.4.1799 or later, or
 - NeoVim,
 
 **and** a true-color enabled terminal (e.g., [iTerm2](https://www.iterm2.com)).
