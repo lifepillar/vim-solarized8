@@ -56,7 +56,7 @@ To use any of them, put a line like the following in your `.vimrc`:
 Keep your `runtimepath` clean!
 
 
-## Configuration
+## Options
 
 The following options are inherited from Solarized:
 
