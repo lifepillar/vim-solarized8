@@ -72,6 +72,21 @@ The following options were not available in the original Solarized:
 These options may be used with any `solarized8_*` variant.
 
 
+## Troubleshooting
+
+**Hey, I do not get the right colors when running Vim inside tmux!**
+
+Put this in your `.vimrc`:
+
+```
+set t_8f=^[[38;2;%lu;%lu;%lum
+set t_8b=^[[48;2;%lu;%lu;%lum
+```
+
+where `^[` is *not* obtained by typing `^` followed by `[`, but it is a real
+escape character (to obtain it, type `<Ctrl-v><Ctrl-[>` in Insert mode). See `:h
+xterm-true-color` for the details.
+
 ## Tips
 
 If you want to quickly toggle between dark and light background, you may define
