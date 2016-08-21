@@ -84,7 +84,8 @@ set t_8b=^[[48;2;%lu;%lu;%lum
 ```
 
 where `^[` is *not* obtained by typing `^` followed by `[`, but it is a real
-escape character (to obtain it, type `<Ctrl-v><Ctrl-[>` in Insert mode). See `:h
+escape character (to obtain it, type `<Ctrl-v><Ctrl-[>` in Insert mode). If that
+does not work yet, try replacing the semicolons with colons. See `:h
 xterm-true-color` for the details.
 
 ## Tips
