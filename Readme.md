@@ -7,26 +7,26 @@ removes only *some* of the bullshit. The color palette is exactly the same as
 in Solarized, of course, although some highlight groups are defined slightly
 differently (and better, in my opinion).
 
-The reason for the existence of this project is that the original Solarized
+The main reason for the existence of this project is that the original Solarized
 theme does not define `guifg` and `guibg` in terminal Vim, which means that gui
 colors cannot be used with versions of Vim supporting true-color terminals.
+Another reason is that I do not understand why a color scheme should dynamically
+compute constant values again and again. So, this version may be thought of as
+a “compiled” Solarized (in fact, code from the original Solarized is used as
+“source” code), and it loads >2.2x times as fast (not that you are likely to
+notice the difference…).
 
 This color scheme works **out of the box** if you use:
 
-- Vim 7.4.1799 or later, or
+- Vim ≥7.4.1799 with `termguicolors` set, or
 - NeoVim,
 
 **and** a true-color enabled terminal (e.g., [iTerm2](https://www.iterm2.com)).
-Just add the following line to your `.vimrc`:
-
-```
-set termguicolors
-```
 
 Solarized 8 also works in MacVim, gVim, etc…: no configuration is needed.
 
 For terminals not supporting true colors, the requirement is the same as for the
-other color schemes: your terminal ASCII colors must be set to the Solarized
+other color schemes: your 16 terminal ASCII colors must be set to the Solarized
 palette. The ugly degraded 256-color variant has been removed.
 
 
