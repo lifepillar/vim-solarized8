@@ -228,11 +228,19 @@ for s:solarized_background in ["dark", "light"]
     if s:solarized_background ==# "dark"
       call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_orange    .s:bg_none)
       call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_orange    .s:bg_none)
-      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange    .s:bg_base02)
+      if s:solarized_contrast ==# "flat"
+        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange    .s:bg_none)
+      else
+        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange    .s:bg_base02)
+      endif
     else
       call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_red    .s:bg_none)
       call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_red    .s:bg_none)
-      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red    .s:bg_base02)
+      if s:solarized_contrast ==# "flat"
+        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red    .s:bg_none)
+      else
+        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red    .s:bg_base02)
+      endif
     endif
     if s:solarized_background == "dark"
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
@@ -242,12 +250,20 @@ for s:solarized_background in ["dark", "light"]
     call s:put('elseif get(g:, "solarized_visibility", "") == "low"')
     call s:put("  hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none)
     call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none)
-    call s:put("  hi! CursorLineNr". s:fmt_bold   .s:fg_base01 .s:bg_base02)
+    if s:solarized_contrast ==# "flat"
+      call s:put("  hi! CursorLineNr". s:fmt_bold   .s:fg_base01 .s:bg_none)
+    else
+      call s:put("  hi! CursorLineNr". s:fmt_bold   .s:fg_base01 .s:bg_base02)
+    endif
     call s:put("  hi! Title"          .s:fmt_bold   .s:fg_base01    .s:bg_none)
     call s:put('else')
     call s:put("  hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02)
     call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none)
-    call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_base02)
+    if s:solarized_contrast ==# "flat"
+      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_none)
+    else
+      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_base02)
+    endif
     if s:solarized_background == "dark"
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
     else
@@ -341,7 +357,11 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none)
     call s:put("hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none)
     call s:put("hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none)
-    call s:put("hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02)
+    if s:solarized_contrast ==# "flat"
+      call s:put("hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_none)
+    else
+      call s:put("hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02)
+    endif
     call s:put("hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none)
     if s:solarized_contrast == "flat"
       call s:put("hi! VertSplit"      .s:fmt_none   .s:fg_base02 .s:bg_base02)
