@@ -62,10 +62,12 @@ The following options are inherited from Solarized:
 
 - `g:solarized_visibility`: one of `"normal"` (default), `"low"`, `"high"`;
 - `g:solarized_diffmode`: one of `"normal"` (default), `"low"`, `"high"`;
+- `g:solarized_termtrans`: make terminal background transparent if set to `1`
+  (default: `0`).
 
 The following options were not available in the original Solarized:
 
-- `g:solarized_statusline`: one of `"normal"` (default) or `"low"`.
+- `g:solarized_statusline`: one of `"normal"` (default) or `"low"`;
 - `g:solarized_term_italics`: set to `1` if your terminal supports italics
   (default is `0`).
 

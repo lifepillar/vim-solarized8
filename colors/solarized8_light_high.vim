@@ -10,7 +10,11 @@ endif
 let colors_name = "solarized8_light_high"
 set background=light
 
-hi! Normal cterm=NONE gui=NONE ctermfg=10 guifg=#586e75 ctermbg=15 guibg=#fdf6e3
+if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
+  hi! Normal cterm=NONE gui=NONE ctermfg=10 guifg=#586e75 ctermbg=NONE guibg=NONE
+else
+  hi! Normal cterm=NONE gui=NONE ctermfg=10 guifg=#586e75 ctermbg=15 guibg=#fdf6e3
+endif
 hi! Comment cterm=NONE gui=NONE,italic ctermfg=12 guifg=#839496 ctermbg=NONE guibg=NONE
 hi! Constant cterm=NONE gui=NONE ctermfg=6 guifg=#2aa198 ctermbg=NONE guibg=NONE
 hi! Identifier cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE

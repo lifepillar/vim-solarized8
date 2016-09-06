@@ -155,7 +155,11 @@ for s:solarized_background in ["dark", "light"]
 
     "}}}
 
-    call s:put("hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back)
+    call s:put("if !has('gui_running') && get(g:, 'solarized_termtrans', 0)")
+    call s:put("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_none)
+    call s:put("else")
+    call s:put("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back)
+    call s:put("endif")
 
     " Basic highlighting"{{{
     " ---------------------------------------------------------------------
