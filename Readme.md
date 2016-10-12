@@ -35,8 +35,8 @@ palette. The ugly degraded 256-color variant has been removed.
 If your Vim supports packages (`echo has('packages')` prints `1`), I strongly
 recommend that you use them. Just clone this repo inside `pack/*/opt`, e.g.:
 
-    git clone https://github.com/lifepillar/vim-solarized8.git
-    \ ~/.vim/pack/themes/opt/solarized8
+    git clone https://github.com/lifepillar/vim-solarized8.git \
+     ~/.vim/pack/themes/opt/solarized8
 
 Otherwise, use your favourite installation method.
 
