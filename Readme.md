@@ -1,5 +1,9 @@
 # Solarized 8: True Colors
 
+![Solarized 8 Dark Flat](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_dark_flat.png)
+
+![Solarized 8 Light Flat](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_light_flat.png)
+
 This is yet another Solarized theme for Vim. It places itself half way between
 the original [Solarized](https://github.com/altercation/vim-colors-solarized)
 and the [Flattened](https://github.com/romainl/flattened) variant. It
@@ -35,8 +39,8 @@ palette. The ugly degraded 256-color variant has been removed.
 If your Vim supports packages (`echo has('packages')` prints `1`), I strongly
 recommend that you use them. Just clone this repo inside `pack/*/opt`, e.g.:
 
-    git clone https://github.com/lifepillar/vim-solarized8.git
-    \ ~/.vim/pack/themes/opt/solarized8
+    git clone https://github.com/lifepillar/vim-solarized8.git \
+     ~/.vim/pack/themes/opt/solarized8
 
 Otherwise, use your favourite installation method.
 
