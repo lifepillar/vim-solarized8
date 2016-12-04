@@ -80,19 +80,18 @@ These options may be used with any `solarized8_*` variant.
 
 ## Troubleshooting
 
-**Hey, I do not get the right colors when running Vim inside tmux!**
+**Hey, I do not get the right colors when running Vim inside tmux or in my
+favourite true-color enabled terminal!**
 
-Put this in your `.vimrc`:
+Try putting this in your `.vimrc`:
 
 ```
-set t_8f=^[[38;2;%lu;%lu;%lum
-set t_8b=^[[48;2;%lu;%lu;%lum
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 ```
 
-where `^[` is *not* obtained by typing `^` followed by `[`, but it is a real
-escape character (to obtain it, type `<Ctrl-v><Ctrl-[>` in Insert mode). If that
-does not work yet, try replacing the semicolons with colons. See `:h
-xterm-true-color` for the details.
+See `:h xterm-true-color` for the details.
+
 
 ## Tips
 
