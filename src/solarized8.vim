@@ -12,13 +12,12 @@ for s:solarized_background in ["dark", "light"]
     call s:put('" Author:   Lifepillar <lifepillar@lifepillar.me>')
     call s:put('" License:  OSI approved MIT license (see end of this file)')
     call s:put('')
+    call s:put('set background='.s:solarized_background)
     call s:put('hi clear')
     call s:put('if exists("syntax_on")')
     call s:put('  syntax reset')
     call s:put('endif')
-    call s:put('')
     call s:put('let colors_name = "' . s:colors_name . '"')
-    call s:put('set background='.s:solarized_background)
     call s:put('')
 
     let s:base03      = ["8" , "#002b36"]

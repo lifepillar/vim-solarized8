@@ -2,13 +2,12 @@
 " Author:   Lifepillar <lifepillar@lifepillar.me>
 " License:  OSI approved MIT license (see end of this file)
 
+set background=dark
 hi clear
 if exists("syntax_on")
   syntax reset
 endif
-
 let colors_name = "solarized8_dark_flat"
-set background=dark
 
 if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
   hi! Normal cterm=NONE gui=NONE ctermfg=12 guifg=#839496 ctermbg=NONE guibg=NONE
