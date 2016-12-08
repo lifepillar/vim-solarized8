@@ -49,10 +49,10 @@ hi! VisualMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,rever
 hi! CommandMode ctermfg=5 guifg=#d33682 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 if get(g:, "solarized_statusline", "") == "low"
   hi! StatusLine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
-  hi! StatusLineNC ctermfg=10 guifg=#586e75 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
-  hi! TabLine ctermfg=10 guifg=#586e75 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
-  hi! TabLineFill ctermfg=10 guifg=#586e75 ctermbg=14 guibg=#93a1a1 cterm=NONE,reverse gui=NONE,reverse
-  hi! TabLineSel ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse gui=NONE,reverse
+  hi! StatusLineNC ctermfg=10 guifg=#586e75 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLine ctermfg=10 guifg=#586e75 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLineFill ctermfg=10 guifg=#586e75 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
+  hi! TabLineSel ctermfg=12 guifg=#839496 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 else
   hi! StatusLine ctermfg=12 guifg=#839496 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse
   hi! StatusLineNC ctermfg=10 guifg=#586e75 ctermbg=0 guibg=#073642 cterm=NONE,reverse gui=NONE,reverse

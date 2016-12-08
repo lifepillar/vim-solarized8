@@ -309,7 +309,12 @@ for s:solarized_background in ["dark", "light"]
           call s:put("  hi! TabLine"      .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
           call s:put("  hi! TabLineFill"  .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
           call s:put("  hi! TabLineSel"   .s:fg_base0  .s:bg_base3  .s:fmt_revbb)
-        else
+        elseif s:solarized_contrast == "normal"
+          call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
+          call s:put("  hi! TabLine"      .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
+          call s:put("  hi! TabLineFill"  .s:fg_base01 .s:bg_base02 .s:fmt_revbb)
+          call s:put("  hi! TabLineSel"   .s:fg_base0  .s:bg_base3  .s:fmt_revbb)
+        else " low contrast
           call s:put("  hi! StatusLineNC" .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
           call s:put("  hi! TabLine"      .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
           call s:put("  hi! TabLineFill"  .s:fg_base01 .s:bg_base1  .s:fmt_revbb)
