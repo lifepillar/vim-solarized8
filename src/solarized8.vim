@@ -154,12 +154,35 @@ for s:solarized_background in ["dark", "light"]
     exe "let s:sp_cyan      = ' guisp=".s:cyan[1]   ."'"
 
     "}}}
-
-    call s:put("if !has('gui_running') && get(g:, 'solarized_termtrans', 0)")
-    call s:put("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_none)
-    call s:put("else")
-    call s:put("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back)
-    call s:put("endif")
+    if s:solarized_contrast ==# "flat"
+      call s:put  ("if !has('gui_running') && get(g:, 'solarized_termtrans', 0)")
+      call s:put  ("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_none)
+      call s:put  ("else")
+      call s:put  ("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back)
+      call s:put  ("endif")
+      call s:put  ("hi! LineNr"           .s:fmt_none   .s:fg_base01 .s:bg_none)
+      if s:solarized_background ==# "dark"
+        call s:put("hi! CursorLineNr"                                .s:bg_none)
+      else
+        call s:put("hi! CursorLineNr"                                .s:bg_none)
+      endif
+      call s:put  ("hi! Folded"           .s:fmt_undb   .s:fg_base0  .s:bg_none  .s:sp_base03)
+      call s:put  ("hi! FoldColumn"       .s:fmt_none   .s:fg_base0  .s:bg_none)
+    else " Not flat
+      call s:put  ("if !has('gui_running') && get(g:, 'solarized_termtrans', 0)")
+      call s:put  ("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_none)
+      call s:put  ("  hi! CursorLineNr"                              .s:bg_none)
+      call s:put  ("  hi! LineNr"                                    .s:bg_none)
+      call s:put  ("  hi! Folded"                                    .s:bg_none)
+      call s:put  ("  hi! FoldColumn"                                .s:bg_none)
+      call s:put  ("else")
+      call s:put  ("  hi! Normal"         .s:fmt_none   .s:fg_base0  .s:bg_back)
+      call s:put  ("  hi! CursorLineNr"                              .s:bg_base02)
+      call s:put  ("  hi! LineNr"                                    .s:bg_base02)
+      call s:put  ("  hi! Folded"                                    .s:bg_base02)
+      call s:put  ("  hi! FoldColumn"                                .s:bg_base02)
+      call s:put  ("endif")
+    endif
 
     " Basic highlighting"{{{
     " ---------------------------------------------------------------------
@@ -232,19 +255,11 @@ for s:solarized_background in ["dark", "light"]
     if s:solarized_background ==# "dark"
       call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_orange    .s:bg_none)
       call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_orange    .s:bg_none)
-      if s:solarized_contrast ==# "flat"
-        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange    .s:bg_none)
-      else
-        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange    .s:bg_base02)
-      endif
+      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange)
     else
       call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_red    .s:bg_none)
       call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_red    .s:bg_none)
-      if s:solarized_contrast ==# "flat"
-        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red    .s:bg_none)
-      else
-        call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red    .s:bg_base02)
-      endif
+      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red)
     endif
     if s:solarized_background == "dark"
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
@@ -254,20 +269,12 @@ for s:solarized_background in ["dark", "light"]
     call s:put('elseif get(g:, "solarized_visibility", "") == "low"')
     call s:put("  hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none)
     call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none)
-    if s:solarized_contrast ==# "flat"
-      call s:put("  hi! CursorLineNr". s:fmt_bold   .s:fg_base01 .s:bg_none)
-    else
-      call s:put("  hi! CursorLineNr". s:fmt_bold   .s:fg_base01 .s:bg_base02)
-    endif
+    call s:put("  hi! CursorLineNr". s:fmt_bold   .s:fg_base01)
     call s:put("  hi! Title"          .s:fmt_bold   .s:fg_base01    .s:bg_none)
     call s:put('else')
     call s:put("  hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02)
     call s:put("  hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none)
-    if s:solarized_contrast ==# "flat"
-      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_none)
-    else
-      call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0 .s:bg_base02)
-    endif
+    call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_base0)
     if s:solarized_background == "dark"
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
     else
@@ -372,10 +379,8 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! Search"         .s:fmt_revr   .s:fg_yellow .s:bg_none)
     call s:put("hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none)
     call s:put("hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none)
-    if s:solarized_contrast ==# "flat"
-      call s:put("hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_none)
-    else
-      call s:put("hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02)
+    if s:solarized_contrast !=# "flat"
+      call s:put("hi! LineNr"         .s:fmt_none   .s:fg_base01)
     endif
     call s:put("hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none)
     if s:solarized_contrast == "flat"
@@ -399,8 +404,10 @@ for s:solarized_background in ["dark", "light"]
         call s:put("hi! WildMenu"       .s:fg_base2  .s:bg_base02 .s:fmt_revbb)
       endif
     endif
-    call s:put("hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03)
-    call s:put("hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02)
+    if s:solarized_contrast !=# "flat"
+      call s:put("hi! Folded"         .s:fmt_undb   .s:fg_base0   .s:sp_base03)
+      call s:put("hi! FoldColumn"     .s:fmt_none   .s:fg_base0)
+    endif
     call s:put('if get(g:, "solarized_diffmode", "") == "high"')
     call s:put("  hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none)
     call s:put("  hi! DiffChange"     .s:fmt_revr   .s:fg_yellow .s:bg_none)
