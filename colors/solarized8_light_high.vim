@@ -111,7 +111,7 @@ hi! PmenuThumb ctermfg=10 guifg=#586e75 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reve
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5
 hi! CursorLine cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5 guisp=#073642
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5
-hi! Cursor cterm=NONE gui=NONE ctermfg=15 guifg=#fdf6e3 ctermbg=10 guibg=#586e75
+hi! Cursor cterm=NONE gui=NONE ctermfg=8 guifg=#002b36 ctermbg=4 guibg=#268bd2
 hi! link lCursor Cursor
 hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=15 guifg=#fdf6e3 ctermbg=11 guibg=#657b83
 hi! link vimVar Identifier

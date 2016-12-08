@@ -459,7 +459,7 @@ for s:solarized_background in ["dark", "light"]
       call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1)
     endif
     call s:put("hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02)
-    call s:put("hi! Cursor"         .s:fmt_none   .s:fg_base03 .s:bg_base0)
+    call s:put("hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_blue)
     call s:put("hi! link lCursor Cursor")
     " Changed by Lifepillar: better (in my opinion) highlighting for MatchParen:
     if s:solarized_background == 'dark'
