@@ -92,18 +92,16 @@ elseif get(g:, "solarized_diffmode", "") == "low"
   hi! DiffChange cterm=NONE gui=NONE ctermfg=3 guifg=#b58900 ctermbg=NONE guibg=NONE guisp=#b58900
   hi! DiffDelete cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
   hi! DiffText cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE guisp=#268bd2
-else
-  if has("gui_running")
+elseif get(g:, "solarized_diffmode", "") == "bold"
     hi! DiffAdd cterm=NONE,bold gui=NONE,bold ctermfg=2 guifg=#719e07 ctermbg=0 guibg=#073642 guisp=#719e07
     hi! DiffChange cterm=NONE,bold gui=NONE,bold ctermfg=3 guifg=#b58900 ctermbg=0 guibg=#073642 guisp=#b58900
     hi! DiffDelete cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=0 guibg=#073642
     hi! DiffText cterm=NONE,bold gui=NONE,bold ctermfg=4 guifg=#268bd2 ctermbg=0 guibg=#073642 guisp=#268bd2
-  else
-    hi! DiffAdd cterm=NONE gui=NONE ctermfg=2 guifg=#719e07 ctermbg=0 guibg=#073642 guisp=#719e07
-    hi! DiffChange cterm=NONE gui=NONE ctermfg=3 guifg=#b58900 ctermbg=0 guibg=#073642 guisp=#b58900
-    hi! DiffDelete cterm=NONE gui=NONE ctermfg=1 guifg=#dc322f ctermbg=0 guibg=#073642
-    hi! DiffText cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=0 guibg=#073642 guisp=#268bd2
-  endif
+else
+  hi! DiffAdd cterm=NONE gui=NONE ctermfg=2 guifg=#719e07 ctermbg=0 guibg=#073642 guisp=#719e07
+  hi! DiffChange cterm=NONE gui=NONE ctermfg=3 guifg=#b58900 ctermbg=0 guibg=#073642 guisp=#b58900
+  hi! DiffDelete cterm=NONE gui=NONE ctermfg=1 guifg=#dc322f ctermbg=0 guibg=#073642
+  hi! DiffText cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=0 guibg=#073642 guisp=#268bd2
 endif
 hi! SignColumn cterm=NONE gui=NONE ctermfg=14 guifg=#93a1a1 ctermbg=NONE guibg=NONE
 hi! Conceal cterm=NONE gui=NONE ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE
