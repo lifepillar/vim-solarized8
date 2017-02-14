@@ -118,6 +118,10 @@ hi! CursorLine cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5
 hi! Cursor cterm=NONE gui=NONE ctermfg=8 guifg=#002b36 ctermbg=4 guibg=#268bd2
 hi! link lCursor Cursor
+if has('nvim')
+  hi! link TermCursor Cursor
+  hi! TermCursorNC ctermfg=15 guifg=#fdf6e3 ctermbg=12 guibg=#839496 cterm=NONE gui=NONE
+endif
 hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=15 guifg=#fdf6e3 ctermbg=11 guibg=#657b83
 hi! link vimVar Identifier
 hi! link vimFunc Function

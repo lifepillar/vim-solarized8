@@ -466,6 +466,12 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02)
     call s:put("hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_blue)
     call s:put("hi! link lCursor Cursor")
+
+    call s:put("if has('nvim')")
+    call s:put("  hi! link TermCursor Cursor")
+    call s:put("  hi! TermCursorNC"   .s:fg_base03  .s:bg_base01  .s:fmt_none)
+    call s:put("endif")
+
     " Changed by Lifepillar: better (in my opinion) highlighting for MatchParen:
     if s:solarized_background == 'dark'
       call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base3  .s:bg_base02)
