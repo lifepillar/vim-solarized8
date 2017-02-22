@@ -470,6 +470,33 @@ for s:solarized_background in ["dark", "light"]
     call s:put("if has('nvim')")
     call s:put("  hi! link TermCursor Cursor")
     call s:put("  hi! TermCursorNC"   .s:fg_base03  .s:bg_base01  .s:fmt_none)
+    let s:colorTable = [
+          \ s:base03,
+          \ s:base02,
+          \ s:base01,
+          \ s:base00,
+          \ s:base0,
+          \ s:base1,
+          \ s:base2,
+          \ s:base3,
+          \ s:yellow,
+          \ s:orange,
+          \ s:red,
+          \ s:magenta,
+          \ s:violet,
+          \ s:blue,
+          \ s:cyan,
+          \ s:green
+          \ ]
+    let s:colorTableIndices = map(copy(s:colorTable), 'v:val[0]')
+    let s:colorTableCodes   = map(copy(s:colorTable), 'v:val[1]')
+
+    for s:num in [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+      let s:matchIndex = index(s:colorTableIndices, string(s:num))
+      if s:matchIndex >= 0
+        call s:put("  let g:terminal_color_" . s:num . " = '" . s:colorTableCodes[s:matchIndex] . "'")
+      endif
+    endfor
     call s:put("endif")
 
     " Changed by Lifepillar: better (in my opinion) highlighting for MatchParen:
