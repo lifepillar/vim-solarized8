@@ -131,6 +131,7 @@ if has('nvim')
   let g:terminal_color_7 = '#eee8d5'
   let g:terminal_color_8 = '#002b36'
   let g:terminal_color_9 = '#cb4b16'
+  let g:terminal_color_10 = '#586e75'
   let g:terminal_color_11 = '#657b83'
   let g:terminal_color_12 = '#839496'
   let g:terminal_color_13 = '#6c71c4'

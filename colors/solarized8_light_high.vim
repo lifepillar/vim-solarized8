@@ -135,6 +135,7 @@ if has('nvim')
   let g:terminal_color_11 = '#657b83'
   let g:terminal_color_12 = '#839496'
   let g:terminal_color_13 = '#6c71c4'
+  let g:terminal_color_14 = '#93a1a1'
   let g:terminal_color_15 = '#fdf6e3'
 endif
 hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=15 guifg=#fdf6e3 ctermbg=11 guibg=#657b83

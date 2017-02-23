@@ -46,6 +46,7 @@ for s:solarized_background in ["dark", "light"]
     let s:b           = ",bold"
     let s:i           = ",italic"
     let s:u           = ""
+    let s:placeholder = ["",""]
 
     if s:solarized_background == "light"
       let s:temp03      = s:base03
@@ -64,6 +65,7 @@ for s:solarized_background in ["dark", "light"]
     endif
 
     if s:solarized_contrast == "high"
+      let s:placeholder = s:base01
       let s:base01      = s:base00
       let s:base00      = s:base0
       let s:base0       = s:base1
@@ -486,7 +488,8 @@ for s:solarized_background in ["dark", "light"]
           \ s:violet,
           \ s:blue,
           \ s:cyan,
-          \ s:green
+          \ s:green,
+          \ s:placeholder
           \ ]
     let s:colorTableIndices = map(copy(s:colorTable), 'v:val[0]')
     let s:colorTableCodes   = map(copy(s:colorTable), 'v:val[1]')
