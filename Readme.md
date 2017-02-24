@@ -33,6 +33,10 @@ For terminals not supporting true colors, the requirement is the same as for the
 other color schemes: your 16 terminal ASCII colors must be set to the Solarized
 palette. The ugly degraded 256-color variant has been removed.
 
+In NeoVim, Solarized 8 defines a color palette for the [terminal
+emulator](https://neovim.io/doc/user/nvim_terminal_emulator.html), as well as
+specifying colors for the `TermCursor` and `TermCursorNC` highlight groups.
+
 
 ## Installation
 
@@ -86,7 +90,7 @@ favourite true-color enabled terminal!**
 
 Try putting this in your `.vimrc`:
 
-```
+```viml
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 ```
@@ -99,7 +103,7 @@ See `:h xterm-true-color` for the details.
 If you want to quickly toggle between dark and light background, you may define
 a mapping like the following:
 
-```
+```viml
 nnoremap  <leader>B :<c-u>exe "colors" (g:colors_name =~# "dark"
     \ ? substitute(g:colors_name, 'dark', 'light', '')
     \ : substitute(g:colors_name, 'light', 'dark', '')
@@ -108,7 +112,7 @@ nnoremap  <leader>B :<c-u>exe "colors" (g:colors_name =~# "dark"
 
 To tune the contrast level you may use the following snippet:
 
-```
+```viml
 fun! Solarized8Contrast(delta)
   let l:schemes = map(["_low", "_flat", "", "_high"], '"solarized8_".(&background).v:val')
   exe "colors" l:schemes[((a:delta+index(l:schemes, g:colors_name)) % 4 + 4) % 4]
