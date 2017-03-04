@@ -1,6 +1,6 @@
-" Name:     Solarized colorscheme for Vim 8
-" Author:   Lifepillar <lifepillar@lifepillar.me>
-" License:  OSI approved MIT license (see end of this file)
+" Name:         Solarized colorscheme for Vim 8
+" Maintainer:   Lifepillar <lifepillar@lifepillar.me>
+" License:      OSI approved MIT license (see end of this file)
 
 set background=dark
 hi clear

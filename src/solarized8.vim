@@ -8,9 +8,9 @@ for s:solarized_background in ["dark", "light"]
     execute "silent" "tabnew" "+setlocal\\ ft=vim"
     execute "file" s:colors_name.".vim"
 
-    call s:put('" Name:     Solarized colorscheme for Vim 8')
-    call s:put('" Author:   Lifepillar <lifepillar@lifepillar.me>')
-    call s:put('" License:  OSI approved MIT license (see end of this file)')
+    call s:put('" Name:         Solarized colorscheme for Vim 8')
+    call s:put('" Maintainer:   Lifepillar <lifepillar@lifepillar.me>')
+    call s:put('" License:      OSI approved MIT license (see end of this file)')
     call s:put('')
     call s:put('set background='.s:solarized_background)
     call s:put('hi clear')
