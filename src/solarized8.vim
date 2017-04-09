@@ -500,7 +500,7 @@ for s:solarized_background in ["dark", "light"]
     if s:solarized_background == 'dark'
       call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base3  .s:bg_base02)
     else
-      call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base03 .s:bg_base00)
+      call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_none .s:bg_base02)
     endif
     "}}}
     " vim syntax highlighting "{{{
