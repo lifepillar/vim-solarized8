@@ -480,7 +480,7 @@ for s:solarized_background in ["dark", "light"]
     endif
     call s:put("hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02)
     if s:solarized_contrast == "flat"
-      call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base03  .s:sp_base1)
+      call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base03  .s:sp_base01)
     else
       call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1)
     endif

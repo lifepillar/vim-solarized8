@@ -112,7 +112,7 @@ hi! PmenuSel ctermfg=11 guifg=#657b83 ctermbg=7 guibg=#eee8d5 cterm=NONE,reverse
 hi! PmenuSbar ctermfg=0 guifg=#073642 ctermbg=10 guibg=#586e75 cterm=NONE,reverse gui=NONE,reverse
 hi! PmenuThumb ctermfg=10 guifg=#586e75 ctermbg=8 guibg=#002b36 cterm=NONE,reverse gui=NONE,reverse
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642
-hi! CursorLine cterm=NONE,underline gui=NONE,underline ctermfg=NONE guifg=NONE ctermbg=8 guibg=#002b36 guisp=#93a1a1
+hi! CursorLine cterm=NONE,underline gui=NONE,underline ctermfg=NONE guifg=NONE ctermbg=8 guibg=#002b36 guisp=#586e75
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=0 guibg=#073642
 hi! Cursor cterm=NONE gui=NONE ctermfg=15 guifg=#fdf6e3 ctermbg=4 guibg=#268bd2
 hi! link lCursor Cursor
