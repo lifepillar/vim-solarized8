@@ -485,7 +485,15 @@ for s:solarized_background in ["dark", "light"]
       call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1)
     endif
     call s:put("hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02)
-    call s:put("hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_blue)
+    if s:solarized_background == "dark"
+      call s:put("hi! Cursor"       .s:fmt_none   .s:fg_base3  .s:bg_blue)
+    else
+      if s:solarized_contrast == "low" || s:solarized_contrast == "flat"
+        call s:put("hi! Cursor"     .s:fmt_none   .s:fg_base03 .s:bg_base0) " As in the original Solarized
+      else
+        call s:put("hi! Cursor"     .s:fmt_none   .s:fg_base03 .s:bg_red)
+      endif
+    endif
     call s:put("hi! link lCursor Cursor")
 
     call s:put("if has('nvim')")

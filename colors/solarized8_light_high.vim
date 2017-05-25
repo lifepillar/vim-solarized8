@@ -116,7 +116,7 @@ hi! PmenuThumb ctermfg=10 guifg=#586e75 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reve
 hi! CursorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5
 hi! CursorLine cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5 guisp=#073642
 hi! ColorColumn cterm=NONE gui=NONE ctermfg=NONE guifg=NONE ctermbg=7 guibg=#eee8d5
-hi! Cursor cterm=NONE gui=NONE ctermfg=8 guifg=#002b36 ctermbg=4 guibg=#268bd2
+hi! Cursor cterm=NONE gui=NONE ctermfg=15 guifg=#fdf6e3 ctermbg=1 guibg=#dc322f
 hi! link lCursor Cursor
 if has('nvim')
   hi! link TermCursor Cursor
