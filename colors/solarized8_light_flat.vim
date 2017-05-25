@@ -136,7 +136,7 @@ if has('nvim')
   let g:terminal_color_14 = '#93a1a1'
   let g:terminal_color_15 = '#fdf6e3'
 endif
-hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=7 guibg=#eee8d5
+hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=7 guibg=#eee8d5
 hi! link vimVar Identifier
 hi! link vimFunc Function
 hi! link vimUserFunc Function

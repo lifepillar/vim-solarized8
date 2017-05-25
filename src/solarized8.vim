@@ -507,10 +507,16 @@ for s:solarized_background in ["dark", "light"]
     " Changed by Lifepillar: better (in my opinion) highlighting for MatchParen
     " (see also https://github.com/lifepillar/vim-solarized8/issues/11 and
     " https://github.com/lifepillar/vim-solarized8/issues/15):
-    if s:solarized_background == 'dark'
+    if s:solarized_background == "dark"
       call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base3  .s:bg_base02)
     else
-      call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_red .s:bg_base02)
+      if s:solarized_contrast == "flat"
+        call s:put("hi! MatchParen"   .s:fmt_bold   .s:fg_orange .s:bg_base02)
+      elseif s:solarized_contrast == "low"
+        call s:put("hi! MatchParen"   .s:fmt_bold   .s:fg_base3  .s:bg_none)
+      else
+        call s:put("hi! MatchParen"   .s:fmt_bold   .s:fg_base03 .s:bg_base00)
+      endif
     endif
     "}}}
     " vim syntax highlighting "{{{
