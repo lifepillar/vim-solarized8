@@ -496,11 +496,13 @@ for s:solarized_background in ["dark", "light"]
     endfor
     call s:put("endif")
 
-    " Changed by Lifepillar: better (in my opinion) highlighting for MatchParen:
+    " Changed by Lifepillar: better (in my opinion) highlighting for MatchParen
+    " (see also https://github.com/lifepillar/vim-solarized8/issues/11 and
+    " https://github.com/lifepillar/vim-solarized8/issues/15):
     if s:solarized_background == 'dark'
       call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base3  .s:bg_base02)
     else
-      call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_none .s:bg_base02)
+      call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_red .s:bg_base02)
     endif
     "}}}
     " vim syntax highlighting "{{{
