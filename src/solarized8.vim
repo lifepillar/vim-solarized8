@@ -271,23 +271,50 @@ for s:solarized_background in ["dark", "light"]
     "}}}
     " Extended highlighting "{{{
     " ---------------------------------------------------------------------
+    if s:solarized_background ==# "dark"
+      call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base3  .s:bg_base02)
+    endif
+
+    " High visibility
     call s:put('if get(g:, "solarized_visibility", "") == "high"')
     if s:solarized_background ==# "dark"
       call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_orange    .s:bg_none)
       call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_orange    .s:bg_none)
       call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_orange)
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_yellow    .s:bg_none)
-    else
+    else " light
       call s:put("  hi! SpecialKey"     .s:fmt_revr   .s:fg_red       .s:bg_none)
       call s:put("  hi! NonText"        .s:fmt_bold   .s:fg_red       .s:bg_none)
       call s:put("  hi! CursorLineNr"   .s:fmt_bold   .s:fg_red)
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_orange    .s:bg_none)
+      if s:solarized_background ==# "light"
+        if s:solarized_contrast ==# "flat"
+          call s:put("  hi! MatchParen"   .s:fmt_bldu   .s:fg_orange    .s:bg_base02)
+        elseif s:solarized_contrast ==# "low"
+          call s:put("  hi! MatchParen"   .s:fmt_bldu   .s:fg_base3     .s:bg_none)
+        else
+          call s:put("  hi! MatchParen"   .s:fmt_bold   .s:fg_base03    .s:bg_base00)
+        endif
+      endif
     endif
+
+    " Low visibility
     call s:put('elseif get(g:, "solarized_visibility", "") == "low"')
     call s:put("  hi! SpecialKey"       .s:fmt_bold   .s:fg_base02    .s:bg_none)
     call s:put("  hi! NonText"          .s:fmt_bold   .s:fg_base02    .s:bg_none)
     call s:put("  hi! CursorLineNr"     .s:fmt_bold   .s:fg_base01)
     call s:put("  hi! Title"            .s:fmt_bold   .s:fg_base01    .s:bg_none)
+    if s:solarized_background ==# "light"
+      if s:solarized_contrast ==# "flat"
+        call s:put("  hi! MatchParen"     .s:fmt_bold   .s:fg_orange    .s:bg_base02)
+      elseif s:solarized_contrast ==# "low"
+        call s:put("  hi! MatchParen"     .s:fmt_bold   .s:fg_base3     .s:bg_base02)
+      else
+        call s:put("  hi! MatchParen"     .s:fmt_bldu   .s:fg_red       .s:bg_base02)
+      endif
+    endif
+
+    " Normal visibility
     call s:put('else')
     call s:put("  hi! SpecialKey"       .s:fmt_bold   .s:fg_base00    .s:bg_base02)
     call s:put("  hi! NonText"          .s:fmt_bold   .s:fg_base00    .s:bg_none)
@@ -297,7 +324,18 @@ for s:solarized_background in ["dark", "light"]
     else
       call s:put("  hi! Title"          .s:fmt_bold   .s:fg_orange    .s:bg_none)
     endif
+    if s:solarized_background ==# "light"
+      if s:solarized_contrast ==# "flat"
+        call s:put("  hi! MatchParen"     .s:fmt_bold   .s:fg_orange    .s:bg_base02)
+      elseif s:solarized_contrast ==# "low"
+        call s:put("  hi! MatchParen"     .s:fmt_bold   .s:fg_base3     .s:bg_base02)
+      else
+        call s:put("  hi! MatchParen"     .s:fmt_bldu   .s:fg_red       .s:bg_base02)
+      endif
+    endif
     call s:put('endif')
+    " End visibility
+
     if s:solarized_contrast != "flat"
       if s:solarized_background == "dark"
         call s:put("hi! NormalMode" . s:fg_base0  .s:bg_base3. s:fmt_revbb)
@@ -500,21 +538,6 @@ for s:solarized_background in ["dark", "light"]
       call s:put("  let g:terminal_color_" . s:col[0] . " = '" . s:col[1] . "'")
     endfor
     call s:put("endif")
-
-    " Changed by Lifepillar: better (in my opinion) highlighting for MatchParen
-    " (see also https://github.com/lifepillar/vim-solarized8/issues/11 and
-    " https://github.com/lifepillar/vim-solarized8/issues/15):
-    if s:solarized_background == "dark"
-      call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base3  .s:bg_base02)
-    else
-      if s:solarized_contrast == "flat"
-        call s:put("hi! MatchParen"   .s:fmt_bold   .s:fg_orange .s:bg_base02)
-      elseif s:solarized_contrast == "low"
-        call s:put("hi! MatchParen"   .s:fmt_bold   .s:fg_base3  .s:bg_none)
-      else
-        call s:put("hi! MatchParen"   .s:fmt_bold   .s:fg_base03 .s:bg_base00)
-      endif
-    endif
     "}}}
     " vim syntax highlighting "{{{
     " ---------------------------------------------------------------------

@@ -38,16 +38,19 @@ if get(g:, "solarized_visibility", "") == "high"
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f ctermbg=NONE guibg=NONE
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=1 guifg=#dc322f
   hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
+  hi! MatchParen cterm=NONE,bold,underline gui=NONE,bold,underline ctermfg=8 guifg=#002b36 ctermbg=NONE guibg=NONE
 elseif get(g:, "solarized_visibility", "") == "low"
   hi! SpecialKey cterm=NONE,bold gui=NONE,bold ctermfg=7 guifg=#eee8d5 ctermbg=NONE guibg=NONE
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=7 guifg=#eee8d5 ctermbg=NONE guibg=NONE
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=14 guifg=#93a1a1
   hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=14 guifg=#93a1a1 ctermbg=NONE guibg=NONE
+  hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=8 guifg=#002b36 ctermbg=7 guibg=#eee8d5
 else
   hi! SpecialKey cterm=NONE,bold gui=NONE,bold ctermfg=12 guifg=#839496 ctermbg=7 guibg=#eee8d5
   hi! NonText cterm=NONE,bold gui=NONE,bold ctermfg=12 guifg=#839496 ctermbg=NONE guibg=NONE
   hi! CursorLineNr cterm=NONE,bold gui=NONE,bold ctermfg=11 guifg=#657b83
   hi! Title cterm=NONE,bold gui=NONE,bold ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE
+  hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=8 guifg=#002b36 ctermbg=7 guibg=#eee8d5
 endif
 hi! NormalMode ctermfg=10 guifg=#586e75 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
 hi! InsertMode ctermfg=6 guifg=#2aa198 ctermbg=15 guibg=#fdf6e3 cterm=NONE,reverse gui=NONE,reverse
@@ -138,7 +141,6 @@ if has('nvim')
   let g:terminal_color_14 = '#93a1a1'
   let g:terminal_color_15 = '#fdf6e3'
 endif
-hi! MatchParen cterm=NONE,bold gui=NONE,bold ctermfg=8 guifg=#002b36 ctermbg=NONE guibg=NONE
 hi! link vimVar Identifier
 hi! link vimFunc Function
 hi! link vimUserFunc Function
