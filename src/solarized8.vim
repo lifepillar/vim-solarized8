@@ -139,6 +139,7 @@ for s:solarized_background in ["dark", "light"]
     exe "let s:fmt_none     = ' cterm=NONE gui=NONE"           ."'"
     exe "let s:fmt_bold     = ' cterm=NONE".s:b        ." gui=NONE".s:b       ."'"
     exe "let s:fmt_bldi     = ' cterm=NONE".s:b        ." gui=NONE".s:b       ."'"
+    exe "let s:fmt_bldu     = ' cterm=NONE,bold,underline gui=NONE,bold,underline'"
     exe "let s:fmt_undr     = ' cterm=NONE".s:u        ." gui=NONE".s:u       ."'"
     exe "let s:fmt_undb     = ' cterm=NONE".s:u.s:b    ." gui=NONE".s:u.s:b   ."'"
     exe "let s:fmt_undi     = ' cterm=NONE".s:u        ." gui=NONE".s:u       ."'"
@@ -273,6 +274,7 @@ for s:solarized_background in ["dark", "light"]
     " ---------------------------------------------------------------------
     if s:solarized_background ==# "dark"
       call s:put("hi! MatchParen"     .s:fmt_bold   .s:fg_base3  .s:bg_base02)
+      call s:put("hi! Cursor"         .s:fmt_none   .s:fg_base3  .s:bg_blue)
     endif
 
     " High visibility
@@ -295,6 +297,11 @@ for s:solarized_background in ["dark", "light"]
         else
           call s:put("  hi! MatchParen"   .s:fmt_bold   .s:fg_base03    .s:bg_base00)
         endif
+        if s:solarized_contrast ==# "low" || s:solarized_contrast ==# "flat"
+          call s:put("  hi! Cursor"       .s:fmt_none   .s:fg_base03 .s:bg_base1)
+        else
+          call s:put("  hi! Cursor"       .s:fmt_none   .s:fg_base03 .s:bg_red)
+        endif
       endif
     endif
 
@@ -311,6 +318,11 @@ for s:solarized_background in ["dark", "light"]
         call s:put("  hi! MatchParen"     .s:fmt_bold   .s:fg_base3     .s:bg_base02)
       else
         call s:put("  hi! MatchParen"     .s:fmt_bldu   .s:fg_red       .s:bg_base02)
+      endif
+      if s:solarized_contrast ==# "low" || s:solarized_contrast ==# "flat"
+        call s:put("  hi! Cursor"       .s:fmt_none   .s:fg_base03 .s:bg_base0) " As in the original Solarized
+      else
+        call s:put("  hi! Cursor"       .s:fmt_none   .s:fg_base03 .s:bg_orange)
       endif
     endif
 
@@ -331,6 +343,11 @@ for s:solarized_background in ["dark", "light"]
         call s:put("  hi! MatchParen"     .s:fmt_bold   .s:fg_base3     .s:bg_base02)
       else
         call s:put("  hi! MatchParen"     .s:fmt_bldu   .s:fg_red       .s:bg_base02)
+      endif
+      if s:solarized_contrast ==# "low" || s:solarized_contrast ==# "flat"
+        call s:put("  hi! Cursor"       .s:fmt_none   .s:fg_base03 .s:bg_base0) " As in the original Solarized
+      else
+        call s:put("  hi! Cursor"       .s:fmt_none   .s:fg_base03 .s:bg_orange)
       endif
     endif
     call s:put('endif')
@@ -520,15 +537,6 @@ for s:solarized_background in ["dark", "light"]
       call s:put("hi! CursorLine"   .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1)
     endif
     call s:put("hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02)
-    if s:solarized_background == "dark"
-      call s:put("hi! Cursor"       .s:fmt_none   .s:fg_base3  .s:bg_blue)
-    else
-      if s:solarized_contrast == "low" || s:solarized_contrast == "flat"
-        call s:put("hi! Cursor"     .s:fmt_none   .s:fg_base03 .s:bg_base0) " As in the original Solarized
-      else
-        call s:put("hi! Cursor"     .s:fmt_none   .s:fg_base03 .s:bg_red)
-      endif
-    endif
     call s:put("hi! link lCursor Cursor")
 
     call s:put("if has('nvim')")
