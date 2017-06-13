@@ -269,6 +269,7 @@ for s:solarized_background in ["dark", "light"]
     "       *Todo            anything that needs extra attention; mostly the
     "                        keywords TODO FIXME and XXX
     "
+    call s:put("hi! link QuickFixLine Search")
     "}}}
     " Extended highlighting "{{{
     " ---------------------------------------------------------------------
