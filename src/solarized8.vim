@@ -544,6 +544,10 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02)
     call s:put("hi! link lCursor Cursor")
 
+    " Terminal status line
+    call s:put("hi! link StatusLineTerm StatusLine")
+    call s:put("hi! link StatusLineTermNC StatusLineNC")
+    " Nvim
     call s:put("if has('nvim')")
     call s:put("  hi! link TermCursor Cursor")
     call s:put("  hi! TermCursorNC"   .s:fg_base03  .s:bg_base01  .s:fmt_none)
