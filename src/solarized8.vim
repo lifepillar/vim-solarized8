@@ -510,13 +510,21 @@ for s:solarized_background in ["dark", "light"]
     call s:put("hi! SignColumn"     .s:fmt_none   .s:fg_base0  .s:bg_none)
     call s:put("hi! Conceal"        .s:fmt_none   .s:fg_blue   .s:bg_none)
     if s:solarized_background == "dark"
-      call s:put("hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_magenta)
+      if s:solarized_contrast == "high"
+        call s:put("hi! SpellBad"    .s:fmt_curl   .s:fg_violet  .s:bg_none .s:sp_orange)
+        call s:put("hi! SpellCap"    .s:fmt_curl   .s:fg_violet  .s:bg_none .s:sp_orange)
+      else
+        call s:put("hi! SpellBad"    .s:fmt_curl   .s:fg_violet  .s:bg_none .s:sp_violet)
+        call s:put("hi! SpellCap"    .s:fmt_curl   .s:fg_violet  .s:bg_none .s:sp_violet)
+      endif
+      call s:put("hi! SpellRare"     .s:fmt_curl   .s:fg_cyan    .s:bg_none .s:sp_cyan)
+      call s:put("hi! SpellLocal"    .s:fmt_curl   .s:fg_yellow  .s:bg_none .s:sp_yellow)
     else
-      call s:put("hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red)
+      call s:put("hi! SpellBad"      .s:fmt_curl   .s:fg_magenta .s:bg_none .s:sp_violet)
+      call s:put("hi! SpellCap"      .s:fmt_curl   .s:fg_magenta .s:bg_none .s:sp_violet)
+      call s:put("hi! SpellRare"     .s:fmt_curl   .s:fg_cyan    .s:bg_none .s:sp_cyan)
+      call s:put("hi! SpellLocal"    .s:fmt_curl   .s:fg_yellow  .s:bg_none .s:sp_yellow)
     endif
-    call s:put("hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet)
-    call s:put("hi! SpellRare"      .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_cyan)
-    call s:put("hi! SpellLocal"     .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_yellow)
     if s:solarized_contrast == "flat"
       if s:solarized_background == "dark"
         call s:put("hi! Pmenu"          .s:fg_base02 .s:bg_base0   .s:fmt_revbb)
