@@ -74,7 +74,8 @@ The following options were not available in the original Solarized:
   (default is `0`).
 - `g:solarized_old_cursor_style`: set to `1` if you want to use the original
   Solarized's cursor style (default: `0`). By default, the cursor is orange/red
-  in light themes, and blue in dark themes.
+  in light themes, and blue in dark themes (but please note that your terminal
+  may override the cursor's color).
 
 The options above may be used with any `solarized8_*` variant.
 
