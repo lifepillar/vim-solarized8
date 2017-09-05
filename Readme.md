@@ -22,9 +22,9 @@ works **out of the box** if you use:
 **and** a true-color enabled terminal (e.g., [iTerm2](https://www.iterm2.com)).
 Solarized 8 also works in MacVim, gVim, etc…: no configuration is needed.
 
-For terminals not supporting true colors, your 16 terminal ASCII colors **must**
-be set to the Solarized palette. The ugly degraded 256-color variant of the
-original Solarized has been removed from Solarized 8.
+For terminals not supporting true colors, your terminal's 16 ANSI colors
+**must** be set to the Solarized palette. The ugly degraded 256-color variant of
+the original Solarized has been removed from Solarized 8.
 
 In NeoVim, Solarized 8 also defines the color palette for the [terminal
 emulator](https://neovim.io/doc/user/nvim_terminal_emulator.html), as well as
