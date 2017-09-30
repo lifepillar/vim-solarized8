@@ -216,6 +216,8 @@ hi! texMathMatcher ctermfg=3 guifg=#b58900 ctermbg=7 guibg=#eee8d5 cterm=NONE gu
 hi! texMathMatcher ctermfg=3 guifg=#b58900 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
 hi! texRefLabel ctermfg=3 guifg=#b58900 ctermbg=7 guibg=#eee8d5 cterm=NONE gui=NONE
 hi! rubyDefine ctermfg=10 guifg=#586e75 ctermbg=7 guibg=#eee8d5 cterm=NONE,bold gui=NONE,bold
+hi! link rubySymbol Type
+hi! rubyBoolean  ctermfg=5 guifg=#d33682 ctermbg=7 guibg=#eee8d5
 hi! cPreCondit ctermfg=9 guifg=#cb4b16 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 hi! VarId ctermfg=4 guifg=#268bd2 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE
 hi! ConId ctermfg=3 guifg=#b58900 ctermbg=NONE guibg=NONE cterm=NONE gui=NONE

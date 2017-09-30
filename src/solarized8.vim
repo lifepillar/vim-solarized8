@@ -674,6 +674,8 @@ for s:solarized_background in ["dark", "light"]
     " ruby highlighting "{{{
     " ---------------------------------------------------------------------
     call s:put("hi! rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold)
+    call s:put("hi! link rubySymbol Type")
+    call s:put("hi! rubyBoolean "   . s:fg_magenta.s:bg_back)
     "rubyInclude
     "rubySharpBang
     "rubyAccess
