@@ -189,8 +189,8 @@ endverbatim
 Directory            blue              none
 EndOfBuffer          none              none
 ErrorMsg             red               base03            reverse
-FoldColumn           base0             none
-Folded               base0             none              bold s=base03
+FoldColumn           base0             base02/none
+Folded               base0             base02/none       bold s=base03
 IncSearch            orange            none              standout
 LineNr               base01            base02/none
 ModeMsg              blue              none
@@ -222,7 +222,7 @@ StatusLine           base1             base02            reverse
 StatusLineNC         base00            base02            reverse
 TabLine              base00            base02            reverse
 TabLineFill          base00            base02            reverse
-TabLineSel           base2             base02            reverse
+TabLineSel           base1             base02            reverse
 verbatim
 endif
 endverbatim

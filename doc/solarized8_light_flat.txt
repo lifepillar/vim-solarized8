@@ -1,0 +1,47 @@
+
+==============================================================================
+Solarized8 Light Flat colorscheme                     *solarized8_light_flat*
+
+                                           *g:solarized_diffmode*
+Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
+`"high"`, and `"low"`.
+>
+  let g:solarized_diffmode = "normal"
+<
+                                           *g:solarized_old_cursor_style*
+Set to 1 if you want to use the original Solarized's cursor style. By default,
+the cursor is blue. NOTE: your terminal may override the cursor's color.
+>
+  let g:solarized_old_cursor_style = 0
+<
+                                           *g:solarized_statusline*
+Set to `"low"` to reduce the contrast in the status line.
+>
+  let g:solarized_statusline = "normal"
+<
+                                           *g:solarized_term_italics*
+Set to 0 if you want to disable italics in the terminal.
+>
+  let g:solarized_term_italics = 1
+<
+                                           *g:solarized_visibility*
+Tweak the visibility of a few  elements. Allowed values are `"normal"`
+(default), `"high"`, and `"low"`.
+>
+  let g:solarized_visibility = "normal"
+<
+
+==============================================================================
+Solarized8 Light Flat other options                   *solarized8_light_flat-other-options*
+
+                                          *g:solarized_transp_bg*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:solarized_transp_bg = 0
+<
+                                          *g:solarized_use16*
+Set to 0 if you want to use 256 colors.
+>
+  let g:solarized_use16 = 1
+<
