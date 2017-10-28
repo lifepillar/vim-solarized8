@@ -193,32 +193,32 @@ SpellRare            cyan              none              undercurl s=cyan
 verbatim
 if get(g:, "@optionprefix_statusline", "") == "low"
 endverbatim
-StatusLine           base02            base1             reverse
+StatusLine           base02            base1             bold,reverse
 StatusLineNC         base02            base01            reverse
-TabLine              base02            base01
-TabLineFill          base02            base01
+TabLine              base01            base02
+TabLineFill          base01            base02
 TabLineSel           base1             base02
 # Additional highlight groups {{{
-NormalMode           base02            base1             reverse
-InsertMode           cyan              base02            reverse
-ReplaceMode          orange            base02            reverse
-VisualMode           magenta           base02            reverse
-CommandMode          magenta           base02            reverse
+NormalMode           base02            base1             bold,reverse
+InsertMode           base02            cyan              bold,reverse
+ReplaceMode          base02            orange            bold,reverse
+VisualMode           base02            magenta           bold,reverse
+CommandMode          base02            magenta           bold,reverse
 # }}}
 verbatim
 else
 endverbatim
 StatusLine           base02            base2             reverse
 StatusLineNC         base02            base1             reverse
-TabLine              base02            base01
-TabLineFill          base02            base01
+TabLine              base01            base02
+TabLineFill          base01            base02
 TabLineSel           base2             base02
 # Additional highlight groups {{{
 NormalMode           base02            base2             reverse
-InsertMode           cyan              base02            reverse
-ReplaceMode          orange            base02            reverse
-VisualMode           magenta           base02            reverse
-CommandMode          magenta           base02            reverse
+InsertMode           base02            cyan              reverse
+ReplaceMode          base02            orange            reverse
+VisualMode           base02            magenta           reverse
+CommandMode          base02            magenta           reverse
 # }}}
 verbatim
 endif
