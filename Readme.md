@@ -126,8 +126,8 @@ nmap <leader>+ :<c-u>call Solarized8Contrast(+v:count1)<cr>
 
 Do you want to hack the theme? Install the
 [Colortemplate](https://github.com/lifepillar/vim-colortemplate) ftplugin,
-edit the `*.colortemplate` files, then rebuild the colorschemes with the
-`:Colortemplate` command.
+edit the `*.colortemplate` files, then rebuild the colorschemes using the
+script in the `templates` folder.
 
 If you extend or improve Solarized8, please consider submitting a pull request!
 
