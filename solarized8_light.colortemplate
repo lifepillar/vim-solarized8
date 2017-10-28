@@ -192,7 +192,7 @@ ErrorMsg             red               base03            reverse
 FoldColumn           base0             none
 Folded               base0             none              bold s=base03
 IncSearch            orange            none              standout
-LineNr               base01            bg
+LineNr               base01            base02/none
 ModeMsg              blue              none
 MoreMsg              blue              none
 Pmenu                base0             base02            reverse
