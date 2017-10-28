@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Oct 28 14:10:20 2017
+" Last Updated: Sat Oct 28 14:51:46 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -43,9 +43,15 @@ let g:colors_name = 'solarized8_dark'
 if get(g:, 'solarized_use16', 1)
 if !has('gui_running') && get(g:, 'solarized8_dark_transp_bg', 0)
 hi Normal ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=10 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=10 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
 hi Normal ctermfg=12 ctermbg=8 guifg=#839496 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermfg=9 ctermbg=bg guifg=#cb4b16 guibg=bg guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=10 ctermbg=bg guifg=#586e75 guibg=bg guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=12 ctermbg=bg guifg=#839496 guibg=bg guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=10 ctermbg=bg guifg=#586e75 guibg=bg guisp=NONE cterm=NONE gui=NONE
 endif
 hi ColorColumn ctermfg=NONE ctermbg=0 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE gui=NONE
@@ -58,17 +64,14 @@ endif
 hi CursorColumn ctermfg=NONE ctermbg=0 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=0 guifg=NONE guibg=#073642 guisp=#93a1a1 cterm=NONE gui=NONE
 if get(g:, "solarized_visibility", "") == "high"
-hi CursorLineNr ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi SpecialKey ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Title ctermfg=3 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 elseif get(g:, "solarized_visibility", "") == "low"
-hi CursorLineNr ctermfg=10 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=0 ctermbg=NONE guifg=#073642 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi SpecialKey ctermfg=0 ctermbg=NONE guifg=#073642 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Title ctermfg=10 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 else
-hi CursorLineNr ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi SpecialKey ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Title ctermfg=3 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -381,9 +384,15 @@ endif
 if !get(g:, 'solarized_use16', 1)
 if !has('gui_running') && get(g:, 'solarized8_dark_transp_bg', 0)
 hi Normal ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=242 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=242 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
 hi Normal ctermfg=246 ctermbg=235 guifg=#839496 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermfg=166 ctermbg=bg guifg=#cb4b16 guibg=bg guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=242 ctermbg=bg guifg=#586e75 guibg=bg guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi CursorLineNr ctermfg=246 ctermbg=bg guifg=#839496 guibg=bg guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=242 ctermbg=bg guifg=#586e75 guibg=bg guisp=NONE cterm=NONE gui=NONE
 endif
 hi ColorColumn ctermfg=NONE ctermbg=236 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE gui=NONE
@@ -396,17 +405,14 @@ endif
 hi CursorColumn ctermfg=NONE ctermbg=236 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi CursorLine ctermfg=NONE ctermbg=236 guifg=NONE guibg=#073642 guisp=#93a1a1 cterm=NONE gui=NONE
 if get(g:, "solarized_visibility", "") == "high"
-hi CursorLineNr ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi SpecialKey ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Title ctermfg=136 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 elseif get(g:, "solarized_visibility", "") == "low"
-hi CursorLineNr ctermfg=242 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=236 ctermbg=NONE guifg=#073642 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi SpecialKey ctermfg=236 ctermbg=NONE guifg=#073642 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Title ctermfg=242 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 else
-hi CursorLineNr ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi SpecialKey ctermfg=66 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Title ctermfg=136 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -752,20 +758,20 @@ endif
 " CursorLine           none              base02            s=base1
 " verbatim
 " endverbatim
-" CursorLineNr         orange            none              bold
+" CursorLineNr         orange            bg                bold
 " NonText              orange            none              bold
 " SpecialKey           orange            none              reverse
 " Title                yellow            none              bold
 " verbatim
 " endverbatim
-" CursorLineNr         base01            none              bold
+" CursorLineNr         base01            bg                bold
 " NonText              base02            none              bold
 " SpecialKey           base02            none              reverse
 " Title                base01            none              bold
 " verbatim
 " else
 " endverbatim
-" CursorLineNr         base0             none              bold
+" CursorLineNr         base0             bg                bold
 " NonText              base00            none              bold
 " SpecialKey           base00            base02            bold
 " Title                yellow            none              bold
