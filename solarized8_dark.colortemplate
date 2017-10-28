@@ -120,21 +120,21 @@ CursorLine           none              base02            s=base1
 verbatim
 if get(g:, "@optionprefix_visibility", "") == "high"
 endverbatim
-CursorLineNr         orange            none              bold
+CursorLineNr         orange            bg                bold
 NonText              orange            none              bold
 SpecialKey           orange            none              reverse
 Title                yellow            none              bold
 verbatim
 elseif get(g:, "@optionprefix_visibility", "") == "low"
 endverbatim
-CursorLineNr         base01            none              bold
+CursorLineNr         base01            bg                bold
 NonText              base02            none              bold
 SpecialKey           base02            none              reverse
 Title                base01            none              bold
 verbatim
 else
 endverbatim
-CursorLineNr         base0             none              bold
+CursorLineNr         base0             bg                bold
 NonText              base00            none              bold
 SpecialKey           base00            base02            bold
 Title                yellow            none              bold
