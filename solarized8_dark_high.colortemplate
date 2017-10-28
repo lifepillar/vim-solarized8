@@ -72,7 +72,7 @@ enddocumentation
 # Color name                GUI                  Base256    Base16 (optional)
 Color: base03               #002b36                ~        8
 Color: base02               #073642                ~        0
-Color: base01               #657b83                ~        11
+Color: base01               #657b83                243      11
 Color: base00               #839496                ~        12
 Color: base0                #93a1a1                ~        14
 Color: base1                #eee8d5                ~        7
