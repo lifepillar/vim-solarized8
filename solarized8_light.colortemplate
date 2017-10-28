@@ -276,11 +276,11 @@ CursorIM             none              fg
 # }}}
 
 # Additional highlight groups {{{
-NormalMode           base0             base3             reverse
-InsertMode           cyan              base3             reverse
-ReplaceMode          orange            base3             reverse
-VisualMode           magenta           base3             reverse
-CommandMode          magenta           base3             reverse
+NormalMode           base1             base03            reverse
+InsertMode           cyan              base03            reverse
+ReplaceMode          orange            base03            reverse
+VisualMode           magenta           base03            reverse
+CommandMode          magenta           base03            reverse
 # }}}
 
 # Plugin specific highlight groups {{{

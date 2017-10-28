@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Oct 28 14:48:38 2017
+" Last Updated: Sat Oct 28 14:58:52 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -182,11 +182,11 @@ hi! link Typedef Type
 hi Underlined ctermfg=13 ctermbg=NONE guifg=#6c71c4 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
-hi NormalMode ctermfg=11 ctermbg=8 guifg=#657b83 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi InsertMode ctermfg=6 ctermbg=8 guifg=#2aa198 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi ReplaceMode ctermfg=9 ctermbg=8 guifg=#cb4b16 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi VisualMode ctermfg=5 ctermbg=8 guifg=#d33682 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi CommandMode ctermfg=5 ctermbg=8 guifg=#d33682 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi NormalMode ctermfg=10 ctermbg=15 guifg=#586e75 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi InsertMode ctermfg=6 ctermbg=15 guifg=#2aa198 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi ReplaceMode ctermfg=9 ctermbg=15 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi VisualMode ctermfg=5 ctermbg=15 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi CommandMode ctermfg=5 ctermbg=15 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi! link vimVar Identifier
 hi! link vimFunc Function
 hi! link vimUserFunc Function
@@ -535,11 +535,11 @@ hi! link Typedef Type
 hi Underlined ctermfg=61 ctermbg=NONE guifg=#6c71c4 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link lCursor Cursor
 hi CursorIM ctermfg=NONE ctermbg=fg guifg=NONE guibg=fg guisp=NONE cterm=NONE gui=NONE
-hi NormalMode ctermfg=66 ctermbg=235 guifg=#657b83 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi InsertMode ctermfg=37 ctermbg=235 guifg=#2aa198 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi ReplaceMode ctermfg=166 ctermbg=235 guifg=#cb4b16 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi VisualMode ctermfg=162 ctermbg=235 guifg=#d33682 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi CommandMode ctermfg=162 ctermbg=235 guifg=#d33682 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi NormalMode ctermfg=242 ctermbg=230 guifg=#586e75 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi InsertMode ctermfg=37 ctermbg=230 guifg=#2aa198 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi ReplaceMode ctermfg=166 ctermbg=230 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi VisualMode ctermfg=162 ctermbg=230 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi CommandMode ctermfg=162 ctermbg=230 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi! link vimVar Identifier
 hi! link vimFunc Function
 hi! link vimUserFunc Function
@@ -924,11 +924,11 @@ endif
 " Underlined           violet            none
 " lCursor           -> Cursor
 " CursorIM             none              fg
-" NormalMode           base0             base3             reverse
-" InsertMode           cyan              base3             reverse
-" ReplaceMode          orange            base3             reverse
-" VisualMode           magenta           base3             reverse
-" CommandMode          magenta           base3             reverse
+" NormalMode           base1             base03            reverse
+" InsertMode           cyan              base03            reverse
+" ReplaceMode          orange            base03            reverse
+" VisualMode           magenta           base03            reverse
+" CommandMode          magenta           base03            reverse
 " vimVar            -> Identifier
 " vimFunc           -> Function
 " vimUserFunc       -> Function
