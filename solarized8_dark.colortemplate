@@ -120,21 +120,21 @@ CursorLine           none              base02            s=base1
 verbatim
 if get(g:, "@optionprefix_visibility", "") == "high"
 endverbatim
-CursorLineNr         orange            bg                bold
+CursorLineNr         orange            base02/none       bold
 NonText              orange            none              bold
 SpecialKey           orange            none              reverse
 Title                yellow            none              bold
 verbatim
 elseif get(g:, "@optionprefix_visibility", "") == "low"
 endverbatim
-CursorLineNr         base01            bg                bold
+CursorLineNr         base01            base02/none       bold
 NonText              base02            none              bold
 SpecialKey           base02            none              reverse
 Title                base01            none              bold
 verbatim
 else
 endverbatim
-CursorLineNr         base0             bg                bold
+CursorLineNr         base0             base02/none       bold
 NonText              base00            none              bold
 SpecialKey           base00            base02            bold
 Title                yellow            none              bold
@@ -171,17 +171,17 @@ endverbatim
 Directory            blue              none
 EndOfBuffer          none              none
 ErrorMsg             red               base3             reverse
-FoldColumn           base0             none
-Folded               base0             none              bold s=base03
+FoldColumn           base0/fg          base02/none
+Folded               base0/fg          base02/none       bold s=base03
 IncSearch            orange            none              standout
-LineNr               base01            bg
+LineNr               base01/base01     base02/none
 MatchParen           base3             base02            bold
 ModeMsg              blue              none
 MoreMsg              blue              none
-Pmenu                base02            base0             reverse
-PmenuSbar            base02            base01            reverse
-PmenuSel             base00            base2             reverse
-PmenuThumb           base01            base03            reverse
+Pmenu                base0             base02            reverse
+PmenuSbar            base2             base0             reverse
+PmenuSel             base01            base2             reverse
+PmenuThumb           base0             base03            reverse
 Question             cyan              none              bold
 QuickFixLine     ->  Search
 Search               yellow            none              reverse
