@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Oct 28 17:20:33 2017
+" Last Updated: Sat Oct 28 21:27:55 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -67,7 +67,7 @@ if get(g:, "solarized_visibility", "") == "high"
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=15 ctermbg=10 guifg=#fdf6e3 guibg=#586e75 guisp=NONE cterm=NONE gui=NONE
 else
-hi Cursor ctermfg=1 ctermbg=15 guifg=#dc322f guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
+hi Cursor ctermfg=15 ctermbg=1 guifg=#fdf6e3 guibg=#dc322f guisp=NONE cterm=NONE gui=NONE
 endif
 hi MatchParen ctermfg=15 ctermbg=11 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=1 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -77,7 +77,7 @@ elseif get(g:, "solarized_visibility", "") == "low"
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=15 ctermbg=10 guifg=#fdf6e3 guibg=#586e75 guisp=NONE cterm=NONE gui=NONE
 else
-hi Cursor ctermfg=9 ctermbg=15 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
+hi Cursor ctermfg=15 ctermbg=9 guifg=#fdf6e3 guibg=#cb4b16 guisp=NONE cterm=NONE gui=NONE
 endif
 hi MatchParen ctermfg=1 ctermbg=7 guifg=#dc322f guibg=#eee8d5 guisp=NONE cterm=NONE,bold,underline gui=NONE,bold,underline
 hi NonText ctermfg=7 ctermbg=NONE guifg=#eee8d5 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -87,7 +87,7 @@ else
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=15 ctermbg=10 guifg=#fdf6e3 guibg=#586e75 guisp=NONE cterm=NONE gui=NONE
 else
-hi Cursor ctermfg=9 ctermbg=15 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
+hi Cursor ctermfg=15 ctermbg=9 guifg=#fdf6e3 guibg=#cb4b16 guisp=NONE cterm=NONE gui=NONE
 endif
 hi MatchParen ctermfg=1 ctermbg=7 guifg=#dc322f guibg=#eee8d5 guisp=NONE cterm=NONE,bold,underline gui=NONE,bold,underline
 hi NonText ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -422,7 +422,7 @@ if get(g:, "solarized_visibility", "") == "high"
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=230 ctermbg=242 guifg=#fdf6e3 guibg=#586e75 guisp=NONE cterm=NONE gui=NONE
 else
-hi Cursor ctermfg=160 ctermbg=230 guifg=#dc322f guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
+hi Cursor ctermfg=230 ctermbg=160 guifg=#fdf6e3 guibg=#dc322f guisp=NONE cterm=NONE gui=NONE
 endif
 hi MatchParen ctermfg=230 ctermbg=66 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi NonText ctermfg=160 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -432,7 +432,7 @@ elseif get(g:, "solarized_visibility", "") == "low"
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=230 ctermbg=242 guifg=#fdf6e3 guibg=#586e75 guisp=NONE cterm=NONE gui=NONE
 else
-hi Cursor ctermfg=166 ctermbg=230 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
+hi Cursor ctermfg=230 ctermbg=166 guifg=#fdf6e3 guibg=#cb4b16 guisp=NONE cterm=NONE gui=NONE
 endif
 hi MatchParen ctermfg=160 ctermbg=254 guifg=#dc322f guibg=#eee8d5 guisp=NONE cterm=NONE,bold,underline gui=NONE,bold,underline
 hi NonText ctermfg=254 ctermbg=NONE guifg=#eee8d5 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -442,7 +442,7 @@ else
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=230 ctermbg=242 guifg=#fdf6e3 guibg=#586e75 guisp=NONE cterm=NONE gui=NONE
 else
-hi Cursor ctermfg=166 ctermbg=230 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
+hi Cursor ctermfg=230 ctermbg=166 guifg=#fdf6e3 guibg=#cb4b16 guisp=NONE cterm=NONE gui=NONE
 endif
 hi MatchParen ctermfg=160 ctermbg=254 guifg=#dc322f guibg=#eee8d5 guisp=NONE cterm=NONE,bold,underline gui=NONE,bold,underline
 hi NonText ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -782,7 +782,7 @@ endif
 " verbatim
 " else
 " endverbatim
-" Cursor               red               base03
+" Cursor               base03            red
 " verbatim
 " endif
 " endverbatim
@@ -797,7 +797,7 @@ endif
 " verbatim
 " else
 " endverbatim
-" Cursor               orange            base03
+" Cursor               base03            orange
 " verbatim
 " endif
 " endverbatim
@@ -813,7 +813,7 @@ endif
 " verbatim
 " else
 " endverbatim
-" Cursor               orange            base03
+" Cursor               base03            orange
 " verbatim
 " endif
 " endverbatim

@@ -111,7 +111,7 @@ Cursor               base03            base0
 verbatim
 else
 endverbatim
-Cursor               red               base03
+Cursor               base03            red
 verbatim
 endif
 endverbatim
@@ -129,7 +129,7 @@ Cursor               base03            base0
 verbatim
 else
 endverbatim
-Cursor               orange            base03
+Cursor               base03            orange
 verbatim
 endif
 endverbatim
@@ -147,7 +147,7 @@ Cursor               base03            base0
 verbatim
 else
 endverbatim
-Cursor               orange            base03
+Cursor               base03            orange
 verbatim
 endif
 endverbatim

@@ -98,21 +98,6 @@ Background: light
 Normal               base0             back
 ColorColumn          none              base02
 Conceal              blue              none
-
-# Cursor style ==============================================================
-verbatim
-if get(g:, '@optionprefix_old_cursor_style', 0)
-endverbatim
-Cursor               base03            base0
-verbatim
-else
-endverbatim
-Cursor               base3             blue
-verbatim
-endif
-endverbatim
-# ---------------------------------------------------------------------------
-
 CursorColumn         none              base02
 CursorLine           none              base03            underline s=base01
 
@@ -125,7 +110,7 @@ Cursor               base03            base0
 verbatim
 else
 endverbatim
-Cursor               red               base03
+Cursor               base03            red
 verbatim
 endif
 endverbatim
@@ -142,7 +127,7 @@ Cursor               base03            base0
 verbatim
 else
 endverbatim
-Cursor               orange            base03
+Cursor               base03            orange
 verbatim
 endif
 endverbatim
@@ -160,7 +145,7 @@ Cursor               base03            base0
 verbatim
 else
 endverbatim
-Cursor               orange            base03
+Cursor               base03            orange
 verbatim
 endif
 endverbatim
