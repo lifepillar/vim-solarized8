@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Oct 28 17:20:28 2017
+" Last Updated: Sat Oct 28 22:11:10 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -41,7 +41,7 @@ let g:colors_name = 'solarized8_dark_low'
 "  base02: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
 
 if get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized8_dark_low_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
 hi Normal ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi CursorLineNr ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi CursorLineNr ctermfg=10 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -384,7 +384,7 @@ let g:terminal_color_2='#859900'
 endif
 endif
 if !get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized8_dark_low_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
 hi Normal ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi CursorLineNr ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi CursorLineNr ctermfg=242 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold

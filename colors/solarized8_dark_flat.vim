@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Oct 28 17:20:25 2017
+" Last Updated: Sat Oct 28 22:11:07 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -41,7 +41,7 @@ let g:colors_name = 'solarized8_dark_flat'
 "  base02: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
 
 if get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized8_dark_flat_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
 hi Normal ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
 hi Normal ctermfg=12 ctermbg=8 guifg=#839496 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
@@ -383,7 +383,7 @@ let g:terminal_color_2='#859900'
 endif
 endif
 if !get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized8_dark_flat_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
 hi Normal ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
 hi Normal ctermfg=246 ctermbg=235 guifg=#839496 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
