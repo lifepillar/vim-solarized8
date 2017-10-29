@@ -36,35 +36,40 @@ documentation
 ==============================================================================
 @fullname colorscheme                     *@shortname*
 
-                                           *g:@optionprefix_diffmode*
+                                          *g:@optionprefix_diffmode*
 Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
 `"high"`, and `"low"`.
 >
   let g:@optionprefix_diffmode = "normal"
 <
-                                           *g:@optionprefix_old_cursor_style*
+                                          *g:@optionprefix_old_cursor_style*
 Set to 1 if you want to use the original Solarized's cursor style. By default,
 the cursor is blue. NOTE: your terminal may override the cursor's color.
 >
   let g:@optionprefix_old_cursor_style = 0
 <
-                                           *g:@optionprefix_statusline*
+                                          *g:@optionprefix_statusline*
 Set to `"low"` to reduce the contrast in the status line.
 >
   let g:@optionprefix_statusline = "normal"
 <
-                                           *g:@optionprefix_term_italics*
+                                          *g:@optionprefix_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:@optionprefix_term_italics = 1
 <
-                                           *g:@optionprefix_visibility*
+                                          *g:@optionprefix_termtrans*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:@optionprefix_termtrans = 0
+<
+                                          *g:@optionprefix_visibility*
 Tweak the visibility of a few  elements. Allowed values are `"normal"`
 (default), `"high"`, and `"low"`.
 >
   let g:@optionprefix_visibility = "normal"
 <
-
 enddocumentation
 # }}}
 
@@ -93,13 +98,23 @@ Color: back                 #fdf6e3                ~        15
 Background: light
 
 # Default highlight groups {{{
-# Comment out (do not delete) the definitions that you want to keep at their default.
-# Group              Foreground        Background        Attributes
-Normal               base0             back
-ColorColumn          none              base02
-Conceal              blue              none
-CursorColumn         none              base02
-CursorLine           none              base03            underline s=base01
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)
+endverbatim
+
+  # Transparent background
+  Normal             base0             none
+
+verbatim
+else
+endverbatim
+
+  # Opaque background
+  Normal            base0             back
+
+verbatim
+endif
+endverbatim
 
 # Visibility ================================================================
 verbatim
@@ -159,6 +174,11 @@ endif
 endverbatim
 # ---------------------------------------------------------------------------
 
+ColorColumn          none              base02
+Conceal              blue              none
+CursorColumn         none              base02
+CursorLine           none              base03            underline s=base01
+
 # Diff mode =================================================================
 verbatim
 if get(g:, "@optionprefix_diffmode", "") == "high"
@@ -210,34 +230,25 @@ if get(g:, "@optionprefix_statusline", "") == "low"
 endverbatim
 StatusLine           base02            base1             bold,reverse
 StatusLineNC         base02            base01            reverse
-TabLine              base01            base02
-TabLineFill          base01            base02
 TabLineSel           base1             base02
-# Additional highlight groups {{{
 NormalMode           base02            base1             bold,reverse
-InsertMode           base02            cyan              bold,reverse
-ReplaceMode          base02            orange            bold,reverse
-VisualMode           base02            magenta           bold,reverse
-CommandMode          base02            magenta           bold,reverse
-# }}}
 verbatim
 else
 endverbatim
 StatusLine           base02            base2             reverse
 StatusLineNC         base02            base1             reverse
-TabLine              base01            base02
-TabLineFill          base01            base02
 TabLineSel           base2             base02
-# Additional highlight groups {{{
 NormalMode           base02            base2             reverse
-InsertMode           base02            cyan              reverse
-ReplaceMode          base02            orange            reverse
-VisualMode           base02            magenta           reverse
-CommandMode          base02            magenta           reverse
-# }}}
 verbatim
 endif
 endverbatim
+TabLine              base01            base02
+TabLineFill          base01            base02
+InsertMode           base02            cyan              bold,reverse
+ReplaceMode          base02            orange            bold,reverse
+VisualMode           base02            magenta           bold,reverse
+CommandMode          base02            magenta           bold,reverse
+
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
 VertSplit            base02            base02

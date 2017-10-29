@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Oct 28 22:11:16 2017
+" Last Updated: Sun Oct 29 21:18:50 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -41,28 +41,21 @@ let g:colors_name = 'solarized8_light_low'
 "   base2: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
 
 if get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
 hi Normal ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi CursorLineNr ctermfg=1 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=14 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi FoldColumn ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=#fdf6e3 cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=14 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermbg=NONE guifg=NONE
 else
 hi Normal ctermfg=11 ctermbg=7 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
-hi CursorLineNr ctermfg=1 ctermbg=7 guifg=#dc322f guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=14 ctermbg=7 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=11 ctermbg=7 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi FoldColumn ctermfg=11 ctermbg=7 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=11 ctermbg=7 guifg=#657b83 guibg=#eee8d5 guisp=#fdf6e3 cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=14 ctermbg=7 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermbg=7 guibg=#eee8d5
 endif
-hi ColorColumn ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
-hi Conceal ctermfg=4 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi CursorColumn ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=#586e75 cterm=NONE,underline gui=NONE,underline
 if get(g:, "solarized_visibility", "") == "high"
+hi CursorLineNr ctermfg=1 guifg=#dc322f cterm=bold gui=bold
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=15 ctermbg=11 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
 else
@@ -73,6 +66,7 @@ hi NonText ctermfg=1 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE
 hi SpecialKey ctermfg=1 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Title ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 elseif get(g:, "solarized_visibility", "") == "low"
+hi CursorLineNr ctermfg=14 guifg=#93a1a1 cterm=bold gui=bold
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=15 ctermbg=11 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
 else
@@ -83,6 +77,7 @@ hi NonText ctermfg=7 ctermbg=NONE guifg=#eee8d5 guibg=NONE guisp=NONE cterm=NONE
 hi SpecialKey ctermfg=7 ctermbg=NONE guifg=#eee8d5 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Title ctermfg=14 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 else
+hi CursorLineNr ctermfg=11 guifg=#657b83 cterm=bold gui=bold
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=15 ctermbg=11 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
 else
@@ -93,6 +88,10 @@ hi NonText ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NON
 hi SpecialKey ctermfg=12 ctermbg=7 guifg=#839496 guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Title ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 endif
+hi ColorColumn ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+hi Conceal ctermfg=4 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi CursorColumn ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+hi CursorLine ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=#586e75 cterm=NONE,underline gui=NONE,underline
 if get(g:, "solarized_diffmode", "") == "high"
 hi DiffAdd ctermfg=2 ctermbg=NONE guifg=#859900 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=3 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -396,28 +395,21 @@ let g:terminal_color_2='#859900'
 endif
 endif
 if !get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
 hi Normal ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi CursorLineNr ctermfg=160 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=247 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi FoldColumn ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=#fdf6e3 cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=247 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermbg=NONE guifg=NONE
 else
 hi Normal ctermfg=66 ctermbg=254 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
-hi CursorLineNr ctermfg=160 ctermbg=254 guifg=#dc322f guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=247 ctermbg=254 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
-hi CursorLineNr ctermfg=66 ctermbg=254 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi FoldColumn ctermfg=66 ctermbg=254 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
 hi Folded ctermfg=66 ctermbg=254 guifg=#657b83 guibg=#eee8d5 guisp=#fdf6e3 cterm=NONE,bold gui=NONE,bold
 hi LineNr ctermfg=247 ctermbg=254 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+hi CursorLineNr ctermbg=254 guibg=#eee8d5
 endif
-hi ColorColumn ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
-hi Conceal ctermfg=32 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi CursorColumn ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
-hi CursorLine ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=#586e75 cterm=NONE,underline gui=NONE,underline
 if get(g:, "solarized_visibility", "") == "high"
+hi CursorLineNr ctermfg=160 guifg=#dc322f cterm=bold gui=bold
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=230 ctermbg=66 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
 else
@@ -428,6 +420,7 @@ hi NonText ctermfg=160 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NO
 hi SpecialKey ctermfg=160 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi Title ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 elseif get(g:, "solarized_visibility", "") == "low"
+hi CursorLineNr ctermfg=247 guifg=#93a1a1 cterm=bold gui=bold
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=230 ctermbg=66 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
 else
@@ -438,6 +431,7 @@ hi NonText ctermfg=254 ctermbg=NONE guifg=#eee8d5 guibg=NONE guisp=NONE cterm=NO
 hi SpecialKey ctermfg=254 ctermbg=NONE guifg=#eee8d5 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Title ctermfg=247 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 else
+hi CursorLineNr ctermfg=66 guifg=#657b83 cterm=bold gui=bold
 if get(g:, 'solarized_old_cursor_style', 0)
 hi Cursor ctermfg=230 ctermbg=66 guifg=#fdf6e3 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
 else
@@ -448,6 +442,10 @@ hi NonText ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NO
 hi SpecialKey ctermfg=246 ctermbg=254 guifg=#839496 guibg=#eee8d5 guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi Title ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 endif
+hi ColorColumn ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+hi Conceal ctermfg=32 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi CursorColumn ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+hi CursorLine ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=#586e75 cterm=NONE,underline gui=NONE,underline
 if get(g:, "solarized_diffmode", "") == "high"
 hi DiffAdd ctermfg=106 ctermbg=NONE guifg=#859900 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi DiffChange ctermfg=136 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE,reverse gui=NONE,reverse
@@ -769,12 +767,26 @@ endif
 " Color: green                #859900                ~        2
 " Color: back                 #eee8d5                ~        7
 " Background: light
-" Normal               base0             back
-" ColorColumn          none              base02
-" Conceal              blue              none
-" CursorColumn         none              base02
-" CursorLine           none              base02            underline s=base1
 " verbatim
+" endverbatim
+"   Normal             base0             none
+"   FoldColumn         base0             none
+"   Folded             base0             none              bold s=base03
+"   LineNr             base01            none
+" verbatim
+" hi CursorLineNr ctermbg=NONE guifg=NONE
+" else
+" endverbatim
+"   Normal            base0             back
+"   FoldColumn        base0             base02
+"   Folded            base0             base02            bold s=base03
+"   LineNr            base01            base02
+" verbatim
+" hi CursorLineNr ctermbg=@base02 guibg=@base02
+" endif
+" endverbatim
+" verbatim
+" hi CursorLineNr ctermfg=@red guifg=@red cterm=bold gui=bold
 " endverbatim
 " Cursor               base03            base0
 " verbatim
@@ -784,12 +796,12 @@ endif
 " verbatim
 " endif
 " endverbatim
-" CursorLineNr         red               base02/none       bold
 " MatchParen           base3             none              bold,underline
 " NonText              red               none              bold
 " SpecialKey           red               none              reverse
 " Title                orange            none              bold
 " verbatim
+" hi CursorLineNr ctermfg=@base01 guifg=@base01 cterm=bold gui=bold
 " endverbatim
 " Cursor               base03            base0
 " verbatim
@@ -799,13 +811,13 @@ endif
 " verbatim
 " endif
 " endverbatim
-" CursorLineNr         base01            base02/none       bold
 " MatchParen           base3             base02            bold
 " NonText              base02            none              bold
 " SpecialKey           base02            none              bold
 " Title                base01            none              bold
 " verbatim
 " else
+" hi CursorLineNr ctermfg=@base0 guifg=@base0 cterm=bold gui=bold
 " endverbatim
 " Cursor               base03            base0
 " verbatim
@@ -815,7 +827,6 @@ endif
 " verbatim
 " endif
 " endverbatim
-" CursorLineNr         base0             base02/none       bold
 " MatchParen           base3             base02            bold
 " NonText              base00            none              bold
 " SpecialKey           base00            base02            bold
@@ -823,6 +834,10 @@ endif
 " verbatim
 " endif
 " endverbatim
+" ColorColumn          none              base02
+" Conceal              blue              none
+" CursorColumn         none              base02
+" CursorLine           none              base02            underline s=base1
 " verbatim
 " endverbatim
 " DiffAdd              green             none              reverse
@@ -848,10 +863,7 @@ endif
 " Directory            blue              none
 " EndOfBuffer          none              none
 " ErrorMsg             red               base03            reverse
-" FoldColumn           base0             base02/none
-" Folded               base0             base02/none       bold s=base03
 " IncSearch            orange            none              standout
-" LineNr               base01            base02/none
 " ModeMsg              blue              none
 " MoreMsg              blue              none
 " Pmenu                base0             base02            reverse
