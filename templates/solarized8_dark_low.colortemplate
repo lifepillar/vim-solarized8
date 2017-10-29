@@ -36,35 +36,40 @@ documentation
 ==============================================================================
 @fullname colorscheme                     *@shortname*
 
-                                           *g:@optionprefix_diffmode*
+                                          *g:@optionprefix_diffmode*
 Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
 `"high"`, and `"low"`.
 >
   let g:@optionprefix_diffmode = "normal"
 <
-                                           *g:@optionprefix_old_cursor_style*
+                                          *g:@optionprefix_old_cursor_style*
 Set to 1 if you want to use the original Solarized's cursor style. By default,
 the cursor is blue. NOTE: your terminal may override the cursor's color.
 >
   let g:@optionprefix_old_cursor_style = 0
 <
-                                           *g:@optionprefix_statusline*
+                                          *g:@optionprefix_statusline*
 Set to `"low"` to reduce the contrast in the status line.
 >
   let g:@optionprefix_statusline = "normal"
 <
-                                           *g:@optionprefix_term_italics*
+                                          *g:@optionprefix_term_italics*
 Set to 0 if you want to disable italics in the terminal.
 >
   let g:@optionprefix_term_italics = 1
 <
-                                           *g:@optionprefix_visibility*
+                                          *g:@optionprefix_termtrans*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:@optionprefix_termtrans = 0
+<
+                                          *g:@optionprefix_visibility*
 Tweak the visibility of a few  elements. Allowed values are `"normal"`
 (default), `"high"`, and `"low"`.
 >
   let g:@optionprefix_visibility = "normal"
 <
-
 enddocumentation
 # }}}
 
@@ -93,11 +98,61 @@ Color: back                 #073642                ~        0
 Background: dark
 
 # Default highlight groups {{{
-# Comment out (do not delete) the definitions that you want to keep at their default.
-# Group              Foreground        Background        Attributes
-Normal               base0             back
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)
+endverbatim
+
+  # Transparent background
+  Normal             base0             none
+  FoldColumn         fg                none
+  Folded             fg                none             bold s=base03
+  LineNr             base01            none
+
+verbatim
+hi CursorLineNr ctermbg=NONE guifg=NONE
+else
+endverbatim
+
+  # Opaque background
+  Normal            base0             back
+  FoldColumn        base0             base02
+  Folded            base0             base02            bold s=base03
+  LineNr            base01            base02
+
+verbatim
+hi CursorLineNr ctermbg=@base02 guibg=@base02
+endif
+endverbatim
+
 ColorColumn          none              base02
 Conceal              blue              none
+
+# Visibility ================================================================
+verbatim
+if get(g:, "@optionprefix_visibility", "") == "high"
+hi CursorLineNr ctermfg=@orange guifg=@orange cterm=bold gui=bold
+endverbatim
+NonText              orange            none              bold
+SpecialKey           orange            none              reverse
+Title                yellow            none              bold
+verbatim
+elseif get(g:, "@optionprefix_visibility", "") == "low"
+hi CursorLineNr ctermfg=@base01 guifg=@base01 cterm=bold gui=bold
+endverbatim
+NonText              base02            none              bold
+SpecialKey           base02            none              reverse
+Title                base01            none              bold
+verbatim
+else
+hi CursorLineNr ctermfg=@base0 guifg=@base0 cterm=bold gui=bold
+endverbatim
+NonText              base00            none              bold
+SpecialKey           base00            base02            bold
+Title                yellow            none              bold
+verbatim
+endif
+endverbatim
+# ---------------------------------------------------------------------------
 
 # Cursor style ==============================================================
 verbatim
@@ -115,33 +170,6 @@ endverbatim
 
 CursorColumn         none              base02
 CursorLine           none              base02            underline s=base1
-
-# Visibility ================================================================
-verbatim
-if get(g:, "@optionprefix_visibility", "") == "high"
-endverbatim
-CursorLineNr         orange            base02/none       bold
-NonText              orange            none              bold
-SpecialKey           orange            none              reverse
-Title                yellow            none              bold
-verbatim
-elseif get(g:, "@optionprefix_visibility", "") == "low"
-endverbatim
-CursorLineNr         base01            base02/none       bold
-NonText              base02            none              bold
-SpecialKey           base02            none              reverse
-Title                base01            none              bold
-verbatim
-else
-endverbatim
-CursorLineNr         base0             base02/none       bold
-NonText              base00            none              bold
-SpecialKey           base00            base02            bold
-Title                yellow            none              bold
-verbatim
-endif
-endverbatim
-# ---------------------------------------------------------------------------
 
 # Diff mode =================================================================
 verbatim
@@ -171,10 +199,7 @@ endverbatim
 Directory            blue              none
 EndOfBuffer          none              none
 ErrorMsg             red               base3             reverse
-FoldColumn           base0/fg          base02/none
-Folded               base0/fg          base02/none       bold s=base03
 IncSearch            orange            none              standout
-LineNr               base01/base01     base02/none
 MatchParen           base3             base02            bold
 ModeMsg              blue              none
 MoreMsg              blue              none

@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Oct 28 22:11:07 2017
+" Last Updated: Sun Oct 29 21:23:20 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -41,7 +41,7 @@ let g:colors_name = 'solarized8_dark_flat'
 "  base02: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
 
 if get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
 hi Normal ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
 hi Normal ctermfg=12 ctermbg=8 guifg=#839496 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
@@ -112,26 +112,20 @@ hi SpellRare ctermfg=6 ctermbg=NONE guifg=#2aa198 guibg=NONE guisp=#2aa198 cterm
 if get(g:, "solarized_statusline", "") == "low"
 hi StatusLine ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi StatusLineNC ctermfg=0 ctermbg=10 guifg=#073642 guibg=#586e75 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi TabLine ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi TabLineFill ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi TabLineSel ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi NormalMode ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
+else
+hi StatusLine ctermfg=0 ctermbg=7 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi StatusLineNC ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi TabLineSel ctermfg=7 ctermbg=0 guifg=#eee8d5 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+hi NormalMode ctermfg=0 ctermbg=7 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+endif
+hi TabLine ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+hi TabLineFill ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi InsertMode ctermfg=0 ctermbg=6 guifg=#073642 guibg=#2aa198 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi ReplaceMode ctermfg=0 ctermbg=9 guifg=#073642 guibg=#cb4b16 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi VisualMode ctermfg=0 ctermbg=5 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi CommandMode ctermfg=0 ctermbg=5 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-else
-hi StatusLine ctermfg=0 ctermbg=7 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi StatusLineNC ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi TabLine ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi TabLineFill ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi TabLineSel ctermfg=7 ctermbg=0 guifg=#eee8d5 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi NormalMode ctermfg=0 ctermbg=7 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi InsertMode ctermfg=0 ctermbg=6 guifg=#073642 guibg=#2aa198 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi ReplaceMode ctermfg=0 ctermbg=9 guifg=#073642 guibg=#cb4b16 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi VisualMode ctermfg=0 ctermbg=5 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi CommandMode ctermfg=0 ctermbg=5 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-endif
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
 hi VertSplit ctermfg=0 ctermbg=0 guifg=#073642 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
@@ -383,7 +377,7 @@ let g:terminal_color_2='#859900'
 endif
 endif
 if !get(g:, 'solarized_use16', 1)
-if !has('gui_running') && get(g:, 'solarized_transp_bg', 0)
+if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
 hi Normal ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 else
 hi Normal ctermfg=246 ctermbg=235 guifg=#839496 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
@@ -454,26 +448,20 @@ hi SpellRare ctermfg=37 ctermbg=NONE guifg=#2aa198 guibg=NONE guisp=#2aa198 cter
 if get(g:, "solarized_statusline", "") == "low"
 hi StatusLine ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi StatusLineNC ctermfg=236 ctermbg=242 guifg=#073642 guibg=#586e75 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi TabLine ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi TabLineFill ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi TabLineSel ctermfg=247 ctermbg=236 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi NormalMode ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
+else
+hi StatusLine ctermfg=236 ctermbg=254 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi StatusLineNC ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+hi TabLineSel ctermfg=254 ctermbg=236 guifg=#eee8d5 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+hi NormalMode ctermfg=236 ctermbg=254 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+endif
+hi TabLine ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+hi TabLineFill ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
 hi InsertMode ctermfg=236 ctermbg=37 guifg=#073642 guibg=#2aa198 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi ReplaceMode ctermfg=236 ctermbg=166 guifg=#073642 guibg=#cb4b16 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi VisualMode ctermfg=236 ctermbg=162 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi CommandMode ctermfg=236 ctermbg=162 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
-else
-hi StatusLine ctermfg=236 ctermbg=254 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi StatusLineNC ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi TabLine ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi TabLineFill ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi TabLineSel ctermfg=254 ctermbg=236 guifg=#eee8d5 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
-hi NormalMode ctermfg=236 ctermbg=254 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi InsertMode ctermfg=236 ctermbg=37 guifg=#073642 guibg=#2aa198 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi ReplaceMode ctermfg=236 ctermbg=166 guifg=#073642 guibg=#cb4b16 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi VisualMode ctermfg=236 ctermbg=162 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-hi CommandMode ctermfg=236 ctermbg=162 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-endif
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
 hi VertSplit ctermfg=236 ctermbg=236 guifg=#073642 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
@@ -743,7 +731,16 @@ endif
 " Color: green                #859900                ~        2
 " Color: back                 #002b36                ~        8
 " Background: dark
-" Normal               base0             back
+" verbatim
+" endverbatim
+"   Normal             base0             none
+" verbatim
+" else
+" endverbatim
+"   Normal            base0             back
+" verbatim
+" endif
+" endverbatim
 " ColorColumn          none              base02
 " Conceal              blue              none
 " verbatim
@@ -828,30 +825,24 @@ endif
 " endverbatim
 " StatusLine           base02            base1             bold,reverse
 " StatusLineNC         base02            base01            reverse
-" TabLine              base01            base02
-" TabLineFill          base01            base02
 " TabLineSel           base1             base02
 " NormalMode           base02            base1             bold,reverse
-" InsertMode           base02            cyan              bold,reverse
-" ReplaceMode          base02            orange            bold,reverse
-" VisualMode           base02            magenta           bold,reverse
-" CommandMode          base02            magenta           bold,reverse
 " verbatim
 " else
 " endverbatim
 " StatusLine           base02            base2             reverse
 " StatusLineNC         base02            base1             reverse
-" TabLine              base01            base02
-" TabLineFill          base01            base02
 " TabLineSel           base2             base02
 " NormalMode           base02            base2             reverse
-" InsertMode           base02            cyan              reverse
-" ReplaceMode          base02            orange            reverse
-" VisualMode           base02            magenta           reverse
-" CommandMode          base02            magenta           reverse
 " verbatim
 " endif
 " endverbatim
+" TabLine              base01            base02
+" TabLineFill          base01            base02
+" InsertMode           base02            cyan              bold,reverse
+" ReplaceMode          base02            orange            bold,reverse
+" VisualMode           base02            magenta           bold,reverse
+" CommandMode          base02            magenta           bold,reverse
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
 " VertSplit            base02            base02
