@@ -64,8 +64,8 @@ The following options are inherited from Solarized:
 - `g:solarized_visibility`: one of `"normal"` (default), `"low"`, `"high"`;
 - `g:solarized_diffmode`: one of `"normal"` (default), `"low"`, `"high"`,
   `"bold"`;
-- `g:solarized_transp_bg`: make terminal background transparent if set to `1`
-  (default: `0`). This options was called `g:solarized_termtrans` in Solarized.
+- `g:solarized_termtrans`: make terminal background transparent if set to `1`
+  (default: `0`).
 
 The following options were not available in the original Solarized:
 
