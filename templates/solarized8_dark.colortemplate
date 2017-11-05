@@ -34,7 +34,7 @@ License:         OSI approved MIT license
 # Documentation {{{
 documentation
 ==============================================================================
-@fullname colorscheme                     *@shortname*
+@fullname colorscheme                     *@optionprefix*
 
                                           *g:@optionprefix_diffmode*
 Tweak the way diffs are displayed. Allowed values are `"normal"` (default),

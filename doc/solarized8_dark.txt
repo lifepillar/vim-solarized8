@@ -1,6 +1,6 @@
 
 ==============================================================================
-Solarized8 Dark colorscheme                     *solarized8_dark*
+Solarized8 Dark colorscheme                     *solarized*
 
                                           *g:solarized_diffmode*
 Tweak the way diffs are displayed. Allowed values are `"normal"` (default),

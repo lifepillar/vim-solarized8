@@ -9,6 +9,11 @@ let s:errors = 0
 
 for s:template in glob(s:curdir . '/*.colortemplate', 1, 1)
   let s:template_name = fnamemodify(s:template, ':t:r')
+  if s:template_name == 'solarized8_dark'
+    let g:colortemplate_no_doc = 0
+  else
+    let g:colortemplate_no_doc = 1
+  endif
   execute "edit" s:template
   execute "Colortemplate!" fnameescape(s:parent)
   if g:colortemplate_exit_status != 0
