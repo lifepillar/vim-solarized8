@@ -7,6 +7,8 @@ let s:curdir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 let s:parent = fnamemodify(s:curdir, ':h')
 let s:errors = 0
 
+execute 'lcd' s:curdir
+
 for s:template in glob(s:curdir . '/*.colortemplate', 1, 1)
   let s:template_name = fnamemodify(s:template, ':t:r')
   if s:template_name == 'solarized8_dark'
