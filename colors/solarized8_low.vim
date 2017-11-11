@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Nov 11 13:12:11 2017
+" Last Updated: Sat Nov 11 14:00:26 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -353,7 +353,7 @@ if !get(g:, 'solarized_use16', 0)
       hi pandocMetadata ctermfg=32 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
       hi! link pandocMetadataTitle pandocMetadata
     endif
-    if get(g:, "solarized_term_italics", 0)
+    if get(g:, "solarized_term_italics", 1)
       hi Comment cterm=italic
       hi gitcommitComment cterm=italic
       hi htmlSpecialTagName cterm=italic
@@ -728,7 +728,7 @@ if !get(g:, 'solarized_use16', 0)
     hi pandocMetadata ctermfg=32 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
     hi! link pandocMetadataTitle pandocMetadata
   endif
-  if get(g:, "solarized_term_italics", 0)
+  if get(g:, "solarized_term_italics", 1)
     hi Comment cterm=italic
     hi gitcommitComment cterm=italic
     hi htmlSpecialTagName cterm=italic
@@ -1075,7 +1075,7 @@ if &background ==# 'dark'
     hi pandocMetadata ctermfg=4 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
     hi! link pandocMetadataTitle pandocMetadata
   endif
-  if get(g:, "solarized_term_italics", 0)
+  if get(g:, "solarized_term_italics", 1)
     hi Comment cterm=italic
     hi gitcommitComment cterm=italic
     hi htmlSpecialTagName cterm=italic
@@ -1432,7 +1432,7 @@ if get(g:, 'solarized_enable_extra_hi_groups', 1)
   hi pandocMetadata ctermfg=4 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi! link pandocMetadataTitle pandocMetadata
 endif
-if get(g:, "solarized_term_italics", 0)
+if get(g:, "solarized_term_italics", 1)
   hi Comment cterm=italic
   hi gitcommitComment cterm=italic
   hi htmlSpecialTagName cterm=italic
