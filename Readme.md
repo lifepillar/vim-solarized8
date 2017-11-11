@@ -51,7 +51,7 @@ recommend that you use them. Just clone this repo inside `pack/*/opt`, e.g.:
 
 Otherwise, use your favourite installation method.
 
-There are actually 4 optimized color schemes:
+There are actually four optimized color schemes:
 
 - `solarized8`: the default Solarized theme;
 - `solarized8_low`: low-contrast variant;
