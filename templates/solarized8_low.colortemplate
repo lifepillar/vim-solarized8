@@ -1,0 +1,475 @@
+# vim: ft=colortemplate fdm=marker
+
+# Information {{{
+Full name:       Solarized 8 Low Contrast
+Short name:      solarized8_low
+Author:          Ethan Schoonover
+Maintainer:      Lifepillar <lifepillar@lifepillar.me>
+Website:         https://github.com/lifepillar/vim-solarized8
+Description:     Precision colors for machines and people
+Terminal Colors: 16, 256
+Option Prefix:   solarized
+License:         OSI approved MIT license
+# }}}
+
+# Documentation {{{
+Include: _help.colortemplate
+# }}}
+
+Background: dark
+
+# Color palette {{{
+# Color name                GUI                  Base256    Base16 (optional)
+Color: base03               #002b36                ~        8
+Color: base02               #073642                ~        0
+Color: base01               #586e75                ~        10
+Color: base00               #657b83                ~        11
+Color: base0                #839496                ~        12
+Color: base1                #93a1a1                ~        14
+Color: base2                #eee8d5                ~        7
+Color: base3                #fdf6e3                ~        15
+Color: yellow               #b58900                ~        3
+Color: orange               #cb4b16                ~        9
+Color: red                  #dc322f                ~        1
+Color: magenta              #d33682                ~        5
+Color: violet               #6c71c4                ~        13
+Color: blue                 #268bd2                ~        4
+Color: cyan                 #2aa198                ~        6
+Color: green                #859900                ~        2
+#Color:green                #719e07                ~        2
+Color: back                 #073642                ~        0
+# }}}
+
+# Default highlight groups {{{
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)
+endverbatim
+
+  # Transparent background
+  Normal             base0             none
+  FoldColumn         fg                none
+  Folded             fg                none             bold s=base03
+  LineNr             base01            none
+
+verbatim
+hi CursorLineNr ctermbg=NONE guifg=NONE
+else
+endverbatim
+
+  # Opaque background
+  Normal            base0             back
+  FoldColumn        base0             base02
+  Folded            base0             base02            bold s=base03
+  LineNr            base01            base02
+
+verbatim
+hi CursorLineNr ctermbg=@base02 guibg=@base02
+endif
+endverbatim
+
+ColorColumn          none              base02
+Conceal              blue              none
+
+# Visibility ================================================================
+verbatim
+if get(g:, "@optionprefix_visibility", "") == "high"
+hi CursorLineNr ctermfg=@orange guifg=@orange cterm=bold gui=bold
+endverbatim
+NonText              orange            none              bold
+SpecialKey           orange            none              reverse
+Title                yellow            none              bold
+verbatim
+elseif get(g:, "@optionprefix_visibility", "") == "low"
+hi CursorLineNr ctermfg=@base01 guifg=@base01 cterm=bold gui=bold
+endverbatim
+NonText              base02            none              bold
+SpecialKey           base02            none              reverse
+Title                base01            none              bold
+verbatim
+else
+hi CursorLineNr ctermfg=@base0 guifg=@base0 cterm=bold gui=bold
+endverbatim
+NonText              base00            none              bold
+SpecialKey           base00            base02            bold
+Title                yellow            none              bold
+verbatim
+endif
+endverbatim
+# ---------------------------------------------------------------------------
+
+# Cursor style ==============================================================
+verbatim
+if get(g:, '@optionprefix_old_cursor_style', 0)
+endverbatim
+Cursor               base03            base0
+verbatim
+else
+endverbatim
+Cursor               base3             blue
+verbatim
+endif
+endverbatim
+# ---------------------------------------------------------------------------
+
+CursorColumn         none              base02
+CursorLine           none              base02            underline s=base1
+
+# Diff mode =================================================================
+verbatim
+if get(g:, "@optionprefix_diffmode", "") == "high"
+endverbatim
+DiffAdd              green             none              reverse
+DiffChange           yellow            none              reverse
+DiffDelete           red               none              reverse
+DiffText             blue              none              reverse
+verbatim
+elseif get(g:, "@optionprefix_diffmode", "") == "low"
+endverbatim
+DiffAdd              green             none              s=green
+DiffChange           yellow            none              s=yellow
+DiffDelete           red               none              bold
+DiffText             blue              none              s=blue
+verbatim
+else
+endverbatim
+DiffAdd              green             base02            s=green
+DiffChange           yellow            base02            s=yellow
+DiffDelete           red               base02            bold
+DiffText             blue              base02            s=blue
+verbatim
+endif
+endverbatim
+Directory            blue              none
+EndOfBuffer          none              none
+ErrorMsg             red               base3             reverse
+IncSearch            orange            none              standout
+MatchParen           base3             base02            bold
+ModeMsg              blue              none
+MoreMsg              blue              none
+Pmenu                base0             base02            reverse
+PmenuSbar            base2             base0             reverse
+PmenuSel             base01            base2             reverse
+PmenuThumb           base0             base03            reverse
+Question             cyan              none              bold
+QuickFixLine     ->  Search
+Search               yellow            none              reverse
+SignColumn           base0             none
+SpellBad             violet            none              undercurl s=violet
+SpellCap             violet            none              undercurl s=violet
+SpellLocal           yellow            none              undercurl s=yellow
+SpellRare            cyan              none              undercurl s=cyan
+verbatim
+if get(g:, "@optionprefix_statusline", "") == "low"
+endverbatim
+StatusLine           base01            base2             reverse
+StatusLineNC         base01            base1             reverse
+TabLine              base01            base1             reverse
+TabLineFill          base01            base1             reverse
+TabLineSel           base01            base2             reverse
+verbatim
+else
+endverbatim
+StatusLine           base0             base02            reverse
+StatusLineNC         base01            base02            reverse
+TabLine              base01            base02            reverse
+TabLineFill          base01            base02            reverse
+TabLineSel           base0             base02            reverse
+verbatim
+endif
+endverbatim
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+VertSplit            base01            base01
+Visual               base01            base03            reverse
+VisualNOS            none              base02            reverse
+WarningMsg           orange            none              bold
+WildMenu             base2             base02            reverse
+# Other conventional group names (see `:help group-name`)
+Boolean           -> Constant
+Character         -> Constant
+Comment              base01            none              g=italic
+Conditional       -> Statement
+Constant             cyan              none
+Define            -> PreProc
+Debug             -> Special
+Delimiter         -> Special
+Error                red               none              bold
+Exception         -> Statement
+Float             -> Constant
+Function          -> Identifier
+Identifier           blue              none
+Ignore               none              none
+Include           -> PreProc
+Keyword           -> Statement
+Label             -> Statement
+Macro             -> PreProc
+Number            -> Constant
+Operator          -> Statement
+PreCondit         -> PreProc
+PreProc              orange            none
+Repeat            -> Statement
+Special              orange            none
+SpecialChar       -> Special
+SpecialComment    -> Special
+Statement            green             none
+StorageClass      -> Type
+String            -> Constant
+Structure         -> Type
+Tag               -> Special
+Todo                 magenta           none              bold
+Type                 yellow            none
+Typedef           -> Type
+Underlined           violet            none
+# See `:help lCursor`
+lCursor           -> Cursor
+# See `:help CursorIM`
+CursorIM             none              fg
+# }}}
+
+# Additional highlight groups {{{
+NormalMode           base0             base3             reverse
+InsertMode           cyan              base3             reverse
+ReplaceMode          orange            base3             reverse
+VisualMode           magenta           base3             reverse
+CommandMode          magenta           base3             reverse
+# }}}
+
+Include: _extra.colortemplate
+
+Background: light
+
+# Color palette {{{
+# Color name                GUI                  Base256    Base16 (optional)
+Color: base3                #002b36                ~        8
+Color: base2                #073642                ~        0
+Color: base1                #586e75                ~        10
+Color: base0                #657b83                ~        11
+Color: base00               #839496                ~        12
+Color: base01               #93a1a1                ~        14
+Color: base02               #eee8d5                ~        7
+Color: base03               #fdf6e3                ~        15
+Color: yellow               #b58900                ~        3
+Color: orange               #cb4b16                ~        9
+Color: red                  #dc322f                ~        1
+Color: magenta              #d33682                ~        5
+Color: violet               #6c71c4                ~        13
+Color: blue                 #268bd2                ~        4
+Color: cyan                 #2aa198                ~        6
+Color: green                #859900                ~        2
+#Color:green                #719e07                ~        2
+Color: back                 #eee8d5                ~        7
+# }}}
+
+# Default highlight groups {{{
+verbatim
+if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)
+endverbatim
+
+  # Transparent background
+  Normal             base0             none
+  FoldColumn         base0             none
+  Folded             base0             none              bold s=base03
+  LineNr             base01            none
+
+verbatim
+hi CursorLineNr ctermbg=NONE guifg=NONE
+else
+endverbatim
+
+  # Opaque background
+  Normal            base0             back
+  FoldColumn        base0             base02
+  Folded            base0             base02            bold s=base03
+  LineNr            base01            base02
+
+verbatim
+hi CursorLineNr ctermbg=@base02 guibg=@base02
+endif
+endverbatim
+
+# Visibility and cursor style ===============================================
+# High visibiity
+verbatim
+if get(g:, "@optionprefix_visibility", "") == "high"
+hi CursorLineNr ctermfg=@red guifg=@red cterm=bold gui=bold
+if get(g:, '@optionprefix_old_cursor_style', 0)
+endverbatim
+Cursor               base03            base0
+verbatim
+else
+endverbatim
+Cursor               base03            red
+verbatim
+endif
+endverbatim
+MatchParen           base3             none              bold,underline
+NonText              red               none              bold
+SpecialKey           red               none              reverse
+Title                orange            none              bold
+# Low visibility
+verbatim
+elseif get(g:, "@optionprefix_visibility", "") == "low"
+hi CursorLineNr ctermfg=@base01 guifg=@base01 cterm=bold gui=bold
+if get(g:, '@optionprefix_old_cursor_style', 0)
+endverbatim
+Cursor               base03            base0
+verbatim
+else
+endverbatim
+Cursor               base03            orange
+verbatim
+endif
+endverbatim
+MatchParen           base3             base02            bold
+NonText              base02            none              bold
+SpecialKey           base02            none              bold
+Title                base01            none              bold
+# Normal visibility
+verbatim
+else
+hi CursorLineNr ctermfg=@base0 guifg=@base0 cterm=bold gui=bold
+if get(g:, 'solarized_old_cursor_style', 0)
+endverbatim
+Cursor               base03            base0
+verbatim
+else
+endverbatim
+Cursor               base03            orange
+verbatim
+endif
+endverbatim
+MatchParen           base3             base02            bold
+NonText              base00            none              bold
+SpecialKey           base00            base02            bold
+Title                orange            none              bold
+verbatim
+endif
+endverbatim
+# ---------------------------------------------------------------------------
+
+ColorColumn          none              base02
+Conceal              blue              none
+CursorColumn         none              base02
+CursorLine           none              base02            underline s=base1
+
+# Diff mode =================================================================
+verbatim
+if get(g:, "@optionprefix_diffmode", "") == "high"
+endverbatim
+DiffAdd              green             none              reverse
+DiffChange           yellow            none              reverse
+DiffDelete           red               none              reverse
+DiffText             blue              none              reverse
+verbatim
+elseif get(g:, "@optionprefix_diffmode", "") == "low"
+endverbatim
+DiffAdd              green             none              s=green
+DiffChange           yellow            none              s=yellow
+DiffDelete           red               none              bold
+DiffText             blue              none              s=blue
+verbatim
+else
+endverbatim
+DiffAdd              green             base02            s=green
+DiffChange           yellow            base02            s=yellow
+DiffDelete           red               base02            bold
+DiffText             blue              base02            s=blue
+verbatim
+endif
+endverbatim
+Directory            blue              none
+EndOfBuffer          none              none
+ErrorMsg             red               base03            reverse
+IncSearch            orange            none              standout
+ModeMsg              blue              none
+MoreMsg              blue              none
+Pmenu                base0             base02            reverse
+PmenuSbar            base2             base0             reverse
+PmenuSel             base01            base2             reverse
+PmenuThumb           base0             base03            reverse
+Question             cyan              none              bold
+QuickFixLine     ->  Search
+Search               yellow            none              reverse
+SignColumn           base0             none
+SpellBad             magenta           none              undercurl s=violet
+SpellCap             magenta           none              undercurl s=violet
+SpellLocal           yellow            none              undercurl s=yellow
+SpellRare            cyan              none              undercurl s=cyan
+verbatim
+if get(g:, "@optionprefix_statusline", "") == "low"
+endverbatim
+StatusLine           base01            base02            reverse
+StatusLineNC         base01            base1             reverse
+TabLine              base01            base1             reverse
+TabLineFill          base01            base1             reverse
+TabLineSel           base01            base02            reverse
+verbatim
+else
+endverbatim
+StatusLine           base1             base02            reverse
+StatusLineNC         base00            base02            reverse
+TabLine              base00            base02            reverse
+TabLineFill          base00            base02            reverse
+TabLineSel           base1             base02            reverse
+verbatim
+endif
+endverbatim
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+VertSplit            base01            base01
+Visual               base01            base03            reverse
+VisualNOS            none              base02            reverse
+WarningMsg           orange            none              bold
+WildMenu             base2             base02            reverse
+# Other conventional group names (see `:help group-name`)
+Boolean           -> Constant
+Character         -> Constant
+Comment              base01            none              g=italic
+Conditional       -> Statement
+Constant             cyan              none
+Define            -> PreProc
+Debug             -> Special
+Delimiter         -> Special
+Error                red               none              bold
+Exception         -> Statement
+Float             -> Constant
+Function          -> Identifier
+Identifier           blue              none
+Ignore               none              none
+Include           -> PreProc
+Keyword           -> Statement
+Label             -> Statement
+Macro             -> PreProc
+Number            -> Constant
+Operator          -> Statement
+PreCondit         -> PreProc
+PreProc              orange            none
+Repeat            -> Statement
+Special              orange            none
+SpecialChar       -> Special
+SpecialComment    -> Special
+Statement            green             none
+StorageClass      -> Type
+String            -> Constant
+Structure         -> Type
+Tag               -> Special
+Todo                 magenta           none              bold
+Type                 yellow            none
+Typedef           -> Type
+Underlined           violet            none
+# See `:help lCursor`
+lCursor           -> Cursor
+# See `:help CursorIM`
+CursorIM             none              fg
+# }}}
+
+# Additional highlight groups {{{
+NormalMode           base1             base03            reverse
+InsertMode           cyan              base03            reverse
+ReplaceMode          orange            base03            reverse
+VisualMode           magenta           base03            reverse
+CommandMode          magenta           base03            reverse
+# }}}
+
+Include: _extra.colortemplate
+

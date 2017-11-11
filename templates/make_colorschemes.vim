@@ -9,9 +9,9 @@ let s:errors = 0
 
 execute 'lcd' s:curdir
 
-for s:template in glob(s:curdir . '/*.colortemplate', 1, 1)
+for s:template in glob(s:curdir . '/solarized8*.colortemplate', 1, 1)
   let s:template_name = fnamemodify(s:template, ':t:r')
-  if s:template_name == 'solarized8_dark'
+  if s:template_name == 'solarized8'
     let g:colortemplate_no_doc = 0
   else
     let g:colortemplate_no_doc = 1

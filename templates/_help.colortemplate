@@ -1,0 +1,65 @@
+# vim: ft=colortemplate fdm=marker tw=78 ts=8 norl
+
+documentation
+==============================================================================
+@fullname colorscheme                     *@shortname*
+
+                                          *g:@optionprefix_diffmode*
+Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
+`"high"`, and `"low"`.
+>
+  let g:@optionprefix_diffmode = "normal"
+<
+                                          *g:@optionprefix_old_cursor_style*
+Set to 1 if you want to use the original Solarized's cursor style. By default,
+the cursor is blue. NOTE: your terminal may override the cursor's color.
+>
+  let g:@optionprefix_old_cursor_style = 0
+<
+                                          *g:@optionprefix_statusline*
+Set to `"low"` to reduce the contrast in the status line.
+>
+  let g:@optionprefix_statusline = "normal"
+<
+                                          *g:@optionprefix_term_italics*
+Set to 0 if you want to disable italics in the terminal.
+>
+  let g:@optionprefix_term_italics = 1
+<
+                                          *g:@optionprefix_termtrans*
+Set to 1 if you want a transparent background. Takes effect only in the
+terminal.
+>
+  let g:@optionprefix_termtrans = 0
+<
+                                          *g:@optionprefix_visibility*
+Tweak the visibility of a few  elements. Allowed values are `"normal"`
+(default), `"high"`, and `"low"`.
+>
+  let g:@optionprefix_visibility = "normal"
+<
+
+==============================================================================
+@fullname license                         *@shortname-license*
+
+Copyright (c) 2011 Ethan Schoonover
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+enddocumentation
+
