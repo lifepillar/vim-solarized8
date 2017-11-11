@@ -63,8 +63,8 @@ SOFTWARE.
 Solarized 8 other options		*solarized8-other-options*
 
 							*g:solarized_use16*
-Set to 0 if you want to use 256 colors.
+Set to 1 if you want to use 16 colors.
 >
-  let g:solarized_use16 = 1
+  let g:solarized_use16 = 0
 <
 vim:tw=78:ts=8:ft=help:norl:

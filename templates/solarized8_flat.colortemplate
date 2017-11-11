@@ -7,7 +7,7 @@ Author:          Ethan Schoonover
 Maintainer:      Lifepillar <lifepillar@lifepillar.me>
 Website:         https://github.com/lifepillar/vim-solarized8
 Description:     Precision colors for machines and people
-Terminal Colors: 16, 256
+Terminal Colors: 256, 16
 Option Prefix:   solarized
 License:         OSI approved MIT license
 # }}}
@@ -225,7 +225,9 @@ lCursor           -> Cursor
 CursorIM             none              fg
 # }}}
 
+# Extra stuff {{{
 Include: _extra.colortemplate
+# }}}
 
 Background: light
 
@@ -452,5 +454,7 @@ lCursor           -> Cursor
 CursorIM             none              fg
 # }}}
 
+# Extra stuff {{{
 Include: _extra.colortemplate
+# }}}
 

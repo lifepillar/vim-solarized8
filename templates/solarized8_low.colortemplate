@@ -7,7 +7,7 @@ Author:          Ethan Schoonover
 Maintainer:      Lifepillar <lifepillar@lifepillar.me>
 Website:         https://github.com/lifepillar/vim-solarized8
 Description:     Precision colors for machines and people
-Terminal Colors: 16, 256
+Terminal Colors: 256, 16
 Option Prefix:   solarized
 License:         OSI approved MIT license
 # }}}
@@ -234,7 +234,9 @@ VisualMode           magenta           base3             reverse
 CommandMode          magenta           base3             reverse
 # }}}
 
+# Extra stuff {{{
 Include: _extra.colortemplate
+# }}}
 
 Background: light
 
@@ -471,5 +473,7 @@ VisualMode           magenta           base03            reverse
 CommandMode          magenta           base03            reverse
 # }}}
 
+# Extra stuff {{{
 Include: _extra.colortemplate
+# }}}
 
