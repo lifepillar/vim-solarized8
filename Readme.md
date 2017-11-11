@@ -120,8 +120,8 @@ See `:h xterm-true-color` for the details.
 
 Do you want to hack the theme? Install
 [Colortemplate](https://github.com/lifepillar/vim-colortemplate), edit the
-`*.colortemplate` files, then rebuild the colorschemes using the script in the
-`templates` folder.
+`*.colortemplate` files, then rebuild the colorschemes by sourcing the script in
+the `templates` folder.
 
 If you extend or improve Solarized 8, please consider submitting a pull request!
 
