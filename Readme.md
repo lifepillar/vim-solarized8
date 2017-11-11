@@ -1,8 +1,8 @@
 # Solarized 8: True Colors
 
-![Solarized 8 Dark Flat](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_dark_flat.png)
-
-![Solarized 8 Light Flat](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_light_flat.png)
+Solarized 8 Flat Dark      |  Solarized 8 Flat Light
+:-------------------------:|:-------------------------:
+![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_dark_flat.png)  |  ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_light_flat.png)
 
 This is yet another Solarized theme for Vim. It places itself half way between
 the original [Solarized](https://github.com/altercation/vim-colors-solarized)
