@@ -123,5 +123,5 @@ Do you want to hack the theme? Install
 `*.colortemplate` files, then rebuild the colorschemes using the script in the
 `templates` folder.
 
-If you extend or improve Solarized8, please consider submitting a pull request!
+If you extend or improve Solarized 8, please consider submitting a pull request!
 
