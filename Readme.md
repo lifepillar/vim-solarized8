@@ -26,8 +26,9 @@ etc…: no configuration is needed.
 to use an approximate palette based on xterm's 256 colors. This is a very crude
 approximation, which looks more or less like this:
 
-![Solarized 8 Dark 256](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_dark_256.png)
-![Solarized 8 Light 256](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_light_256.png)
+Dark 256 color palette     |  Light 256 color palette
+:-------------------------:|:-------------------------:
+![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_dark_256.png)  |  ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_light_256.png)
 
 To get exact colors with such terminals, you must set your terminal's 16 ANSI
 colors to the Solarized palette (refer to the manual of your terminal) and put
