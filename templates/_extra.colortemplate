@@ -1,7 +1,7 @@
 # vim: ft=colortemplate fdm=marker
 # Filetype specific highlight groups {{{
 verbatim
-if get(g:, '@optionprefix_enable_extra_hi_groups', 0)
+if get(g:, '@optionprefix_extra_hi_groups', 0)
 endverbatim
 # vim {{{
 vimVar            -> Identifier

@@ -91,7 +91,7 @@ The following options were not available in the original Solarized:
   Solarized's cursor style (default: `0`). By default, the cursor is orange/red
   in light themes, and blue in dark themes (but please note that your terminal
   may override the cursor's color).
-- `g:solarized_enable_extra_hi_groups`: set to `1` to enable Solarized
+- `g:solarized_extra_hi_groups`: set to `1` to enable Solarized
   filetype-specific syntax highlighting groups (default is `0`). Please be aware
   that there is [a long standing
   issue](https://github.com/altercation/solarized/issues/102) with extra

@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sat Nov 11 14:16:15 2017
+" Last Updated: Sat Nov 11 14:26:16 2017
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -175,7 +175,7 @@ if !get(g:, 'solarized_use16', 0)
     hi ReplaceMode ctermfg=166 ctermbg=230 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi VisualMode ctermfg=162 ctermbg=230 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi CommandMode ctermfg=162 ctermbg=230 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-    if get(g:, 'solarized_enable_extra_hi_groups', 0)
+    if get(g:, 'solarized_extra_hi_groups', 0)
       hi! link vimVar Identifier
       hi! link vimFunc Function
       hi! link vimUserFunc Function
@@ -550,7 +550,7 @@ if !get(g:, 'solarized_use16', 0)
   hi ReplaceMode ctermfg=166 ctermbg=230 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualMode ctermfg=162 ctermbg=230 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi CommandMode ctermfg=162 ctermbg=230 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  if get(g:, 'solarized_enable_extra_hi_groups', 0)
+  if get(g:, 'solarized_extra_hi_groups', 0)
     hi! link vimVar Identifier
     hi! link vimFunc Function
     hi! link vimUserFunc Function
@@ -897,7 +897,7 @@ if &background ==# 'dark'
   hi ReplaceMode ctermfg=9 ctermbg=15 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualMode ctermfg=5 ctermbg=15 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi CommandMode ctermfg=5 ctermbg=15 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-  if get(g:, 'solarized_enable_extra_hi_groups', 0)
+  if get(g:, 'solarized_extra_hi_groups', 0)
     hi! link vimVar Identifier
     hi! link vimFunc Function
     hi! link vimUserFunc Function
@@ -1254,7 +1254,7 @@ hi InsertMode ctermfg=6 ctermbg=15 guifg=#2aa198 guibg=#fdf6e3 guisp=NONE cterm=
 hi ReplaceMode ctermfg=9 ctermbg=15 guifg=#cb4b16 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualMode ctermfg=5 ctermbg=15 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi CommandMode ctermfg=5 ctermbg=15 guifg=#d33682 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
-if get(g:, 'solarized_enable_extra_hi_groups', 0)
+if get(g:, 'solarized_extra_hi_groups', 0)
   hi! link vimVar Identifier
   hi! link vimFunc Function
   hi! link vimUserFunc Function
