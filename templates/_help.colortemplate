@@ -31,7 +31,16 @@ Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
 `"high"`, and `"low"`.
 >
 	let g:@optionprefix_diffmode = "normal"
-<						*g:@optionprefix_old_cursor_style*
+<
+					*g:@optionprefix_enable_extra_hi_groups*
+Set to 1 to enable filetype-specific syntax highlight group.
+>
+	let g:@optionprefix_enable_extra_hi_groups = 0
+<
+NOTE: setting this to 1 may leave "a wake of destruction when switching away"
+(T. Pope), that is, when you switch to a different colorscheme the
+highlighting may look wrong or disabled.
+						*g:@optionprefix_old_cursor_style*
 Set to 1 if you want to use the original Solarized's cursor style. By default,
 the cursor is blue. NOTE: your terminal may override the cursor's color.
 >
