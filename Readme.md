@@ -1,3 +1,5 @@
+**NOTE:** version 1.0.0 has backward incompatible changes. Please review this Readme!
+
 # Solarized 8: True Colors
 
 Solarized 8 Flat Dark      |  Solarized 8 Flat Light
