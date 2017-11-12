@@ -1,4 +1,4 @@
-**NOTE:** version 1.0.0 has backward incompatible changes. Please review this Readme!
+**NOTE: version 1.0.0 has backward incompatible changes. Please review this Readme!**
 
 # Solarized 8: True Colors
 
@@ -73,9 +73,9 @@ accordingly.
 If you use Vim packages, there is no need to `packadd solarized8`. Keep your
 `runtimepath` clean!
 
-<sup>*</sup> On my machine, the original Solarized loads in ~3.5ms, while
-the command above takes ~1.6ms. Even with extra highlight groups on (see options
-below), Solarized 8 loads in about ~2.0ms. The loading time depends on
+<sup>*</sup> On my machine, the original Solarized loads in ~3.5ms, while the
+command above takes ~1.6ms. Even with extra highlight groups on (see options
+below), Solarized 8 loads in about ~2.0ms. The loading time depends on the
 background and on the terminal palette, but it should never be more than 3ms on
 average (light background, 16 colors).
 
