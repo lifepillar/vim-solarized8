@@ -51,7 +51,7 @@ recommend that you use them. Just clone this repo inside `pack/*/opt`, e.g.:
 
 Otherwise, use your favourite installation method.
 
-There are actually four optimized color schemes:
+There are actually four optimized<sup>*</sup> color schemes:
 
 - `solarized8`: the default Solarized theme;
 - `solarized8_low`: low-contrast variant;
@@ -70,6 +70,12 @@ accordingly.
 
 If you use Vim packages, there is no need to `packadd solarized8`. Keep your
 `runtimepath` clean!
+
+<sup>*</sup> On my machine, the original Solarized loads in ~3.5ms, while
+the command above takes ~1.6ms. Even with extra highlight groups on (see options
+below), Solarized 8 loads in about ~2.0ms. The loading time depends on
+background and on the terminal palette, but it should never be more than 3ms on
+average (light background, 16 colors).
 
 
 ## Options
