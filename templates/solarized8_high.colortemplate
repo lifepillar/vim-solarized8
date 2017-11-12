@@ -74,6 +74,10 @@ hi CursorLineNr ctermfg=@orange guifg=@orange cterm=bold gui=bold
 endverbatim
 NonText              orange            none              bold
 SpecialKey           orange            none              reverse
+SpellBad             violet            base3             t=underline,reverse g=undercurl,reverse s=red
+SpellCap             violet            base3             t=underline,reverse g=undercurl,reverse s=red
+SpellLocal           yellow            base3             t=underline,reverse g=undercurl,reverse s=red
+SpellRare            cyan              base3             t=underline,reverse g=undercurl,reverse s=red
 Title                yellow            none              bold
 verbatim
 elseif get(g:, "@optionprefix_visibility", "") == "low"
@@ -81,6 +85,10 @@ hi CursorLineNr ctermfg=@base01 guifg=@base01 cterm=bold gui=bold
 endverbatim
 NonText              base02            none              bold
 SpecialKey           base02            none              reverse
+SpellBad             violet            none              t=underline g=undercurl s=orange
+SpellCap             violet            none              t=underline g=undercurl s=orange
+SpellLocal           yellow            none              t=underline g=undercurl s=yellow
+SpellRare            cyan              none              t=underline g=undercurl s=cyan
 Title                base01            none              bold
 verbatim
 else
@@ -88,6 +96,10 @@ hi CursorLineNr ctermfg=@base0 guifg=@base0 cterm=bold gui=bold
 endverbatim
 NonText              base00            none              bold
 SpecialKey           base00            base02            bold
+SpellBad             violet            none              t=underline g=undercurl s=orange
+SpellCap             violet            none              t=underline g=undercurl s=orange
+SpellLocal           yellow            none              t=underline g=undercurl s=yellow
+SpellRare            cyan              none              t=underline g=undercurl s=cyan
 Title                yellow            none              bold
 verbatim
 endif
@@ -154,10 +166,6 @@ Question             cyan              none              bold
 QuickFixLine     ->  Search
 Search               yellow            none              reverse
 SignColumn           base0             none
-SpellBad             violet            none              undercurl s=orange
-SpellCap             violet            none              undercurl s=orange
-SpellLocal           yellow            none              undercurl s=yellow
-SpellRare            cyan              none              undercurl s=cyan
 verbatim
 if get(g:, "@optionprefix_statusline", "") == "low"
 endverbatim
@@ -307,6 +315,10 @@ endverbatim
 MatchParen           base03            base00            bold
 NonText              red               none              bold
 SpecialKey           red               none              reverse
+SpellBad             magenta           base03            t=underline,reverse g=undercurl,reverse s=violet
+SpellCap             magenta           base03            t=underline,reverse g=undercurl,reverse s=violet
+SpellLocal           yellow            base03            t=underline,reverse g=undercurl,reverse s=orange
+SpellRare            cyan              base03            t=underline,reverse g=undercurl,reverse s=orange
 Title                orange            none              bold
 # Low visibility
 verbatim
@@ -325,6 +337,10 @@ endverbatim
 MatchParen           red               base02            bold,underline
 NonText              base02            none              bold
 SpecialKey           base02            none              bold
+SpellBad             magenta           none              t=underline g=undercurl s=violet
+SpellCap             magenta           none              t=underline g=undercurl s=violet
+SpellLocal           yellow            none              t=underline g=undercurl s=yellow
+SpellRare            cyan              none              t=underline g=undercurl s=cyan
 Title                base01            none              bold
 # Normal visibility
 verbatim
@@ -343,6 +359,10 @@ endverbatim
 MatchParen           red               base02            bold,underline
 NonText              base00            none              bold
 SpecialKey           base00            base02            bold
+SpellBad             magenta           none              t=underline g=undercurl s=violet
+SpellCap             magenta           none              t=underline g=undercurl s=violet
+SpellLocal           yellow            none              t=underline g=undercurl s=yellow
+SpellRare            cyan              none              t=underline g=undercurl s=cyan
 Title                orange            none              bold
 verbatim
 endif
@@ -393,10 +413,6 @@ Question             cyan              none              bold
 QuickFixLine     ->  Search
 Search               yellow            none              reverse
 SignColumn           base0             none
-SpellBad             magenta           none              undercurl s=violet
-SpellCap             magenta           none              undercurl s=violet
-SpellLocal           yellow            none              undercurl s=yellow
-SpellRare            cyan              none              undercurl s=cyan
 verbatim
 if get(g:, "@optionprefix_statusline", "") == "low"
 endverbatim
