@@ -70,9 +70,9 @@ colorscheme, e.g.:
 To switch the background from dark to light or vice versa, just set `background`
 accordingly.
 
-**Note:** the old names (`solarized8_dark*.vim` and `solarized8_light*.vim`) are
-still availabled, but **they are deprecated** and will be removed in a future
-release. Please, use one of the names above.
+**Note:** the old names (`solarized8_dark*` and `solarized8_light*`) are
+still available, but **they are deprecated** and will be removed in a future
+release. Please use one of the names above.
 
 If you use Vim packages, there is no need to `packadd solarized8`. Keep your
 `runtimepath` clean!
