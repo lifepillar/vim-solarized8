@@ -18,13 +18,12 @@ theme does not define `guifg` and `guibg` in terminal Vim, making it unsuitable
 for versions of Vim supporting true-color terminals. Instead, this color scheme
 works **out of the box everywhere**. For the best experience, you need:
 
-- Vim ≥7.4.1799 with `termguicolors` set, or
-- NeoVim,
+- Vim ≥7.4.1799, or NeoVim, with `termguicolors` set, **and**
+- [a true-color enabled terminal](https://gist.github.com/XVilka/8346728).
 
-**and** a true-color enabled terminal. Solarized 8 also works in MacVim, gVim,
-etc…: no configuration is needed.
+Solarized 8 also works in MacVim, gVim, etc…: no configuration is needed.
 
-**Note:** for terminals not supporting true colors, Solarized 8 will fall back
+For terminals not supporting true colors, Solarized 8 will fall back
 to use an approximate palette based on xterm's 256 colors. This is a very crude
 approximation, which looks more or less like this:
 
@@ -32,16 +31,20 @@ Dark 256 color palette     |  Light 256 color palette
 :-------------------------:|:-------------------------:
 ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_dark_256.png)  |  ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_light_256.png)
 
-To get exact colors with such terminals, you must set your terminal's 16 ANSI
-colors to the Solarized palette (refer to the manual of your terminal) and put
-this line in your `vimrc` before loading the colorscheme:
+(Yeah, it looks like a different colorscheme.)
+
+If you don't like this approximation, to get exact colors with such terminals
+you must set your terminal's 16 ANSI colors to the Solarized palette (refer to
+the manual of your terminal) and put this line in your `vimrc` before loading
+the colorscheme:
 
    ```vim
    let g:solarized_use16 = 1
    ```
 
 Be aware that, if you set the variable above, but your terminal does not use the
-Solarized palette, your colors will be completely off.
+Solarized palette, your colors will be completely off. Note also that if your
+terminal does not support true colors, you must *not* set `termguicolors`.
 
 
 ## Installation
