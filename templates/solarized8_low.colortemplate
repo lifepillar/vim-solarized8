@@ -50,6 +50,7 @@ endverbatim
   FoldColumn         fg                none
   Folded             fg                none             bold s=base03
   LineNr             base01            none
+  Terminal           fg                none
 
 verbatim
 hi CursorLineNr ctermbg=NONE guifg=NONE
@@ -61,6 +62,7 @@ endverbatim
   FoldColumn        base0             base02
   Folded            base0             base02            bold s=base03
   LineNr            base01            base02
+  Terminal          fg                back
 
 verbatim
 hi CursorLineNr ctermbg=@base02 guibg=@base02
@@ -232,6 +234,9 @@ Underlined           violet            none
 lCursor           -> Cursor
 # See `:help CursorIM`
 CursorIM             none              fg
+# See `:help window-toolbar`
+ToolbarLine          none              base02
+ToolbarButton        base1             base02            bold
 # }}}
 
 # Additional highlight groups {{{
@@ -280,6 +285,7 @@ endverbatim
   FoldColumn         base0             none
   Folded             base0             none              bold s=base03
   LineNr             base01            none
+  Terminal           fg                none
 
 verbatim
 hi CursorLineNr ctermbg=NONE guifg=NONE
@@ -291,7 +297,7 @@ endverbatim
   FoldColumn        base0             base02
   Folded            base0             base02            bold s=base03
   LineNr            base01            base02
-
+  Terminal          fg                back
 verbatim
 hi CursorLineNr ctermbg=@base02 guibg=@base02
 endif
@@ -479,6 +485,9 @@ Underlined           violet            none
 lCursor           -> Cursor
 # See `:help CursorIM`
 CursorIM             none              fg
+# See `:help window-toolbar`
+ToolbarLine          none              base02
+ToolbarButton        base1             base02            bold
 # }}}
 
 # Additional highlight groups {{{
