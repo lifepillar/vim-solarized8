@@ -52,9 +52,9 @@ Set to `"low"` to reduce the contrast in the status line.
 	let g:@optionprefix_statusline = "normal"
 <
 						*g:@optionprefix_term_italics*
-Set to 0 if you want to disable italics in the terminal.
+Set to 1 if you want to enable italics in the terminal.
 >
-	let g:@optionprefix_term_italics = 1
+	let g:@optionprefix_term_italics = 0
 <
 						*g:@optionprefix_termtrans*
 Set to 1 if you want a transparent background. Takes effect only in the

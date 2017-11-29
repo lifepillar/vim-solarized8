@@ -222,7 +222,7 @@ endverbatim
 
 # Terminal italic {{{
 verbatim
-if get(g:, "@optionprefix_term_italics", 1)
+if get(g:, "@optionprefix_term_italics", 0)
 hi Comment cterm=italic
 hi gitcommitComment cterm=italic
 hi htmlSpecialTagName cterm=italic
