@@ -1,4 +1,4 @@
-" Source this script to parse all the templates in this folder and
+" Source this script to parse all the templates in the templates folder and
 " generate corresponding colorschemes in the colors folder (the colors folder
 " will be created if it does not exist).
 " Note: existing files in the colors folder are overridden.
