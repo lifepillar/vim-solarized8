@@ -40,6 +40,10 @@ Color: green                #859900                ~        2
 Color: back                 #002b36                ~        8
 # }}}
 
+# Fix 256-color palette in supported terminals {{{
+Include: _fix-256-palette.colortemplate
+# }}}
+
 # Default highlight groups {{{
 verbatim
 if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)

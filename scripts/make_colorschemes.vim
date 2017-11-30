@@ -5,11 +5,12 @@
 
 let s:curdir = fnamemodify(resolve(expand('<sfile>:p')), ':h')
 let s:parent = fnamemodify(s:curdir, ':h')
+let s:templates = s:parent.'/templates'
 let s:errors = 0
 
-execute 'lcd' s:curdir
+execute 'lcd' s:templates
 
-for s:template in glob(s:curdir . '/solarized8*.colortemplate', 1, 1)
+for s:template in glob(s:templates . '/solarized8*.colortemplate', 1, 1)
   let s:template_name = fnamemodify(s:template, ':t:r')
   if s:template_name == 'solarized8'
     let g:colortemplate_no_doc = 0
