@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Wed Nov 29 19:34:21 2017
+" Last Updated: Sun Mar 25 12:43:37 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -138,7 +138,7 @@ if !get(g:, 'solarized_use16', 0)
     endif
     hi! link StatusLineTerm StatusLine
     hi! link StatusLineTermNC StatusLineNC
-    hi VertSplit ctermfg=243 ctermbg=243 guifg=#657b83 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
+    hi VertSplit ctermfg=236 ctermbg=243 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
     hi Visual ctermfg=243 ctermbg=235 guifg=#657b83 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi VisualNOS ctermfg=NONE ctermbg=236 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi WarningMsg ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -525,7 +525,7 @@ if !get(g:, 'solarized_use16', 0)
   endif
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
-  hi VertSplit ctermfg=247 ctermbg=247 guifg=#93a1a1 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
+  hi VertSplit ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
   hi Visual ctermfg=247 ctermbg=230 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi WarningMsg ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -884,7 +884,7 @@ if &background ==# 'dark'
   endif
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
-  hi VertSplit ctermfg=11 ctermbg=11 guifg=#657b83 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
+  hi VertSplit ctermfg=0 ctermbg=11 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
   hi Visual ctermfg=11 ctermbg=8 guifg=#657b83 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=NONE ctermbg=0 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi WarningMsg ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -1253,7 +1253,7 @@ else
 endif
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
-hi VertSplit ctermfg=14 ctermbg=14 guifg=#93a1a1 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
+hi VertSplit ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
 hi Visual ctermfg=14 ctermbg=15 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualNOS ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi WarningMsg ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -1605,7 +1605,7 @@ finish
 " TabLineSel           base0             base02            reverse
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
-" VertSplit            base01            base01
+" VertSplit            base02            base01
 " Visual               base01            base03            reverse
 " VisualNOS            none              base02            reverse
 " WarningMsg           orange            none              bold
@@ -1930,7 +1930,7 @@ finish
 " TabLineSel           base1             base02            reverse
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
-" VertSplit            base01            base01
+" VertSplit            base1             base01
 " Visual               base01            base03            reverse
 " VisualNOS            none              base02            reverse
 " WarningMsg           orange            none              bold

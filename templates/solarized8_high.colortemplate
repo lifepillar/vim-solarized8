@@ -189,7 +189,7 @@ endif
 endverbatim
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
-VertSplit            base01            base01
+VertSplit            base02            base01
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold
@@ -441,7 +441,7 @@ endif
 endverbatim
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
-VertSplit            base01            base01
+VertSplit            base1             base01
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold

@@ -188,7 +188,7 @@ VisualMode           base02            magenta           bold,reverse
 CommandMode          base02            magenta           bold,reverse
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
-VertSplit            base02            base02
+VertSplit            base01            base02
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold
@@ -430,7 +430,7 @@ CommandMode          base02            magenta           bold,reverse
 
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
-VertSplit            base02            base02
+VertSplit            base01            base02
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold

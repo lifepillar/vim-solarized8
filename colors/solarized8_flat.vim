@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Wed Nov 29 19:34:18 2017
+" Last Updated: Sun Mar 25 12:43:34 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -137,7 +137,7 @@ if !get(g:, 'solarized_use16', 0)
     hi CommandMode ctermfg=236 ctermbg=162 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
     hi! link StatusLineTerm StatusLine
     hi! link StatusLineTermNC StatusLineNC
-    hi VertSplit ctermfg=236 ctermbg=236 guifg=#073642 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+    hi VertSplit ctermfg=242 ctermbg=236 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
     hi Visual ctermfg=242 ctermbg=235 guifg=#586e75 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi VisualNOS ctermfg=NONE ctermbg=236 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi WarningMsg ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -518,7 +518,7 @@ if !get(g:, 'solarized_use16', 0)
   hi CommandMode ctermfg=254 ctermbg=162 guifg=#eee8d5 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
-  hi VertSplit ctermfg=254 ctermbg=254 guifg=#eee8d5 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+  hi VertSplit ctermfg=247 ctermbg=254 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
   hi Visual ctermfg=247 ctermbg=230 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi WarningMsg ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -871,7 +871,7 @@ if &background ==# 'dark'
   hi CommandMode ctermfg=0 ctermbg=5 guifg=#073642 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
-  hi VertSplit ctermfg=0 ctermbg=0 guifg=#073642 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+  hi VertSplit ctermfg=10 ctermbg=0 guifg=#586e75 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
   hi Visual ctermfg=10 ctermbg=8 guifg=#586e75 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=NONE ctermbg=0 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi WarningMsg ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -1234,7 +1234,7 @@ hi VisualMode ctermfg=7 ctermbg=5 guifg=#eee8d5 guibg=#d33682 guisp=NONE cterm=N
 hi CommandMode ctermfg=7 ctermbg=5 guifg=#eee8d5 guibg=#d33682 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
-hi VertSplit ctermfg=7 ctermbg=7 guifg=#eee8d5 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+hi VertSplit ctermfg=14 ctermbg=7 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
 hi Visual ctermfg=14 ctermbg=15 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualNOS ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi WarningMsg ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -1585,7 +1585,7 @@ finish
 " CommandMode          base02            magenta           bold,reverse
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
-" VertSplit            base02            base02
+" VertSplit            base01            base02
 " Visual               base01            base03            reverse
 " VisualNOS            none              base02            reverse
 " WarningMsg           orange            none              bold
@@ -1909,7 +1909,7 @@ finish
 " CommandMode          base02            magenta           bold,reverse
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
-" VertSplit            base02            base02
+" VertSplit            base01            base02
 " Visual               base01            base03            reverse
 " VisualNOS            none              base02            reverse
 " WarningMsg           orange            none              bold
