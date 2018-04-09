@@ -40,6 +40,10 @@ Color: green                #859900                ~        2
 Color: back                 #002b36                ~        8
 # }}}
 
+# Terminal ANSI colors {{{
+Include: _terminal_ansi_colors.colortemplate
+# }}}
+
 # Default highlight groups {{{
 verbatim
 if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)
@@ -273,6 +277,10 @@ Color: cyan                 #2aa198                ~        6
 Color: green                #859900                ~        2
 #Color:green                #719e07                ~        2
 Color: back                 #fdf6e3                ~        15
+# }}}
+
+# Terminal ANSI colors {{{
+Include: _terminal_ansi_colors.colortemplate
 # }}}
 
 # Default highlight groups {{{

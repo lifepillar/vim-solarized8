@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sun Mar 25 12:43:41 2018
+" Last Updated: Mon Apr  9 21:50:32 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -40,6 +40,8 @@ if !get(g:, 'solarized_use16', 0)
     "  base03: GUI=#002b36/rgb(  0, 43, 54)  Term=235 #262626/rgb( 38, 38, 38)  [delta=12.727247]
     "    back: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
     "  base02: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
+    let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5',
+          \ '#002b36', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
     if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
       hi Normal ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
       hi FoldColumn ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -415,6 +417,8 @@ if !get(g:, 'solarized_use16', 0)
   "   base1: GUI=#586e75/rgb( 88,110,117)  Term=242 #6c6c6c/rgb(108,108,108)  [delta=9.227744]
   "   base3: GUI=#002b36/rgb(  0, 43, 54)  Term=235 #262626/rgb( 38, 38, 38)  [delta=12.727247]
   "   base2: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
+  let g:terminal_ansi_colors = ['#eee8d5', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#073642',
+        \ '#fdf6e3', '#cb4b16', '#93a1a1', '#839496', '#657b83', '#6c71c4', '#586e75', '#002b36']
   if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
     hi Normal ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi FoldColumn ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -786,6 +790,8 @@ endif
 
 " 16-color variant
 if &background ==# 'dark'
+  let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5',
+        \ '#002b36', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
   if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
     hi Normal ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi FoldColumn ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1143,6 +1149,8 @@ if &background ==# 'dark'
   finish
 endif
 
+let g:terminal_ansi_colors = ['#eee8d5', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#073642',
+      \ '#fdf6e3', '#cb4b16', '#93a1a1', '#839496', '#657b83', '#6c71c4', '#586e75', '#002b36']
 if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
   hi Normal ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi FoldColumn ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE

@@ -1,0 +1,5 @@
+verbatim
+let g:terminal_ansi_colors = ['@guibase02', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta', '@guicyan', '@guibase2',
+\ '@guibase03', '@guiorange', '@guibase01', '@guibase00', '@guibase0', '@guiviolet', '@guibase1', '@guibase3']
+endverbatim
+
