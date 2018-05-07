@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Mon Apr  9 21:50:25 2018
+" Last Updated: Mon 07 May 2018 12:48:27 PM CEST
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
@@ -233,6 +233,7 @@ if !get(g:, 'solarized_use16', 0)
       hi htmlSpecialTagName ctermfg=32 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
       hi htmlArg ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
       hi javaScript ctermfg=136 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+      hi! link jsFuncCall Function
       hi perlHereDoc ctermfg=247 ctermbg=235 guifg=#93a1a1 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
       hi perlVarPlain ctermfg=136 ctermbg=235 guifg=#b58900 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
       hi perlStatementFileDesc ctermfg=37 ctermbg=235 guifg=#2aa198 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
@@ -616,6 +617,7 @@ if !get(g:, 'solarized_use16', 0)
     hi htmlSpecialTagName ctermfg=32 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
     hi htmlArg ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi javaScript ctermfg=136 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi! link jsFuncCall Function
     hi perlHereDoc ctermfg=242 ctermbg=230 guifg=#586e75 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
     hi perlVarPlain ctermfg=136 ctermbg=230 guifg=#b58900 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
     hi perlStatementFileDesc ctermfg=37 ctermbg=230 guifg=#2aa198 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
@@ -971,6 +973,7 @@ if &background ==# 'dark'
     hi htmlSpecialTagName ctermfg=4 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
     hi htmlArg ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi javaScript ctermfg=3 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi! link jsFuncCall Function
     hi perlHereDoc ctermfg=14 ctermbg=8 guifg=#93a1a1 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
     hi perlVarPlain ctermfg=3 ctermbg=8 guifg=#b58900 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
     hi perlStatementFileDesc ctermfg=6 ctermbg=8 guifg=#2aa198 guibg=#002b36 guisp=NONE cterm=NONE gui=NONE
@@ -1336,6 +1339,7 @@ if get(g:, 'solarized_extra_hi_groups', 0)
   hi htmlSpecialTagName ctermfg=4 ctermbg=NONE guifg=#268bd2 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
   hi htmlArg ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi javaScript ctermfg=3 ctermbg=NONE guifg=#b58900 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi! link jsFuncCall Function
   hi perlHereDoc ctermfg=10 ctermbg=15 guifg=#586e75 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
   hi perlVarPlain ctermfg=3 ctermbg=15 guifg=#b58900 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
   hi perlStatementFileDesc ctermfg=6 ctermbg=15 guifg=#2aa198 guibg=#fdf6e3 guisp=NONE cterm=NONE gui=NONE
@@ -1686,6 +1690,7 @@ finish
 " htmlSpecialTagName         blue            none              g=italic
 " htmlArg                    base00          none
 " javaScript                 yellow          none
+" jsFuncCall              -> Function
 " perlHereDoc                base1           back
 " perlVarPlain               yellow          back
 " perlStatementFileDesc      cyan            back
@@ -2010,6 +2015,7 @@ finish
 " htmlSpecialTagName         blue            none              g=italic
 " htmlArg                    base00          none
 " javaScript                 yellow          none
+" jsFuncCall              -> Function
 " perlHereDoc                base1           back
 " perlVarPlain               yellow          back
 " perlStatementFileDesc      cyan            back
