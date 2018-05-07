@@ -60,6 +60,9 @@ htmlSpecialTagName         blue            none              g=italic
 htmlArg                    base00          none
 javaScript                 yellow          none
 # }}}
+# javascript {{{
+jsFuncCall              -> Function
+# }}}
 # perl {{{
 perlHereDoc                base1           back
 perlVarPlain               yellow          back
