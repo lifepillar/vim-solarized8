@@ -4,10 +4,10 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Mon 07 May 2018 12:48:30 PM CEST
+" Last Updated: Wed Jun 20 09:03:14 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
-      \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', 0) ? 16 : 256))
+      \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', &t_Co < 256) ? 16 : 256))
   echoerr '[Solarized 8 High Contrast] There are not enough colors.'
   finish
 endif

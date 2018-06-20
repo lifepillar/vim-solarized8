@@ -71,7 +71,7 @@ Tweak the visibility of a few  elements. Allowed values are `"normal"`
 Solarized 8 other options		*solarized8-other-options*
 
 							*g:solarized_use16*
-Set to 1 if you want to use 16 colors.
+Set to 1 if you want to force the use of 16 colors.
 >
 	let g:solarized_use16 = 0
 <
