@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Wed Jun 20 09:03:17 2018
+" Last Updated: Thu Jun 21 12:32:24 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', &t_Co < 256) ? 16 : 256))
@@ -20,7 +20,7 @@ endif
 let g:colors_name = 'solarized8_low'
 
 " 256-color variant
-if !get(g:, 'solarized_use16', 0)
+if !get(g:, 'solarized_use16', &t_Co < 256)
   if &background ==# 'dark'
     " Color similarity table (dark background)
     "  yellow: GUI=#b58900/rgb(181,137,  0)  Term=136 #af8700/rgb(175,135,  0)  [delta=1.465279]
