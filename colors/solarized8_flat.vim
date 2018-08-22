@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Thu Jun 21 12:32:17 2018
+" Last Updated: Wed Aug 22 14:17:35 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', &t_Co < 256) ? 16 : 256))
@@ -22,24 +22,6 @@ let g:colors_name = 'solarized8_flat'
 " 256-color variant
 if !get(g:, 'solarized_use16', &t_Co < 256)
   if &background ==# 'dark'
-    " Color similarity table (dark background)
-    "  yellow: GUI=#b58900/rgb(181,137,  0)  Term=136 #af8700/rgb(175,135,  0)  [delta=1.465279]
-    "    blue: GUI=#268bd2/rgb( 38,139,210)  Term= 32 #0087d7/rgb(  0,135,215)  [delta=2.677029]
-    " magenta: GUI=#d33682/rgb(211, 54,130)  Term=162 #d70087/rgb(215,  0,135)  [delta=4.342643]
-    "    cyan: GUI=#2aa198/rgb( 42,161,152)  Term= 37 #00afaf/rgb(  0,175,175)  [delta=5.365780]
-    "   base1: GUI=#93a1a1/rgb(147,161,161)  Term=247 #9e9e9e/rgb(158,158,158)  [delta=6.489730]
-    "  violet: GUI=#6c71c4/rgb(108,113,196)  Term= 61 #5f5faf/rgb( 95, 95,175)  [delta=6.795109]
-    "     red: GUI=#dc322f/rgb(220, 50, 47)  Term=160 #d70000/rgb(215,  0,  0)  [delta=6.843619]
-    "   green: GUI=#859900/rgb(133,153,  0)  Term=106 #87af00/rgb(135,175,  0)  [delta=6.901386]
-    "   base0: GUI=#839496/rgb(131,148,150)  Term=246 #949494/rgb(148,148,148)  [delta=7.557606]
-    "   base3: GUI=#fdf6e3/rgb(253,246,227)  Term=230 #ffffd7/rgb(255,255,215)  [delta=7.816259]
-    "  orange: GUI=#cb4b16/rgb(203, 75, 22)  Term=166 #d75f00/rgb(215, 95,  0)  [delta=8.065025]
-    "   base2: GUI=#eee8d5/rgb(238,232,213)  Term=254 #e4e4e4/rgb(228,228,228)  [delta=8.289679]
-    "  base00: GUI=#657b83/rgb(101,123,131)  Term= 66 #5f8787/rgb( 95,135,135)  [delta=8.468738]
-    "  base01: GUI=#586e75/rgb( 88,110,117)  Term=242 #6c6c6c/rgb(108,108,108)  [delta=9.227744]
-    "    back: GUI=#002b36/rgb(  0, 43, 54)  Term=235 #262626/rgb( 38, 38, 38)  [delta=12.727247]
-    "  base03: GUI=#002b36/rgb(  0, 43, 54)  Term=235 #262626/rgb( 38, 38, 38)  [delta=12.727247]
-    "  base02: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
     let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5',
           \ '#002b36', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
     if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
@@ -394,26 +376,8 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
     finish
   endif
 
-  " Color similarity table (light background)
-  "  yellow: GUI=#b58900/rgb(181,137,  0)  Term=136 #af8700/rgb(175,135,  0)  [delta=1.465279]
-  "    blue: GUI=#268bd2/rgb( 38,139,210)  Term= 32 #0087d7/rgb(  0,135,215)  [delta=2.677029]
-  " magenta: GUI=#d33682/rgb(211, 54,130)  Term=162 #d70087/rgb(215,  0,135)  [delta=4.342643]
-  "    cyan: GUI=#2aa198/rgb( 42,161,152)  Term= 37 #00afaf/rgb(  0,175,175)  [delta=5.365780]
-  "  base01: GUI=#93a1a1/rgb(147,161,161)  Term=247 #9e9e9e/rgb(158,158,158)  [delta=6.489730]
-  "  violet: GUI=#6c71c4/rgb(108,113,196)  Term= 61 #5f5faf/rgb( 95, 95,175)  [delta=6.795109]
-  "     red: GUI=#dc322f/rgb(220, 50, 47)  Term=160 #d70000/rgb(215,  0,  0)  [delta=6.843619]
-  "   green: GUI=#859900/rgb(133,153,  0)  Term=106 #87af00/rgb(135,175,  0)  [delta=6.901386]
-  "  base00: GUI=#839496/rgb(131,148,150)  Term=246 #949494/rgb(148,148,148)  [delta=7.557606]
-  "    back: GUI=#fdf6e3/rgb(253,246,227)  Term=230 #ffffd7/rgb(255,255,215)  [delta=7.816259]
-  "  base03: GUI=#fdf6e3/rgb(253,246,227)  Term=230 #ffffd7/rgb(255,255,215)  [delta=7.816259]
-  "  orange: GUI=#cb4b16/rgb(203, 75, 22)  Term=166 #d75f00/rgb(215, 95,  0)  [delta=8.065025]
-  "  base02: GUI=#eee8d5/rgb(238,232,213)  Term=254 #e4e4e4/rgb(228,228,228)  [delta=8.289679]
-  "   base0: GUI=#657b83/rgb(101,123,131)  Term= 66 #5f8787/rgb( 95,135,135)  [delta=8.468738]
-  "   base1: GUI=#586e75/rgb( 88,110,117)  Term=242 #6c6c6c/rgb(108,108,108)  [delta=9.227744]
-  "   base3: GUI=#002b36/rgb(  0, 43, 54)  Term=235 #262626/rgb( 38, 38, 38)  [delta=12.727247]
-  "   base2: GUI=#073642/rgb(  7, 54, 66)  Term=236 #303030/rgb( 48, 48, 48)  [delta=13.434724]
-  let g:terminal_ansi_colors = ['#eee8d5', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#073642',
-        \ '#fdf6e3', '#cb4b16', '#93a1a1', '#839496', '#657b83', '#6c71c4', '#586e75', '#002b36']
+  let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5',
+        \ '#002b36', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
   if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
     hi Normal ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1134,8 +1098,8 @@ if &background ==# 'dark'
   finish
 endif
 
-let g:terminal_ansi_colors = ['#eee8d5', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#073642',
-      \ '#fdf6e3', '#cb4b16', '#93a1a1', '#839496', '#657b83', '#6c71c4', '#586e75', '#002b36']
+let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5',
+      \ '#002b36', '#cb4b16', '#586e75', '#657b83', '#839496', '#6c71c4', '#93a1a1', '#fdf6e3']
 if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
   hi Normal ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Terminal ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE

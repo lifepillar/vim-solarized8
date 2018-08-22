@@ -41,7 +41,7 @@ Color: back                 #002b36                ~        8
 # }}}
 
 # Terminal ANSI colors {{{
-Include: _terminal_ansi_colors.colortemplate
+Include: _terminal_ansi_colors_dark.colortemplate
 # }}}
 
 # Default highlight groups {{{
@@ -280,7 +280,7 @@ Color: back                 #fdf6e3                ~        15
 # }}}
 
 # Terminal ANSI colors {{{
-Include: _terminal_ansi_colors.colortemplate
+Include: _terminal_ansi_colors_light.colortemplate
 # }}}
 
 # Default highlight groups {{{
