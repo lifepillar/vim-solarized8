@@ -40,8 +40,9 @@ Color: green                #859900                ~        2
 Color: back                 #073642                ~        0
 # }}}
 
-# Terminal ANSI colors {{{
+# Terminal colors {{{
 Include: _terminal_ansi_colors_dark.colortemplate
+Include: _neovim_dark.colortemplate
 # }}}
 
 # Default highlight groups {{{
@@ -279,8 +280,9 @@ Color: green                #859900                ~        2
 Color: back                 #eee8d5                ~        7
 # }}}
 
-# Terminal ANSI colors {{{
+# Terminal colors {{{
 Include: _terminal_ansi_colors_light.colortemplate
+Include: _neovim_light.colortemplate
 # }}}
 
 # Default highlight groups {{{

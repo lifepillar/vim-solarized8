@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Wed Aug 22 14:17:38 2018
+" Last Updated: Sun Aug 26 09:13:04 2018
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', &t_Co < 256) ? 16 : 256))
@@ -24,6 +24,26 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
   if &background ==# 'dark'
     let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#fdf6e3',
           \ '#002b36', '#cb4b16', '#657b83', '#839496', '#93a1a1', '#6c71c4', '#eee8d5', '#fdf6e3']
+    if has('nvim')
+      hi! link TermCursor Cursor
+      hi TermCursorNC ctermfg=235 ctermbg=243 guifg=#002b36 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
+      let g:terminal_color_0='#073642'
+      let g:terminal_color_1='#dc322f'
+      let g:terminal_color_2='#859900'
+      let g:terminal_color_3='#b58900'
+      let g:terminal_color_4='#268bd2'
+      let g:terminal_color_5='#d33682'
+      let g:terminal_color_6='#2aa198'
+      let g:terminal_color_7='#fdf6e3'
+      let g:terminal_color_8='#002b36'
+      let g:terminal_color_9='#cb4b16'
+      let g:terminal_color_10='#657b83'
+      let g:terminal_color_11='#839496'
+      let g:terminal_color_12='#93a1a1'
+      let g:terminal_color_13='#6c71c4'
+      let g:terminal_color_14='#eee8d5'
+      let g:terminal_color_15='#fdf6e3'
+    endif
     if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
       hi Normal ctermfg=247 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
       hi FoldColumn ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -359,31 +379,31 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
       hi pandocEmphasisTable cterm=italic
       hi pandocEmphasis cterm=italic
     endif
-    if has('nvim')
-      hi! link TermCursor Cursor
-      hi TermCursorNC ctermfg=235 ctermbg=243 guifg=#002b36 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
-      let g:terminal_color_8='#002b36'
-      let g:terminal_color_0='#073642'
-      let g:terminal_color_10='#657b83'
-      let g:terminal_color_11='#839496'
-      let g:terminal_color_12='#93a1a1'
-      let g:terminal_color_14='#eee8d5'
-      let g:terminal_color_7='#fdf6e3'
-      let g:terminal_color_15='#fdf6e3'
-      let g:terminal_color_3='#b58900'
-      let g:terminal_color_9='#cb4b16'
-      let g:terminal_color_1='#dc322f'
-      let g:terminal_color_5='#d33682'
-      let g:terminal_color_13='#6c71c4'
-      let g:terminal_color_4='#268bd2'
-      let g:terminal_color_6='#2aa198'
-      let g:terminal_color_2='#859900'
-    endif
     finish
   endif
 
   let g:terminal_ansi_colors = ['#002b36', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5',
         \ '#002b36', '#cb4b16', '#073642', '#586e75', '#657b83', '#6c71c4', '#93a1a1', '#fdf6e3']
+  if has('nvim')
+    hi! link TermCursor Cursor
+    hi TermCursorNC ctermfg=230 ctermbg=247 guifg=#fdf6e3 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
+    let g:terminal_color_0='#002b36'
+    let g:terminal_color_1='#dc322f'
+    let g:terminal_color_2='#859900'
+    let g:terminal_color_3='#b58900'
+    let g:terminal_color_4='#268bd2'
+    let g:terminal_color_5='#d33682'
+    let g:terminal_color_6='#2aa198'
+    let g:terminal_color_7='#eee8d5'
+    let g:terminal_color_8='#002b36'
+    let g:terminal_color_9='#cb4b16'
+    let g:terminal_color_10='#073642'
+    let g:terminal_color_11='#586e75'
+    let g:terminal_color_12='#657b83'
+    let g:terminal_color_13='#6c71c4'
+    let g:terminal_color_14='#93a1a1'
+    let g:terminal_color_15='#fdf6e3'
+  endif
   if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
     hi Normal ctermfg=242 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi FoldColumn ctermfg=242 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -731,26 +751,6 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
     hi pandocEmphasisTable cterm=italic
     hi pandocEmphasis cterm=italic
   endif
-  if has('nvim')
-    hi! link TermCursor Cursor
-    hi TermCursorNC ctermfg=230 ctermbg=247 guifg=#fdf6e3 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
-    let g:terminal_color_8='#fdf6e3'
-    let g:terminal_color_0='#eee8d5'
-    let g:terminal_color_10='#93a1a1'
-    let g:terminal_color_11='#657b83'
-    let g:terminal_color_12='#586e75'
-    let g:terminal_color_14='#073642'
-    let g:terminal_color_7='#002b36'
-    let g:terminal_color_15='#002b36'
-    let g:terminal_color_3='#b58900'
-    let g:terminal_color_9='#cb4b16'
-    let g:terminal_color_1='#dc322f'
-    let g:terminal_color_5='#d33682'
-    let g:terminal_color_13='#6c71c4'
-    let g:terminal_color_4='#268bd2'
-    let g:terminal_color_6='#2aa198'
-    let g:terminal_color_2='#859900'
-  endif
   finish
 endif
 
@@ -758,6 +758,26 @@ endif
 if &background ==# 'dark'
   let g:terminal_ansi_colors = ['#073642', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#fdf6e3',
         \ '#002b36', '#cb4b16', '#657b83', '#839496', '#93a1a1', '#6c71c4', '#eee8d5', '#fdf6e3']
+  if has('nvim')
+    hi! link TermCursor Cursor
+    hi TermCursorNC ctermfg=8 ctermbg=11 guifg=#002b36 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
+    let g:terminal_color_0='#073642'
+    let g:terminal_color_1='#dc322f'
+    let g:terminal_color_2='#859900'
+    let g:terminal_color_3='#b58900'
+    let g:terminal_color_4='#268bd2'
+    let g:terminal_color_5='#d33682'
+    let g:terminal_color_6='#2aa198'
+    let g:terminal_color_7='#fdf6e3'
+    let g:terminal_color_8='#002b36'
+    let g:terminal_color_9='#cb4b16'
+    let g:terminal_color_10='#657b83'
+    let g:terminal_color_11='#839496'
+    let g:terminal_color_12='#93a1a1'
+    let g:terminal_color_13='#6c71c4'
+    let g:terminal_color_14='#eee8d5'
+    let g:terminal_color_15='#fdf6e3'
+  endif
   if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
     hi Normal ctermfg=14 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi FoldColumn ctermfg=fg ctermbg=NONE guifg=fg guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1093,31 +1113,31 @@ if &background ==# 'dark'
     hi pandocEmphasisTable cterm=italic
     hi pandocEmphasis cterm=italic
   endif
-  if has('nvim')
-    hi! link TermCursor Cursor
-    hi TermCursorNC ctermfg=8 ctermbg=11 guifg=#002b36 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
-    let g:terminal_color_8='#002b36'
-    let g:terminal_color_0='#073642'
-    let g:terminal_color_10='#657b83'
-    let g:terminal_color_11='#839496'
-    let g:terminal_color_12='#93a1a1'
-    let g:terminal_color_14='#eee8d5'
-    let g:terminal_color_7='#fdf6e3'
-    let g:terminal_color_15='#fdf6e3'
-    let g:terminal_color_3='#b58900'
-    let g:terminal_color_9='#cb4b16'
-    let g:terminal_color_1='#dc322f'
-    let g:terminal_color_5='#d33682'
-    let g:terminal_color_13='#6c71c4'
-    let g:terminal_color_4='#268bd2'
-    let g:terminal_color_6='#2aa198'
-    let g:terminal_color_2='#859900'
-  endif
   finish
 endif
 
 let g:terminal_ansi_colors = ['#002b36', '#dc322f', '#859900', '#b58900', '#268bd2', '#d33682', '#2aa198', '#eee8d5',
       \ '#002b36', '#cb4b16', '#073642', '#586e75', '#657b83', '#6c71c4', '#93a1a1', '#fdf6e3']
+if has('nvim')
+  hi! link TermCursor Cursor
+  hi TermCursorNC ctermfg=15 ctermbg=14 guifg=#fdf6e3 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
+  let g:terminal_color_0='#002b36'
+  let g:terminal_color_1='#dc322f'
+  let g:terminal_color_2='#859900'
+  let g:terminal_color_3='#b58900'
+  let g:terminal_color_4='#268bd2'
+  let g:terminal_color_5='#d33682'
+  let g:terminal_color_6='#2aa198'
+  let g:terminal_color_7='#eee8d5'
+  let g:terminal_color_8='#002b36'
+  let g:terminal_color_9='#cb4b16'
+  let g:terminal_color_10='#073642'
+  let g:terminal_color_11='#586e75'
+  let g:terminal_color_12='#657b83'
+  let g:terminal_color_13='#6c71c4'
+  let g:terminal_color_14='#93a1a1'
+  let g:terminal_color_15='#fdf6e3'
+endif
 if !has('gui_running') && get(g:, 'solarized_termtrans', 0)
   hi Normal ctermfg=10 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi FoldColumn ctermfg=10 ctermbg=NONE guifg=#586e75 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1465,26 +1485,6 @@ if get(g:, "solarized_term_italics", 0)
   hi pandocEmphasisTable cterm=italic
   hi pandocEmphasis cterm=italic
 endif
-if has('nvim')
-  hi! link TermCursor Cursor
-  hi TermCursorNC ctermfg=15 ctermbg=14 guifg=#fdf6e3 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
-  let g:terminal_color_8='#fdf6e3'
-  let g:terminal_color_0='#eee8d5'
-  let g:terminal_color_10='#93a1a1'
-  let g:terminal_color_11='#657b83'
-  let g:terminal_color_12='#586e75'
-  let g:terminal_color_14='#073642'
-  let g:terminal_color_7='#002b36'
-  let g:terminal_color_15='#002b36'
-  let g:terminal_color_3='#b58900'
-  let g:terminal_color_9='#cb4b16'
-  let g:terminal_color_1='#dc322f'
-  let g:terminal_color_5='#d33682'
-  let g:terminal_color_13='#6c71c4'
-  let g:terminal_color_4='#268bd2'
-  let g:terminal_color_6='#2aa198'
-  let g:terminal_color_2='#859900'
-endif
 finish
 
 " Background: dark
@@ -1505,6 +1505,8 @@ finish
 " Color: cyan                 #2aa198                ~        6
 " Color: green                #859900                ~        2
 " Color: back                 #002b36                ~        8
+" TermCursor        -> Cursor
+" TermCursorNC         base03            base01
 "   Normal             base0             none
 "   FoldColumn         fg                none
 "   Folded             fg                none             bold s=base03
@@ -1805,8 +1807,6 @@ finish
 " pandocMetadataKey                      blue               none
 " pandocMetadata                         blue               none           bold
 " pandocMetadataTitle                 -> pandocMetadata
-" TermCursor        -> Cursor
-" TermCursorNC         base03            base01
 " Background: light
 " Color: base3                #002b36                ~        8
 " Color: base2                #002b36                ~        8
@@ -1825,6 +1825,8 @@ finish
 " Color: cyan                 #2aa198                ~        6
 " Color: green                #859900                ~        2
 " Color: back                 #fdf6e3                ~        15
+" TermCursor        -> Cursor
+" TermCursorNC         base03            base01
 "   Normal             base0             none
 "   FoldColumn         base0             none
 "   Folded             base0             none              bold s=base03
@@ -2131,5 +2133,3 @@ finish
 " pandocMetadataKey                      blue               none
 " pandocMetadata                         blue               none           bold
 " pandocMetadataTitle                 -> pandocMetadata
-" TermCursor        -> Cursor
-" TermCursorNC         base03            base01
