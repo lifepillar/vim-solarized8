@@ -17,7 +17,6 @@ if [ "${TERM%%-*}" = 'linux' ]; then
 fi
 
 if [[ "$TERM" =~ "^(tmux|screen).*" && -n "$TMUX" ]]; then
-  echo "OKOKOKOKOKOKOK"
   # tell tmux to pass the escape sequences through
   # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
   printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
