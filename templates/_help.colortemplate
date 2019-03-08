@@ -47,7 +47,10 @@ the cursor is blue. NOTE: your terminal may override the cursor's color.
 	let g:@optionprefix_old_cursor_style = 0
 <
 						*g:@optionprefix_statusline*
-Set to `"low"` to reduce the contrast in the status line.
+Set to `"low"` to reduce the contrast in the status line. Set to `"flat"` to
+make the status lines, tab bars and vertical splits similar to how they look
+in the flat variant (of course, `"flat"` does not have any effect in the flat
+variant).
 >
 	let g:@optionprefix_statusline = "normal"
 <
