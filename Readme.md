@@ -71,11 +71,13 @@ Otherwise, use your favourite installation method.
 
 There are actually four optimized<sup>*</sup> colorschemes:
 
-- `solarized8`: the default Solarized theme;
-- `solarized8_low`: low-contrast variant;
-- `solarized8_high`: high-contrast variant;
+- `solarized8`: the default Solarized theme (screenshot below, middle);
+- `solarized8_low`: low-contrast variant (screenshow below, right);
+- `solarized8_high`: high-contrast variant (screenshow below, left);
 - `solarized8_flat`: “flat” variant (not present in the original Solarized, see
    screenshots above).
+
+![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-normal-high-low.png)
 
 To use any of them, set the background (`dark` or `light`) then load the
 colorscheme, e.g.:
@@ -85,9 +87,6 @@ colorscheme, e.g.:
 
 To switch the background from dark to light or vice versa, just set `background`
 accordingly.
-
-**Note:** the old names (`solarized8_dark*` and `solarized8_light*`) have been
-removed in v1.1.1. Please use one of the names above.
 
 If you use Vim packages, there is no need to `packadd solarized8`. Keep your
 `runtimepath` clean!
