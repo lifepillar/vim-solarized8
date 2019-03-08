@@ -181,6 +181,16 @@ StatusLineNC         base01            base02            reverse
 TabLine              base01            base02            reverse
 TabLineFill          base01            base02            reverse
 TabLineSel           base0             base3             reverse
+VertSplit            base02            base01
+verbatim
+elseif get(g:, "@optionprefix_statusline", "") == "flat"
+endverbatim
+StatusLine           base02            base2             reverse
+StatusLineNC         base02            base1             reverse
+TabLineSel           base2             base02
+TabLine              base01            base02
+TabLineFill          base01            base02
+VertSplit            base01            base02
 verbatim
 else
 endverbatim
@@ -189,12 +199,12 @@ StatusLineNC         base01            base02            reverse
 TabLine              base01            base02            reverse
 TabLineFill          base01            base02            reverse
 TabLineSel           base0             base02            reverse
+VertSplit            base02            base01
 verbatim
 endif
 endverbatim
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
-VertSplit            base02            base01
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold
@@ -438,6 +448,16 @@ StatusLineNC         base01            base1             reverse
 TabLine              base01            base1             reverse
 TabLineFill          base01            base1             reverse
 TabLineSel           base1             base03            reverse
+VertSplit            base1             base01
+verbatim
+elseif get(g:, "@optionprefix_statusline", "") == "flat"
+endverbatim
+StatusLine           base02            base2             reverse
+StatusLineNC         base02            base1             reverse
+TabLineSel           base2             base02
+TabLine              base01            base02
+TabLineFill          base01            base02
+VertSplit            base01            base02
 verbatim
 else
 endverbatim
@@ -446,12 +466,12 @@ StatusLineNC         base00            base02            reverse
 TabLine              base00            base02            reverse
 TabLineFill          base00            base02            reverse
 TabLineSel           base1             base02            reverse
+VertSplit            base1             base01
 verbatim
 endif
 endverbatim
 StatusLineTerm    -> StatusLine
 StatusLineTermNC  -> StatusLineNC
-VertSplit            base1             base01
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold

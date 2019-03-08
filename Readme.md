@@ -109,7 +109,7 @@ The following options are inherited from Solarized:
 
 The following options were not available in the original Solarized:
 
-- `g:solarized_statusline`: one of `"normal"` (default) or `"low"`;
+- `g:solarized_statusline`: one of `"normal"` (default), `"low"` or `"flat"`;
 - `g:solarized_term_italics`: set to `1` to enable italics in the terminal
   (default is `0`).
 - `g:solarized_old_cursor_style`: set to `1` if you want to use the original

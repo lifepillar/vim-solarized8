@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sun Aug 26 09:13:04 2018
+" Last Updated: Fri Mar  8 10:26:18 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', &t_Co < 256) ? 16 : 256))
@@ -133,16 +133,24 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
       hi TabLine ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
       hi TabLineFill ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
       hi TabLineSel ctermfg=247 ctermbg=230 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+      hi VertSplit ctermfg=236 ctermbg=243 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
+    elseif get(g:, "solarized_statusline", "") == "flat"
+      hi StatusLine ctermfg=236 ctermbg=230 guifg=#073642 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+      hi StatusLineNC ctermfg=236 ctermbg=254 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+      hi TabLineSel ctermfg=230 ctermbg=236 guifg=#fdf6e3 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+      hi TabLine ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+      hi TabLineFill ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+      hi VertSplit ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
     else
       hi StatusLine ctermfg=247 ctermbg=236 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
       hi StatusLineNC ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
       hi TabLine ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
       hi TabLineFill ctermfg=243 ctermbg=236 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
       hi TabLineSel ctermfg=247 ctermbg=236 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+      hi VertSplit ctermfg=236 ctermbg=243 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
     endif
     hi! link StatusLineTerm StatusLine
     hi! link StatusLineTermNC StatusLineNC
-    hi VertSplit ctermfg=236 ctermbg=243 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
     hi Visual ctermfg=243 ctermbg=235 guifg=#657b83 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi VisualNOS ctermfg=NONE ctermbg=236 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi WarningMsg ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -505,16 +513,24 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
     hi TabLine ctermfg=247 ctermbg=236 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineFill ctermfg=247 ctermbg=236 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineSel ctermfg=236 ctermbg=230 guifg=#073642 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi VertSplit ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
+  elseif get(g:, "solarized_statusline", "") == "flat"
+    hi StatusLine ctermfg=254 ctermbg=235 guifg=#eee8d5 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi StatusLineNC ctermfg=254 ctermbg=236 guifg=#eee8d5 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi TabLineSel ctermfg=235 ctermbg=254 guifg=#002b36 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+    hi TabLine ctermfg=247 ctermbg=254 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+    hi TabLineFill ctermfg=247 ctermbg=254 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+    hi VertSplit ctermfg=247 ctermbg=254 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
   else
     hi StatusLine ctermfg=236 ctermbg=254 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi StatusLineNC ctermfg=66 ctermbg=254 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLine ctermfg=66 ctermbg=254 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineFill ctermfg=66 ctermbg=254 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineSel ctermfg=236 ctermbg=254 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi VertSplit ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
   endif
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
-  hi VertSplit ctermfg=236 ctermbg=247 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
   hi Visual ctermfg=247 ctermbg=230 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=NONE ctermbg=254 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi WarningMsg ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -867,16 +883,24 @@ if &background ==# 'dark'
     hi TabLine ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineFill ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineSel ctermfg=14 ctermbg=15 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi VertSplit ctermfg=0 ctermbg=11 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
+  elseif get(g:, "solarized_statusline", "") == "flat"
+    hi StatusLine ctermfg=0 ctermbg=15 guifg=#073642 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi StatusLineNC ctermfg=0 ctermbg=7 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi TabLineSel ctermfg=15 ctermbg=0 guifg=#fdf6e3 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+    hi TabLine ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+    hi TabLineFill ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
+    hi VertSplit ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE gui=NONE
   else
     hi StatusLine ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi StatusLineNC ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLine ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineFill ctermfg=11 ctermbg=0 guifg=#657b83 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi TabLineSel ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+    hi VertSplit ctermfg=0 ctermbg=11 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
   endif
   hi! link StatusLineTerm StatusLine
   hi! link StatusLineTermNC StatusLineNC
-  hi VertSplit ctermfg=0 ctermbg=11 guifg=#073642 guibg=#657b83 guisp=NONE cterm=NONE gui=NONE
   hi Visual ctermfg=11 ctermbg=8 guifg=#657b83 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi VisualNOS ctermfg=NONE ctermbg=0 guifg=NONE guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi WarningMsg ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -1239,16 +1263,24 @@ if get(g:, "solarized_statusline", "") == "low"
   hi TabLine ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi TabLineFill ctermfg=14 ctermbg=0 guifg=#93a1a1 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi TabLineSel ctermfg=0 ctermbg=15 guifg=#073642 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi VertSplit ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
+elseif get(g:, "solarized_statusline", "") == "flat"
+  hi StatusLine ctermfg=7 ctermbg=8 guifg=#eee8d5 guibg=#002b36 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi StatusLineNC ctermfg=7 ctermbg=0 guifg=#eee8d5 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi TabLineSel ctermfg=8 ctermbg=7 guifg=#002b36 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+  hi TabLine ctermfg=14 ctermbg=7 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+  hi TabLineFill ctermfg=14 ctermbg=7 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
+  hi VertSplit ctermfg=14 ctermbg=7 guifg=#93a1a1 guibg=#eee8d5 guisp=NONE cterm=NONE gui=NONE
 else
   hi StatusLine ctermfg=0 ctermbg=7 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi StatusLineNC ctermfg=11 ctermbg=7 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi TabLine ctermfg=11 ctermbg=7 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi TabLineFill ctermfg=11 ctermbg=7 guifg=#657b83 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi TabLineSel ctermfg=0 ctermbg=7 guifg=#073642 guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
+  hi VertSplit ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
 endif
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
-hi VertSplit ctermfg=0 ctermbg=14 guifg=#073642 guibg=#93a1a1 guisp=NONE cterm=NONE gui=NONE
 hi Visual ctermfg=14 ctermbg=15 guifg=#93a1a1 guibg=#fdf6e3 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi VisualNOS ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
 hi WarningMsg ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
@@ -1576,14 +1608,21 @@ finish
 " TabLine              base01            base02            reverse
 " TabLineFill          base01            base02            reverse
 " TabLineSel           base0             base3             reverse
+" VertSplit            base02            base01
+" StatusLine           base02            base2             reverse
+" StatusLineNC         base02            base1             reverse
+" TabLineSel           base2             base02
+" TabLine              base01            base02
+" TabLineFill          base01            base02
+" VertSplit            base01            base02
 " StatusLine           base0             base02            reverse
 " StatusLineNC         base01            base02            reverse
 " TabLine              base01            base02            reverse
 " TabLineFill          base01            base02            reverse
 " TabLineSel           base0             base02            reverse
+" VertSplit            base02            base01
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
-" VertSplit            base02            base01
 " Visual               base01            base03            reverse
 " VisualNOS            none              base02            reverse
 " WarningMsg           orange            none              bold
@@ -1902,14 +1941,21 @@ finish
 " TabLine              base01            base1             reverse
 " TabLineFill          base01            base1             reverse
 " TabLineSel           base1             base03            reverse
+" VertSplit            base1             base01
+" StatusLine           base02            base2             reverse
+" StatusLineNC         base02            base1             reverse
+" TabLineSel           base2             base02
+" TabLine              base01            base02
+" TabLineFill          base01            base02
+" VertSplit            base01            base02
 " StatusLine           base1             base02            reverse
 " StatusLineNC         base00            base02            reverse
 " TabLine              base00            base02            reverse
 " TabLineFill          base00            base02            reverse
 " TabLineSel           base1             base02            reverse
+" VertSplit            base1             base01
 " StatusLineTerm    -> StatusLine
 " StatusLineTermNC  -> StatusLineNC
-" VertSplit            base1             base01
 " Visual               base01            base03            reverse
 " VisualNOS            none              base02            reverse
 " WarningMsg           orange            none              bold
