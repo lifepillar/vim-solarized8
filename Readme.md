@@ -78,8 +78,13 @@ There are actually four optimized<sup>*</sup> colorschemes:
 
 ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-variants.png)
 
-To use any of them, set the background (`dark` or `light`) then load the
-colorscheme, e.g.:
+The “flat” variant does not exist in the original Solarized. It differs
+mainly in how the status line, split bars and tab bar look like:
+
+![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-normal-vs-flat.png)
+
+To use a Solarized 8 colorscheme, set the background (`dark` or `light`) then
+load the variant you want, e.g.:
 
     set background=dark
     colorscheme solarized8
