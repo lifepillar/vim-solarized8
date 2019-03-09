@@ -71,13 +71,12 @@ Otherwise, use your favourite installation method.
 
 There are actually four optimized<sup>*</sup> colorschemes:
 
-- `solarized8`: the default Solarized theme (screenshot below, middle);
-- `solarized8_low`: low-contrast variant (screenshow below, right);
-- `solarized8_high`: high-contrast variant (screenshow below, left);
-- `solarized8_flat`: “flat” variant (not present in the original Solarized, see
-   screenshots above).
+- `solarized8_high`: high-contrast variant (screenshow below, first column);
+- `solarized8`: the default Solarized theme (screenshot below, second column);
+- `solarized8_low`: low-contrast variant (screenshow below, third column);
+- `solarized8_flat`: “flat” variant (screenshow below, fourth column).
 
-![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-normal-high-low.png)
+![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-variants.png)
 
 To use any of them, set the background (`dark` or `light`) then load the
 colorscheme, e.g.:
