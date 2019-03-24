@@ -21,7 +21,7 @@ Background: dark
 # Color palette {{{
 # Color name                GUI                  Base256    Base16 (optional)
 Color: base03               #002b36                ~        8
-Color: base02               #073642                ~        0
+Color: base02               #073642               239       0
 Color: base01               #586e75                ~        10
 Color: base00               #657b83                ~        11
 Color: base0                #839496                ~        12
