@@ -165,7 +165,7 @@ IncSearch            orange            none              standout
 MatchParen           base3             base02            bold
 ModeMsg              blue              none
 MoreMsg              blue              none
-Pmenu                base02            base03
+Pmenu                base00            base03
 PmenuSbar            none              base03
 PmenuSel             base00            base02
 PmenuThumb           none              base03
