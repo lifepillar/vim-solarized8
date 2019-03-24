@@ -165,10 +165,10 @@ IncSearch            orange            none              standout
 MatchParen           base3             base02            bold
 ModeMsg              blue              none
 MoreMsg              blue              none
-Pmenu                base0             base02            reverse
-PmenuSbar            base2             base0             reverse
-PmenuSel             base01            base2             reverse
-PmenuThumb           base0             base03            reverse
+Pmenu                base1             base02
+PmenuSbar            none              base0
+PmenuSel             base2             base01
+PmenuThumb           none              base01
 Question             cyan              none              bold
 QuickFixLine     ->  Search
 Search               yellow            none              reverse
@@ -432,10 +432,10 @@ ErrorMsg             red               base03            reverse
 IncSearch            orange            none              standout
 ModeMsg              blue              none
 MoreMsg              blue              none
-Pmenu                base0             base02            reverse
-PmenuSbar            base2             base0             reverse
-PmenuSel             base01            base2             reverse
-PmenuThumb           base0             base03            reverse
+Pmenu                base1             base02
+PmenuSbar            none              base1
+PmenuSel             base2             base01
+PmenuThumb           none              base00
 Question             cyan              none              bold
 QuickFixLine     ->  Search
 Search               yellow            none              reverse
@@ -475,7 +475,7 @@ StatusLineTermNC  -> StatusLineNC
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold
-WildMenu             base2             base02            reverse
+WildMenu             base0             base03            reverse
 # Other conventional group names (see `:help group-name`)
 Boolean           -> Constant
 Character         -> Constant

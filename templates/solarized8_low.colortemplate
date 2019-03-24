@@ -165,10 +165,10 @@ IncSearch            orange            none              standout
 MatchParen           base3             base02            bold
 ModeMsg              blue              none
 MoreMsg              blue              none
-Pmenu                base0             base02            reverse
-PmenuSbar            base2             base0             reverse
-PmenuSel             base01            base2             reverse
-PmenuThumb           base0             base03            reverse
+Pmenu                base02            base03
+PmenuSbar            none              base03
+PmenuSel             base00            base02
+PmenuThumb           none              base03
 Question             cyan              none              bold
 QuickFixLine     ->  Search
 Search               yellow            none              reverse
@@ -431,10 +431,10 @@ ErrorMsg             red               base03            reverse
 IncSearch            orange            none              standout
 ModeMsg              blue              none
 MoreMsg              blue              none
-Pmenu                base0             base02            reverse
-PmenuSbar            base2             base0             reverse
-PmenuSel             base01            base2             reverse
-PmenuThumb           base0             base03            reverse
+Pmenu                base03            base01
+PmenuSbar            none              base0
+PmenuSel             base03            base00
+PmenuThumb           none              base00
 Question             cyan              none              bold
 QuickFixLine     ->  Search
 Search               yellow            none              reverse
