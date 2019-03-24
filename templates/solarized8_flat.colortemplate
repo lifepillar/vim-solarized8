@@ -399,7 +399,7 @@ endif
 endverbatim
 Directory            blue              none
 EndOfBuffer          none              none
-ErrorMsg             red               base3             reverse
+ErrorMsg             red               base03            reverse
 FoldColumn           base0             none
 Folded               base0             none              bold s=base03
 IncSearch            orange            none              standout
