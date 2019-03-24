@@ -448,6 +448,7 @@ TabLine              base01            base1             reverse
 TabLineFill          base01            base1             reverse
 TabLineSel           base01            base02            reverse
 VertSplit            base1             base01
+WildMenu             base0             base02            reverse
 verbatim
 elseif get(g:, "@optionprefix_statusline", "") == "flat"
 endverbatim
@@ -457,6 +458,7 @@ TabLineSel           base2             base03
 TabLine              base01            base03
 TabLineFill          base01            base03
 VertSplit            base01            base03
+WildMenu             base01            base03            reverse
 verbatim
 else
 endverbatim
@@ -466,6 +468,7 @@ TabLine              base00            base02            reverse
 TabLineFill          base00            base02            reverse
 TabLineSel           base1             base02            reverse
 VertSplit            base1             base01
+WildMenu             base00            base02            reverse
 verbatim
 endif
 endverbatim
@@ -474,7 +477,6 @@ StatusLineTermNC  -> StatusLineNC
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold
-WildMenu             base2             base02            reverse
 # Other conventional group names (see `:help group-name`)
 Boolean           -> Constant
 Character         -> Constant
