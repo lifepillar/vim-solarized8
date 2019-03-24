@@ -51,7 +51,7 @@ if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)
 endverbatim
 
   # Transparent background
-  Normal             base0             none
+  Normal             base1             none
   FoldColumn         fg                none
   Folded             fg                none             bold s=base03
   LineNr             base01            none
@@ -63,7 +63,7 @@ else
 endverbatim
 
   # Opaque background
-  Normal            base0             back
+  Normal            base1             back
   FoldColumn        base0             base02
   Folded            base0             base02            bold s=base03
   LineNr            base01            base02
@@ -301,7 +301,7 @@ if !has('gui_running') && get(g:, '@optionprefix_termtrans', 0)
 endverbatim
 
   # Transparent background
-  Normal             base0             none
+  Normal             base1             none
   FoldColumn         base0             none
   Folded             base0             none              bold s=base03
   LineNr             base01            none
@@ -313,7 +313,7 @@ else
 endverbatim
 
   # Opaque background
-  Normal            base0             back
+  Normal            base1             back
   FoldColumn        base0             base02
   Folded            base0             base02            bold s=base03
   LineNr            base01            base02
