@@ -212,7 +212,7 @@ WildMenu             base2             base02            reverse
 # Other conventional group names (see `:help group-name`)
 Boolean           -> Constant
 Character         -> Constant
-Comment              base01            none              g=italic
+Comment              base00            none              g=italic
 Conditional       -> Statement
 Constant             cyan              none
 Define            -> PreProc
@@ -481,7 +481,7 @@ WarningMsg           orange            none              bold
 # Other conventional group names (see `:help group-name`)
 Boolean           -> Constant
 Character         -> Constant
-Comment              base01            none              g=italic
+Comment              base00            none              g=italic
 Conditional       -> Statement
 Constant             cyan              none
 Define            -> PreProc
