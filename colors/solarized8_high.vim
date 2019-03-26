@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Sun Mar 24 21:23:59 2019
+" Last Updated: Tue Mar 26 08:41:02 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', &t_Co < 256) ? 16 : 256))
@@ -157,7 +157,7 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
     hi WildMenu ctermfg=230 ctermbg=236 guifg=#fdf6e3 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
     hi! link Boolean Constant
     hi! link Character Constant
-    hi Comment ctermfg=243 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
+    hi Comment ctermfg=246 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
     hi! link Conditional Statement
     hi Constant ctermfg=37 ctermbg=NONE guifg=#2aa198 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi! link Define PreProc
@@ -539,7 +539,7 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
   hi WarningMsg ctermfg=166 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
   hi! link Boolean Constant
   hi! link Character Constant
-  hi Comment ctermfg=247 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
+  hi Comment ctermfg=66 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
   hi! link Conditional Statement
   hi Constant ctermfg=37 ctermbg=NONE guifg=#2aa198 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Define PreProc
@@ -909,7 +909,7 @@ if &background ==# 'dark'
   hi WildMenu ctermfg=15 ctermbg=0 guifg=#fdf6e3 guibg=#073642 guisp=NONE cterm=NONE,reverse gui=NONE,reverse
   hi! link Boolean Constant
   hi! link Character Constant
-  hi Comment ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
+  hi Comment ctermfg=12 ctermbg=NONE guifg=#839496 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
   hi! link Conditional Statement
   hi Constant ctermfg=6 ctermbg=NONE guifg=#2aa198 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi! link Define PreProc
@@ -1291,7 +1291,7 @@ hi VisualNOS ctermfg=NONE ctermbg=7 guifg=NONE guibg=#eee8d5 guisp=NONE cterm=NO
 hi WarningMsg ctermfg=9 ctermbg=NONE guifg=#cb4b16 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
 hi! link Boolean Constant
 hi! link Character Constant
-hi Comment ctermfg=14 ctermbg=NONE guifg=#93a1a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
+hi Comment ctermfg=11 ctermbg=NONE guifg=#657b83 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
 hi! link Conditional Statement
 hi Constant ctermfg=6 ctermbg=NONE guifg=#2aa198 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi! link Define PreProc
@@ -1633,7 +1633,7 @@ finish
 " WildMenu             base2             base02            reverse
 " Boolean           -> Constant
 " Character         -> Constant
-" Comment              base01            none              g=italic
+" Comment              base00            none              g=italic
 " Conditional       -> Statement
 " Constant             cyan              none
 " Define            -> PreProc
@@ -1968,7 +1968,7 @@ finish
 " WarningMsg           orange            none              bold
 " Boolean           -> Constant
 " Character         -> Constant
-" Comment              base01            none              g=italic
+" Comment              base00            none              g=italic
 " Conditional       -> Statement
 " Constant             cyan              none
 " Define            -> PreProc
