@@ -218,7 +218,7 @@ Constant             cyan              none
 Define            -> PreProc
 Debug             -> Special
 Delimiter         -> Special
-Error                red               none              bold
+Error                red               base3             bold,reverse
 Exception         -> Statement
 Float             -> Constant
 Function          -> Identifier
@@ -486,7 +486,7 @@ Constant             cyan              none
 Define            -> PreProc
 Debug             -> Special
 Delimiter         -> Special
-Error                red               none              bold
+Error                red               base03            bold,reverse
 Exception         -> Statement
 Float             -> Constant
 Function          -> Identifier

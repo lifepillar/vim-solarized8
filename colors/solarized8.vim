@@ -4,7 +4,7 @@
 " Maintainer:   Lifepillar <lifepillar@lifepillar.me>
 " Website:      https://github.com/lifepillar/vim-solarized8
 " License:      OSI approved MIT license
-" Last Updated: Tue Mar 26 08:40:55 2019
+" Last Updated: Wed May  1 23:22:13 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < (get(g:, 'solarized_use16', &t_Co < 256) ? 16 : 256))
@@ -163,7 +163,7 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
     hi! link Define PreProc
     hi! link Debug Special
     hi! link Delimiter Special
-    hi Error ctermfg=160 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+    hi Error ctermfg=160 ctermbg=230 guifg=#dc322f guibg=#fdf6e3 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
     hi! link Exception Statement
     hi! link Float Constant
     hi! link Function Identifier
@@ -545,7 +545,7 @@ if !get(g:, 'solarized_use16', &t_Co < 256)
   hi! link Define PreProc
   hi! link Debug Special
   hi! link Delimiter Special
-  hi Error ctermfg=160 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi Error ctermfg=160 ctermbg=230 guifg=#dc322f guibg=#fdf6e3 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
   hi! link Exception Statement
   hi! link Float Constant
   hi! link Function Identifier
@@ -915,7 +915,7 @@ if &background ==# 'dark'
   hi! link Define PreProc
   hi! link Debug Special
   hi! link Delimiter Special
-  hi Error ctermfg=1 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi Error ctermfg=1 ctermbg=15 guifg=#dc322f guibg=#fdf6e3 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
   hi! link Exception Statement
   hi! link Float Constant
   hi! link Function Identifier
@@ -1297,7 +1297,7 @@ hi Constant ctermfg=6 ctermbg=NONE guifg=#2aa198 guibg=NONE guisp=NONE cterm=NON
 hi! link Define PreProc
 hi! link Debug Special
 hi! link Delimiter Special
-hi Error ctermfg=1 ctermbg=NONE guifg=#dc322f guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+hi Error ctermfg=1 ctermbg=15 guifg=#dc322f guibg=#fdf6e3 guisp=NONE cterm=NONE,bold,reverse gui=NONE,bold,reverse
 hi! link Exception Statement
 hi! link Float Constant
 hi! link Function Identifier
@@ -1639,7 +1639,7 @@ finish
 " Define            -> PreProc
 " Debug             -> Special
 " Delimiter         -> Special
-" Error                red               none              bold
+" Error                red               base3             bold,reverse
 " Exception         -> Statement
 " Float             -> Constant
 " Function          -> Identifier
@@ -1974,7 +1974,7 @@ finish
 " Define            -> PreProc
 " Debug             -> Special
 " Delimiter         -> Special
-" Error                red               none              bold
+" Error                red               base03            bold,reverse
 " Exception         -> Statement
 " Float             -> Constant
 " Function          -> Identifier
