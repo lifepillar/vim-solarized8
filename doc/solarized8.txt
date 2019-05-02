@@ -1,3 +1,4 @@
+*solarized8.txt*	For Vim version 7.4	Last change: 2019 March 26
 ==============================================================================
 Solarized 8 license		*solarized8-license*
 
