@@ -1,6 +1,7 @@
 # vim: ft=colortemplate fdm=marker tw=78 ts=8 norl
 
 documentation
+*@shortname.txt*	For Vim version 7.4	Last change: 2019 March 26
 ==============================================================================
 @fullname license		*@shortname-license*
 
