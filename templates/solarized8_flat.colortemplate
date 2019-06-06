@@ -107,7 +107,7 @@ Include: _dark_terminal.colortemplate
   DiffChange         yellow            none              s=yellow
   DiffDelete         red               none              bold
   DiffText           blue              none              s=blue
-#else " normal diff
+#else " normal diffmode
   DiffAdd            green             base02            s=green
   DiffChange         yellow            base02            s=yellow
   DiffDelete         red               base02            bold
@@ -286,7 +286,7 @@ Include: _light_terminal.colortemplate
   DiffChange         yellow            none              s=yellow
   DiffDelete         red               none              bold
   DiffText           blue              none              s=blue
-#else
+#else " normal diffmode
   DiffAdd            green             base02            s=green
   DiffChange         yellow            base02            s=yellow
   DiffDelete         red               base02            bold

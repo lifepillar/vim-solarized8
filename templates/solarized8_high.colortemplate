@@ -122,7 +122,7 @@ Variant: gui 256 16
   DiffChange         yellow            none              s=yellow
   DiffDelete         red               none              bold
   DiffText           blue              none              s=blue
-#else
+#else " normal diffmode
   DiffAdd            green             base02            s=green
   DiffChange         yellow            base02            s=yellow
   DiffDelete         red               base02            bold
@@ -327,7 +327,7 @@ Variant: gui 256 16
   DiffChange         yellow            none              s=yellow
   DiffDelete         red               none              bold
   DiffText           blue              none              s=blue
-#else
+#else " normal diffmode
   DiffAdd            green             base02            s=green
   DiffChange         yellow            base02            s=yellow
   DiffDelete         red               base02            bold
