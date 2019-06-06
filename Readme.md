@@ -108,7 +108,7 @@ If you use Vim packages, there is no need to `packadd solarized8`. Keep your
  cases, i.e., GUI, true-color terminals and 256-color terminals.
 
 <p align="center">
-<img width="400" src="https://raw.github.com/lifepillar/Resources/master/solarized8/load_time.png">
+<img width="500" src="https://raw.github.com/lifepillar/Resources/master/solarized8/load_time.png">
 </p>
 
 
