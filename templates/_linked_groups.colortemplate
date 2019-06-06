@@ -1,0 +1,30 @@
+# vim: ft=colortemplate fdm=marker
+Boolean           -> Constant
+Character         -> Constant
+Conditional       -> Statement
+Debug             -> Special
+Define            -> PreProc
+Delimiter         -> Special
+Exception         -> Statement
+Float             -> Constant
+Function          -> Identifier
+Include           -> PreProc
+Keyword           -> Statement
+Label             -> Statement
+Macro             -> PreProc
+Number            -> Constant
+Operator          -> Statement
+PreCondit         -> PreProc
+QuickFixLine      -> Search
+Repeat            -> Statement
+SpecialChar       -> Special
+SpecialComment    -> Special
+StatusLineTerm    -> StatusLine
+StatusLineTermNC  -> StatusLineNC
+StorageClass      -> Type
+String            -> Constant
+Structure         -> Type
+Tag               -> Special
+Typedef           -> Type
+lCursor           -> Cursor
+
