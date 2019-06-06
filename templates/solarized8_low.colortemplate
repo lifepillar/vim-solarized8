@@ -21,25 +21,25 @@ Variant: 256 gui 16
 
 Background: dark
 # Dark color palette {{{
-# Color name                GUI                  Base256    Base16
-Color: base02               #073642                239        0
-Color: back                 #073642                236        0
-Color: red                  #dc322f                160        1
-Color: green                #859900                106        2
-#Color:green                #719e07                ~          2
-Color: yellow               #b58900                136        3
-Color: blue                 #268bd2                32         4
-Color: magenta              #d33682                162        5
-Color: cyan                 #2aa198                37         6
-Color: base2                #eee8d5                254        7
-Color: base03               #002b36                235        8
-Color: orange               #cb4b16                166        9
-Color: base01               #586e75                242       10
-Color: base00               #657b83                66        11
-Color: base0                #839496                246       12
-Color: violet               #6c71c4                61        13
-Color: base1                #93a1a1                247       14
-Color: base3                #fdf6e3                230       15
+# Color name    GUI     Base256 Base16
+Color: base02   #073642   239     0
+Color: back     #073642   236     0
+Color: red      #dc322f   160     1
+Color: green    #859900   106     2
+#Color:green    #719e07   ~       2
+Color: yellow   #b58900   136     3
+Color: blue     #268bd2   32      4
+Color: magenta  #d33682   162     5
+Color: cyan     #2aa198   37      6
+Color: base2    #eee8d5   254     7
+Color: base03   #002b36   235     8
+Color: orange   #cb4b16   166     9
+Color: base01   #586e75   242    10
+Color: base00   #657b83   66     11
+Color: base0    #839496   246    12
+Color: violet   #6c71c4   61     13
+Color: base1    #93a1a1   247    14
+Color: base3    #fdf6e3   230    15
 
 Include: _dark_terminal.colortemplate
 # }}}
@@ -211,25 +211,25 @@ Include: _extra.colortemplate
 
 Background: light
 # Light color palette {{{
-# Color name                GUI                  Base256    Base16
-Color: base2                #073642                236        0
-Color: red                  #dc322f                160        1
-Color: green                #859900                106        2
-#Color:green                #719e07                ~          2
-Color: yellow               #b58900                136        3
-Color: blue                 #268bd2                32         4
-Color: magenta              #d33682                162        5
-Color: cyan                 #2aa198                37         6
-Color: base02               #eee8d5                254        7
-Color: back                 #eee8d5                254        7
-Color: base3                #002b36                235        8
-Color: orange               #cb4b16                166        9
-Color: base1                #586e75                242       10
-Color: base0                #657b83                66        11
-Color: base00               #839496                246       12
-Color: violet               #6c71c4                61        13
-Color: base01               #93a1a1                247       14
-Color: base03               #fdf6e3                230       15
+# Color name    GUI     Base256 Base16
+Color: base2    #073642   236     0
+Color: red      #dc322f   160     1
+Color: green    #859900   106     2
+#Color:green    #719e07   ~       2
+Color: yellow   #b58900   136     3
+Color: blue     #268bd2   32      4
+Color: magenta  #d33682   162     5
+Color: cyan     #2aa198   37      6
+Color: base02   #eee8d5   254     7
+Color: back     #eee8d5   254     7
+Color: base3    #002b36   235     8
+Color: orange   #cb4b16   166     9
+Color: base1    #586e75   242    10
+Color: base0    #657b83   66     11
+Color: base00   #839496   246    12
+Color: violet   #6c71c4   61     13
+Color: base01   #93a1a1   247    14
+Color: base03   #fdf6e3   230    15
 
 Include: _light_terminal.colortemplate
 # }}}
