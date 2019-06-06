@@ -38,14 +38,14 @@ variant).
 >
 	let g:@optionprefix_statusline = "normal"
 <
-						*g:@optionprefix_term_italics*
-Set to 0 if you do not want to enable italics in the terminal. Note that the
-color scheme in normal circumstances detects whether italics is available
-automatically. You should never need to set this option explicitly. You may
-want to unset it if you do not want Vim to display italics even when the
-feature is available (e.g., in GUI versions of Vim).
+						*g:@optionprefix_italics*
+Set to 0 if you do not want to enable italics. Note that the color scheme in
+normal circumstances automatically detects whether italics is available. You
+should never need to set this option explicitly. You may want to unset it if
+you do not want Vim to display italics even when the feature is available
+(e.g., in GUI versions of Vim).
 >
-	let g:@optionprefix_term_italics = 1
+	let g:@optionprefix_italics = 1
 <
 						*g:@optionprefix_termtrans*
 Set to 1 if you want a transparent background. Takes effect only in the
