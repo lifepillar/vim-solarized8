@@ -1,5 +1,0 @@
-verbatim
-let g:terminal_ansi_colors = ['@guibase2', '@guired', '@guigreen', '@guiyellow', '@guiblue', '@guimagenta', '@guicyan', '@guibase02',
-\ '@guibase3', '@guiorange', '@guibase1', '@guibase0', '@guibase00', '@guiviolet', '@guibase01', '@guibase03']
-endverbatim
-

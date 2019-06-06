@@ -1,7 +1,10 @@
 # vim: ft=colortemplate fdm=marker
 # Filetype specific highlight groups {{{
 verbatim
-if get(g:, '@optionprefix_extra_hi_groups', 0)
+if !get(g:, '@optionprefix_extra_hi_groups', 0)
+  unlet s:t_Co s:italics s:termtrans
+  finish
+endif
 endverbatim
 # vim {{{
 vimVar            -> Identifier
@@ -31,7 +34,7 @@ diffAdded         -> Statement
 diffLine          -> Identifier
 # }}}
 # git {{{
-gitcommitComment           base01          none              g=italic
+gitcommitComment           base01          none              italic
 gitcommitUntracked      -> gitcommitComment
 gitcommitDiscarded      -> gitcommitComment
 gitcommitSelected       -> gitcommitComment
@@ -56,7 +59,7 @@ htmlTag                    base01          none
 htmlEndTag                 base01          none
 htmlTagN                   base1           none              bold
 htmlTagName                blue            none              bold
-htmlSpecialTagName         blue            none              g=italic
+htmlSpecialTagName         blue            none              italic
 htmlArg                    base00          none
 javaScript                 yellow          none
 # }}}
@@ -87,10 +90,6 @@ rubyBoolean                magenta         back
 #
 # Treat True and False and highlight delims specially, see the plugin
 # referenced above.
-verbatim
-let hs_highlight_boolean=1
-let hs_highlight_delimiters=1
-endverbatim
 cPreCondit                 orange          none
 VarId                      blue            none
 ConId                      yellow          none
@@ -114,12 +113,14 @@ hsModuleWhereLabel      -> hsModuleStartLabel
 # the first two items don't have an impact, but better safe
 hsNiceOperator             cyan            none
 hsniceoperator             cyan            none
+#let hs_highlight_boolean=1
+#let hs_highlight_delimiters=1
 # }}}
 # pandoc {{{
 pandocTitleBlock                       blue               none
 pandocTitleBlockTitle                  blue               none           bold
 pandocTitleComment                     blue               none           bold
-pandocComment                          base01             none           g=italic
+pandocComment                          base01             none           italic
 pandocVerbatimBlock                    yellow             none
 pandocVerbatimBlockDeep             -> pandocVerbatimBlock
 pandocCodeBlock                     -> pandocVerbatimBlock
@@ -137,7 +138,7 @@ pandocListReference                    magenta            none
 pandocDefinitionBlock                  violet             none
 pandocDefinitionTerm                   violet             none           standout
 pandocDefinitionIndctr                 violet             none           bold
-pandocEmphasisDefinition               violet             none           g=italic
+pandocEmphasisDefinition               violet             none           italic
 pandocEmphasisNestedDefinition         violet             none           bold
 pandocStrongEmphasisDefinition         violet             none           bold
 pandocStrongEmphasisNestedDefinition   violet             none           bold
@@ -154,7 +155,7 @@ pandocTableStructureTop             -> pandocTableStructre
 pandocTableStructureEnd             -> pandocTableStructre
 pandocTableZebraLight                  blue               base03
 pandocTableZebraDark                   blue               base02
-pandocEmphasisTable                    blue               none           g=italic
+pandocEmphasisTable                    blue               none           italic
 pandocEmphasisNestedTable              blue               none           bold
 pandocStrongEmphasisTable              blue               none           bold
 pandocStrongEmphasisNestedTable        blue               none           bold
@@ -195,7 +196,7 @@ pandocCitationID                       magenta            none
 pandocCitationRef                      magenta            none
 # Main Styles
 pandocStyleDelim                       base01             none
-pandocEmphasis                         base0              none           g=italic
+pandocEmphasis                         base0              none           italic
 pandocEmphasisNested                   base0              none           bold
 pandocStrongEmphasis                   base0              none           bold
 pandocStrongEmphasisNested             base0              none           bold
@@ -218,22 +219,5 @@ pandocMetadataKey                      blue               none
 pandocMetadata                         blue               none           bold
 pandocMetadataTitle                 -> pandocMetadata
 # }}}
-verbatim
-endif
-endverbatim
-# }}}
-
-# Terminal italic {{{
-verbatim
-if get(g:, "@optionprefix_term_italics", 0)
-hi Comment cterm=italic
-hi gitcommitComment cterm=italic
-hi htmlSpecialTagName cterm=italic
-hi pandocComment cterm=italic
-hi pandocEmphasisDefinition cterm=italic
-hi pandocEmphasisTable cterm=italic
-hi pandocEmphasis cterm=italic
-endif
-endverbatim
 # }}}
 
