@@ -1,0 +1,3 @@
+# vim: ft=colortemplate fdm=marker
+#unlet s:termtrans
+

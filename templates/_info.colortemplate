@@ -1,0 +1,9 @@
+# vim: ft=colortemplate fdm=marker
+Author:          Ethan Schoonover
+Maintainer:      Lifepillar <lifepillar@lifepillar.me>
+Website:         https://github.com/lifepillar/vim-solarized8
+Description:     Precision colors for machines and people
+Option Prefix:   solarized
+License:         OSI approved MIT license
+Neovim:          yes
+

@@ -3,13 +3,7 @@
 # Information {{{
 Full name:       Solarized 8
 Short name:      solarized8
-Author:          Ethan Schoonover
-Maintainer:      Lifepillar <lifepillar@lifepillar.me>
-Website:         https://github.com/lifepillar/vim-solarized8
-Description:     Precision colors for machines and people
-Option Prefix:   solarized
-License:         OSI approved MIT license
-Neovim:          yes
+Include:        _info.colortemplate
 # }}}
 # Documentation {{{
 Include: _help.colortemplate
@@ -220,7 +214,7 @@ TermCursorNC         base03            base01
 # Extra stuff (dark) {{{
 Include: _extra.colortemplate
 # }}}
-#unlet s:termtrans
+Include: _cleanup.colortemplate
 
 Background: light
 # Light color palette {{{
@@ -429,11 +423,11 @@ TermCursorNC         base03            base01
 # Extra stuff (light) {{{
 Include: _extra.colortemplate
 # }}}
-#unlet s:termtrans
+Include: _cleanup.colortemplate
 
 Background: any
 # B&W variant {{{
 Include: _bw.colortemplate
 # }}}
-#unlet s:termtrans
+Include: _cleanup.colortemplate
 
