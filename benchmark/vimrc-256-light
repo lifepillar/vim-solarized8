@@ -1,0 +1,6 @@
+set notermguicolors
+set t_Co=256
+set bg=light
+let g:solarized_enable_extra_hi_groups=1
+colo solarized8
+

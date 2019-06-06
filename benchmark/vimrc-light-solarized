@@ -1,0 +1,5 @@
+set notermguicolors
+set t_Co=16
+set bg=light
+colo solarized
+
