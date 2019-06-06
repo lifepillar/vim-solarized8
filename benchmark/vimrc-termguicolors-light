@@ -1,5 +1,0 @@
-set termguicolors
-set bg=light
-let g:solarized_enable_extra_hi_groups=1
-colo solarized8
-
