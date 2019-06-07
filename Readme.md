@@ -20,8 +20,10 @@ experience, you need:
 - Vim ≥7.4.1799, or NeoVim, with `termguicolors` set, **and**
 - [a true-color enabled terminal](https://gist.github.com/XVilka/8346728).
 
-Solarized 8 also works in any GUI version of Vim: no configuration is necessary.
+Solarized 8 also works in any GUI version of Vim: no configuration is necessary.<sup>*</sup>
 
+<sup>*</sup> [VimR](https://github.com/qvacua/vimr) users must set
+`termguicolors` before loading the color scheme.
 
 ## But, my terminal has only 256 colors!
 
