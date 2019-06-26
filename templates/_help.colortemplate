@@ -23,6 +23,15 @@ Set to 1 to enable filetype-specific syntax highlight group.
 NOTE: setting this to 1 may leave "a wake of destruction when switching away"
 (T. Pope), that is, when you switch to a different colorscheme the
 highlighting may look wrong or disabled.
+						*g:@optionprefix_italics*
+Set to 0 if you do not want to enable italics. Note that the color scheme in
+normal circumstances automatically detects whether italics is available. You
+should never need to set this option explicitly. You may want to unset it if
+you do not want Vim to display italics even when the feature is available
+(e.g., in GUI versions of Vim).
+>
+	let g:@optionprefix_italics = 1
+<
 
 						*g:@optionprefix_old_cursor_style*
 Set to 1 if you want to use the original Solarized's cursor style. By default,
@@ -38,20 +47,16 @@ variant).
 >
 	let g:@optionprefix_statusline = "normal"
 <
-						*g:@optionprefix_italics*
-Set to 0 if you do not want to enable italics. Note that the color scheme in
-normal circumstances automatically detects whether italics is available. You
-should never need to set this option explicitly. You may want to unset it if
-you do not want Vim to display italics even when the feature is available
-(e.g., in GUI versions of Vim).
->
-	let g:@optionprefix_italics = 1
-<
 						*g:@optionprefix_termtrans*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
 	let g:@optionprefix_termtrans = 0
+<
+						*g:@optionprefix_use16*
+Set to 1 if you want to force using the 16 ANSI terminal colors.
+>
+	let g:@optionprefix_use16 = 0
 <
 						*g:@optionprefix_visibility*
 Tweak the visibility of a few  elements. Allowed values are `"normal"`
