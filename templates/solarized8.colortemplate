@@ -44,7 +44,6 @@ Include: _fix-256-palette.colortemplate
 # Transparency (dark) {{{
 #if s:termtrans
   Normal             base1             none
-  CursorLine         none              none              underline s=base1
   FoldColumn         fg                none
   Folded             fg                none              bold s=base03
   Terminal           fg                none
@@ -52,7 +51,6 @@ Include: _fix-256-palette.colortemplate
   ToolbarLine        none              none
 #else " opaque
   Normal             base1             back
-  CursorLine         none              base02
   FoldColumn         base0             base02
   Folded             base0             base02            bold s=base03
   Terminal           fg                back
@@ -163,6 +161,7 @@ Variant: gui 256 16
 ColorColumn          none              base02
 Conceal              blue              none
 CursorColumn         none              base02
+CursorLine           none              base02
 Directory            blue              none
 EndOfBuffer          none              none
 ErrorMsg             red               base3             reverse
@@ -241,7 +240,6 @@ Include: _light_terminal.colortemplate
 # Transparency (light) {{{
 #if s:termtrans
   Normal             base1             none
-  CursorLine         none              none              underline s=base1
   FoldColumn         base0             none
   Folded             base0             none              bold s=base03
   Terminal           fg                none
@@ -249,7 +247,6 @@ Include: _light_terminal.colortemplate
   ToolbarLine        none              none
 #else " opaque
   Normal             base1             back
-  CursorLine         none              base02
   FoldColumn         base0             base02
   Folded             base0             base02            bold s=base03
   Terminal           fg                back
@@ -374,6 +371,7 @@ Variant: gui 256 16
 ColorColumn          none              base02
 Conceal              blue              none
 CursorColumn         none              base02
+CursorLine           none              base02
 Directory            blue              none
 EndOfBuffer          none              none
 ErrorMsg             red               base03            reverse
