@@ -81,7 +81,7 @@ Include: _dark_terminal.colortemplate
   SpellCap           violet            none              t=underline g=undercurl s=violet
   SpellLocal         yellow            none              t=underline g=undercurl s=yellow
   SpellRare          cyan              none              t=underline g=undercurl s=cyan
-  Title              yellow            none              bold
+  Title              orange            none              bold
 #endif
 # }}}
 # CursorLineNr transparency (dark) {{{
