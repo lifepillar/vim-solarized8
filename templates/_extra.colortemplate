@@ -1,12 +1,12 @@
-# vim: ft=colortemplate fdm=marker
-# Filetype specific highlight groups {{{
+; vim: ft=colortemplate fdm=marker
+; Filetype specific highlight groups {{{
 verbatim
 if !get(g:, '@optionprefix_extra_hi_groups', 0)
   unlet s:t_Co s:italics s:termtrans
   finish
 endif
 endverbatim
-# vim {{{
+; vim {{{
 vimVar            -> Identifier
 vimFunc           -> Function
 vimUserFunc       -> Function
@@ -28,12 +28,12 @@ vimSynType           cyan              none
 vimHiLink            blue              none
 vimHiGroup           blue              none
 vimGroup             blue              none              bold
-# }}}
-# diff {{{
+; }}}
+; diff {{{
 diffAdded         -> Statement
 diffLine          -> Identifier
-# }}}
-# git {{{
+; }}}
+; git {{{
 gitcommitComment           base01          none              italic
 gitcommitUntracked      -> gitcommitComment
 gitcommitDiscarded      -> gitcommitComment
@@ -53,8 +53,8 @@ gitcommitFile              base0           none              bold
 gitcommitDiscardedArrow -> gitcommitDiscardedFile
 gitcommitSelectedArrow  -> gitcommitSelectedFile
 gitcommitUnmergedArrow  -> gitcommitUnmergedFile
-# }}}
-# html {{{
+; }}}
+; html {{{
 htmlTag                    base01          none
 htmlEndTag                 base01          none
 htmlTagN                   base1           none              bold
@@ -62,34 +62,34 @@ htmlTagName                blue            none              bold
 htmlSpecialTagName         blue            none              italic
 htmlArg                    base00          none
 javaScript                 yellow          none
-# }}}
-# javascript {{{
+; }}}
+; javascript {{{
 jsFuncCall              -> Function
-# }}}
-# perl {{{
+; }}}
+; perl {{{
 perlHereDoc                base1           back
 perlVarPlain               yellow          back
 perlStatementFileDesc      cyan            back
-# }}}
-# tex {{{
+; }}}
+; tex {{{
 texstatement               cyan            back
 texmathzonex               yellow          back
 texmathmatcher             yellow          back
 texreflabel                yellow          back
-# }}}
-# ruby {{{
+; }}}
+; ruby {{{
 rubyDefine                 base1           back              bold
 rubySymbol              -> Type
 rubyBoolean                magenta         back
-# }}}
-# haskell {{{
-# For use with syntax/haskell.vim : Haskell Syntax File
-# http://www.vim.org/scripts/script.php?script_id=3034
-# See also Steffen Siering's github repository:
-# http://github.com/urso/dotrc/blob/master/vim/syntax/haskell.vim
-#
-# Treat True and False and highlight delims specially, see the plugin
-# referenced above.
+; }}}
+; haskell {{{
+; For use with syntax/haskell.vim : Haskell Syntax File
+; http://www.vim.org/scripts/script.php?script_id=3034
+; See also Steffen Siering's github repository:
+; http://github.com/urso/dotrc/blob/master/vim/syntax/haskell.vim
+;
+; Treat True and False and highlight delims specially, see the plugin
+; referenced above.
 cPreCondit                 orange          none
 VarId                      blue            none
 ConId                      yellow          none
@@ -109,14 +109,14 @@ hsImportParams          -> Delimiter
 hsDelimTypeExport       -> Delimiter
 hsModuleStartLabel      -> hsStructure
 hsModuleWhereLabel      -> hsModuleStartLabel
-# following is for the haskell-conceal plugin
-# the first two items don't have an impact, but better safe
+; following is for the haskell-conceal plugin
+; the first two items don't have an impact, but better safe
 hsNiceOperator             cyan            none
 hsniceoperator             cyan            none
 #let hs_highlight_boolean=1
 #let hs_highlight_delimiters=1
-# }}}
-# pandoc {{{
+; }}}
+; pandoc {{{
 pandocTitleBlock                       blue               none
 pandocTitleBlockTitle                  blue               none           bold
 pandocTitleComment                     blue               none           bold
@@ -134,7 +134,7 @@ pandocBlockQuoteLeader5                base0              none
 pandocBlockQuoteLeader6                base01             none
 pandocListMarker                       magenta            none
 pandocListReference                    magenta            none
-# Definitions
+; Definitions
 pandocDefinitionBlock                  violet             none
 pandocDefinitionTerm                   violet             none           standout
 pandocDefinitionIndctr                 violet             none           bold
@@ -147,10 +147,10 @@ pandocStrikeoutDefinition              violet             none           reverse
 pandocVerbatimInlineDefinition         violet             none
 pandocSuperscriptDefinition            violet             none
 pandocSubscriptDefinition              violet             none
-# Tables
+; Tables
 pandocTable                            blue               none
 pandocTableStructure                   blue               none
-# Sic in the original Solarized:
+; Sic in the original Solarized:
 pandocTableStructureTop             -> pandocTableStructre
 pandocTableStructureEnd             -> pandocTableStructre
 pandocTableZebraLight                  blue               base03
@@ -164,7 +164,7 @@ pandocStrikeoutTable                   blue               none           reverse
 pandocVerbatimInlineTable              blue               none
 pandocSuperscriptTable                 blue               none
 pandocSubscriptTable                   blue               none
-# Headings
+; Headings
 pandocHeading                          orange             none           bold
 pandocHeadingMarker                    orange             none           bold
 pandocEmphasisHeading                  orange             none           bold
@@ -176,7 +176,7 @@ pandocStrikeoutHeading                 orange             none           reverse
 pandocVerbatimInlineHeading            orange             none           bold
 pandocSuperscriptHeading               orange             none           bold
 pandocSubscriptHeading                 orange             none           bold
-# Links
+; Links
 pandocLinkDelim                        base01             none
 pandocLinkLabel                        blue               none
 pandocLinkText                         blue               none
@@ -194,7 +194,7 @@ pandocCitationDelim                    magenta            none
 pandocCitation                         magenta            none
 pandocCitationID                       magenta            none
 pandocCitationRef                      magenta            none
-# Main Styles
+; Main Styles
 pandocStyleDelim                       base01             none
 pandocEmphasis                         base0              none           italic
 pandocEmphasisNested                   base0              none           bold
@@ -212,14 +212,14 @@ pandocCitationRef                      magenta            none
 pandocNonBreakingSpace                 red                none           reverse
 pandocEscapedCharacter              -> pandocEscapePair
 pandocLineBreak                     -> pandocEscapePair
-# Embedded code
+; Embedded code
 pandocMetadataDelim                    base01             none
 pandocMetadata                         blue               none
 pandocMetadataKey                      blue               none
 pandocMetadata                         blue               none           bold
 pandocMetadataTitle                 -> pandocMetadata
-# }}}
-# ale {{{
+; }}}
+; ale {{{
 #if get(g:, '@optionprefix_statusline', '') ==# 'flat'
     ALEErrorSign               red         none              bold
     ALEInfoSign                cyan        none              bold
@@ -255,5 +255,5 @@ ALEStyleErrorSignLineNr     -> ALEErrorSignLineNr
 ALEStyleWarning             -> ALEWarning
 ALEStyleWarningSign         -> ALEWarningSign
 ALEStyleWarningSignLineNr   -> ALEWarningSignLineNr
-# }}}
-# }}}
+; }}}
+; }}}

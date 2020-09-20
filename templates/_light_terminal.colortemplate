@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 Term Colors: base2  red    green  yellow blue   magenta cyan   base02
 Term Colors: base3  orange base1  base0  base00 violet  base01 base03
 

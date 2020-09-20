@@ -1,25 +1,25 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 
-# Information {{{
+; Information {{{
 Full name:       Solarized 8
 Short name:      solarized8
 Include:        _info.colortemplate
-# }}}
-# Documentation {{{
+; }}}
+; Documentation {{{
 Include: _help.colortemplate
-# }}}
+; }}}
 
 Include: _global.colortemplate
 
 Variant: gui 256 16
 
 Background: dark
-# Dark color palette {{{
-# Color name    GUI     Base256 Base16
+; Dark color palette {{{
+; Color name    GUI     Base256 Base16
 Color: base02   #073642   236      0
 Color: red      #dc322f   160      1
 Color: green    #859900   106      2
-#Color:green    #719e07   ~        2
+;Color:green    #719e07   ~        2
 Color: yellow   #b58900   136      3
 Color: blue     #268bd2   32       4
 Color: magenta  #d33682   162      5
@@ -36,12 +36,12 @@ Color: base1    #93a1a1   247     14
 Color: base3    #fdf6e3   230     15
 
 Include: _dark_terminal.colortemplate
-# }}}
-# Fix 256-color palette in supported terminals (dark) {{{
+; }}}
+; Fix 256-color palette in supported terminals (dark) {{{
 Include: _fix-256-palette.colortemplate
-# }}}
-# Default highlight groups (dark) {{{
-# Transparency (dark) {{{
+; }}}
+; Default highlight groups (dark) {{{
+; Transparency (dark) {{{
 #if s:termtrans
   Normal             base1             none
   FoldColumn         fg                none
@@ -57,8 +57,8 @@ Include: _fix-256-palette.colortemplate
   ToolbarButton      base1             base02            bold
   ToolbarLine        none              base02
 #endif
-# }}}
-# Visibility (dark) {{{
+; }}}
+; Visibility (dark) {{{
 #if get(g:, '@optionprefix_visibility', '') ==# 'high'
   CursorLineNr       orange            base02            bold
   LineNr             base0             base02
@@ -90,8 +90,8 @@ Include: _fix-256-palette.colortemplate
   SpellRare          cyan              none              t=underline g=undercurl s=cyan
   Title              orange            none              bold
 #endif
-# }}}
-# [Cursor]LineNr transparency (dark) {{{
+; }}}
+; [Cursor]LineNr transparency (dark) {{{
 Variant: gui
 verbatim
 if s:termtrans
@@ -107,15 +107,15 @@ if s:termtrans
 endif
 endverbatim
 Variant: gui 256 16
-# }}}
-# Cursor style (dark) {{{
+; }}}
+; Cursor style (dark) {{{
 #if get(g:, '@optionprefix_old_cursor_style', 0)
   Cursor             base03            base0
 #else
   Cursor             base3             blue
 #endif
-# }}}
-# Diff mode (dark) {{{
+; }}}
+; Diff mode (dark) {{{
 #if get(g:, '@optionprefix_diffmode', '') ==# 'high'
   DiffAdd            green             none              reverse
   DiffChange         yellow            none              reverse
@@ -132,8 +132,8 @@ Variant: gui 256 16
   DiffDelete         red               base02            bold
   DiffText           blue              base02            s=blue
 #endif
-# }}}
-# Structural elements (dark) {{{
+; }}}
+; Structural elements (dark) {{{
 #if get(g:, '@optionprefix_statusline', '') ==# 'low'
   StatusLine         base01            base2             reverse
   StatusLineNC       base01            base02            reverse
@@ -156,8 +156,8 @@ Variant: gui 256 16
   TabLineSel         base0             base02            reverse
   VertSplit          base02            base01
 #endif
-# }}}
-# Base groups (dark) {{{
+; }}}
+; Base groups (dark) {{{
 ColorColumn          none              base02
 Conceal              blue              none
 CursorColumn         none              base02
@@ -180,8 +180,8 @@ Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold
 WildMenu             base2             base02            reverse
-# }}}
-# Other conventional groups (dark) {{{
+; }}}
+; Other conventional groups (dark) {{{
 Comment              base01            none              italic
 Constant             cyan              none
 CursorIM             none              fg
@@ -194,31 +194,31 @@ Statement            green             none
 Todo                 magenta           none              bold
 Type                 yellow            none
 Underlined           violet            none
-# }}}
-# }}}
-# Additional highlight groups (dark) {{{
+; }}}
+; }}}
+; Additional highlight groups (dark) {{{
 NormalMode           base0             base3             reverse
 InsertMode           cyan              base3             reverse
 ReplaceMode          orange            base3             reverse
 VisualMode           magenta           base3             reverse
 CommandMode          magenta           base3             reverse
-# }}}
-# Neovim (dark) {{{
+; }}}
+; Neovim (dark) {{{
 TermCursor        -> Cursor
 TermCursorNC         base03            base01
-# }}}
-# Extra stuff (dark) {{{
+; }}}
+; Extra stuff (dark) {{{
 Include: _extra.colortemplate
-# }}}
+; }}}
 Include: _cleanup.colortemplate
 
 Background: light
-# Light color palette {{{
-# Color name    GUI     Base256    Base16
+; Light color palette {{{
+; Color name    GUI     Base256    Base16
 Color: base2    #073642   236        0
 Color: red      #dc322f   160        1
 Color: green    #859900   106        2
-#Color:green    #719e07   ~          2
+;Color:green    #719e07   ~          2
 Color: yellow   #b58900   136        3
 Color: blue     #268bd2   32         4
 Color: magenta  #d33682   162        5
@@ -235,9 +235,9 @@ Color: base03   #fdf6e3   230       15
 Color: back     #fdf6e3   230       15
 
 Include: _light_terminal.colortemplate
-# }}}
-# Default highlight groups (dark) {{{
-# Transparency (light) {{{
+; }}}
+; Default highlight groups (dark) {{{
+; Transparency (light) {{{
 #if s:termtrans
   Normal             base1             none
   FoldColumn         base0             none
@@ -253,8 +253,8 @@ Include: _light_terminal.colortemplate
   ToolbarButton      base1             base02            bold
   ToolbarLine        none              base02
 #endif
-# }}}
-# Visibility and cursor style (light) {{{
+; }}}
+; Visibility and cursor style (light) {{{
 #if get(g:, '@optionprefix_visibility', '') ==# 'high'
   #if get(g:, '@optionprefix_old_cursor_style', 0)
     Cursor           base03            base0
@@ -304,8 +304,8 @@ Include: _light_terminal.colortemplate
   SpellRare          cyan              none              t=underline g=undercurl s=cyan
   Title              orange            none              bold
 #endif
-# }}}
-# [Cursor]LineNr transparency (light) {{{
+; }}}
+; [Cursor]LineNr transparency (light) {{{
 Variant: gui
 verbatim
 if s:termtrans
@@ -321,8 +321,8 @@ if s:termtrans
 endif
 endverbatim
 Variant: gui 256 16
-# }}}
-# Diff mode (light) {{{
+; }}}
+; Diff mode (light) {{{
 #if get(g:, '@optionprefix_diffmode', '') ==# 'high'
   DiffAdd            green             none              reverse
   DiffChange         yellow            none              reverse
@@ -339,8 +339,8 @@ Variant: gui 256 16
   DiffDelete         red               base02            bold
   DiffText           blue              base02            s=blue
 #endif
-# }}}
-# Structural elements (light) {{{
+; }}}
+; Structural elements (light) {{{
 #if get(g:, '@optionprefix_statusline', '') ==# 'low'
   StatusLine         base01            base03            reverse
   StatusLineNC       base01            base1             reverse
@@ -366,8 +366,8 @@ Variant: gui 256 16
   VertSplit          base1             base01
   WildMenu           base2             base02            reverse
 #endif
-# }}}
-# Base groups (light) {{{
+; }}}
+; Base groups (light) {{{
 ColorColumn          none              base02
 Conceal              blue              none
 CursorColumn         none              base02
@@ -388,8 +388,8 @@ SignColumn           base0             none
 Visual               base01            base03            reverse
 VisualNOS            none              base02            reverse
 WarningMsg           orange            none              bold
-# }}}
-# Other conventional groups (light) {{{
+; }}}
+; Other conventional groups (light) {{{
 Comment              base01            none              italic
 Constant             cyan              none
 CursorIM             none              fg
@@ -402,27 +402,27 @@ Statement            green             none
 Todo                 magenta           none              bold
 Type                 yellow            none
 Underlined           violet            none
-# }}}
-# }}}
-# Additional highlight groups (light) {{{
+; }}}
+; }}}
+; Additional highlight groups (light) {{{
 NormalMode           base1             base03            reverse
 InsertMode           cyan              base03            reverse
 ReplaceMode          orange            base03            reverse
 VisualMode           magenta           base03            reverse
 CommandMode          magenta           base03            reverse
-# }}}
-# Neovim (light) {{{
+; }}}
+; Neovim (light) {{{
 TermCursor        -> Cursor
 TermCursorNC         base03            base01
-# }}}
-# Extra stuff (light) {{{
+; }}}
+; Extra stuff (light) {{{
 Include: _extra.colortemplate
-# }}}
+; }}}
 Include: _cleanup.colortemplate
 
 Background: any
-# B&W variant {{{
+; B&W variant {{{
 Include: _bw.colortemplate
-# }}}
+; }}}
 Include: _cleanup.colortemplate
 

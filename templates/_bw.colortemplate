@@ -1,10 +1,10 @@
-# vim: ft=colortemplate fdm=marker cc=22
+; vim: ft=colortemplate fdm=marker cc=22
 
-# Template for black & white terminals
+; Template for black & white terminals
 Variant: 2
 
-# Default highlight groups {{{
-# Group              Unused Unused  Term attributes
+; Default highlight groups {{{
+; Group              Unused Unused  Term attributes
 Normal               omit   omit
 ColorColumn          omit   omit    reverse
 Conceal              omit   omit
@@ -50,7 +50,7 @@ Visual               omit   omit    reverse
 VisualNOS            omit   omit
 WarningMsg           omit   omit    standout
 WildMenu             omit   omit    bold
-# Other conventional group names (see `:help group-name`)
+; Other conventional group names (see `:help group-name`)
 Comment              omit   omit    italic
 Constant             omit   omit    bold,italic
 Error                omit   omit    reverse
@@ -65,5 +65,5 @@ Underlined           omit   omit    underline
 CursorIM             omit   omit
 ToolbarLine          omit   omit    reverse
 ToolbarButton        omit   omit    bold,reverse
-# }}}
+; }}}
 

@@ -92,5 +92,5 @@ SOFTWARE.
 
 enddocumentation
 
-# vim: ft=colortemplate fdm=marker ts=8 tw=78
+; vim: ft=colortemplate fdm=marker ts=8 tw=78
 

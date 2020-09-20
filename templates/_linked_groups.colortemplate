@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 Boolean           -> Constant
 Character         -> Constant
 Conditional       -> Statement

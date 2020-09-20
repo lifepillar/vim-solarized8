@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 Author:          Ethan Schoonover
 Maintainer:      Lifepillar <lifepillar@lifepillar.me>
 Website:         https://github.com/lifepillar/vim-solarized8

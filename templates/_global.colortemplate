@@ -1,4 +1,4 @@
-# vim: ft=colortemplate fdm=marker
+; vim: ft=colortemplate fdm=marker
 #let s:t_Co = get(g:, '@optionprefix_use16', 0) ? 16 : s:t_Co
 #let s:italics = s:italics && get(g:, '@optionprefix_italics', 1)
 #let s:termtrans = get(g:, '@optionprefix_termtrans', 0) && !has('gui_running')
