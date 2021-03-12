@@ -4,26 +4,33 @@
 set -o errexit
 
 hex2rgb() {
-  local s=$1
-  local r=${s:1:2}
-  local g=${s:3:2}
-  local b=${s:5:2}
-  echo "$r/$g/$b"
+  echo "${1##\#}" | sed 's/.\{2\}/&\//g;s/\/$//'
 }
 
-if [ "${TERM%%-*}" = 'linux' ]; then
-  # This script doesn't support linux console
+tmux_term="no"
+supported="yes"
+
+# Terminal classification
+case "$TERM" in
+  screen*|tmux*)
+    tmux_term="yes"
+    ;;
+  linux*)
+    supported="no"
+    ;;
+esac
+
+if [ "$supported" = "no" ]; then
   return 2>/dev/null || exit 0
 fi
 
-if [[ "$TERM" =~ "^(tmux|screen).*" && -n "$TMUX" ]]; then
+if [ -n "$TMUX" ] && [ "$tmux_term" = "yes" ]; then
   # tell tmux to pass the escape sequences through
   # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
   printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
   printf_template_var="\033Ptmux;\033\033]%d;rgb:%s\007\033\\"
   printf_template_custom="\033Ptmux;\033\033]%s%s\007\033\\"
 elif [ "${TERM%%-*}" = "screen" ]; then
-  # GNU screen (screen, screen-256color, screen-256color-bce)
   printf_template="\033P\033]4;%d;rgb:%s\007\033\\"
   printf_template_var="\033P\033]%d;rgb:%s\007\033\\"
   printf_template_custom="\033P\033]%s%s\007\033\\"
@@ -69,3 +76,5 @@ printf $printf_template 106 $(hex2rgb "#859900")
 unset printf_template
 unset printf_template_var
 unset printf_template_custom
+unset tmux_term
+unset supported
