@@ -105,8 +105,10 @@ The “flat” variant does not exist in the original Solarized. It differs from
 To use a Solarized 8 color scheme, set the background (`dark` or `light`) then
 load the variant you want, e.g.:
 
-    set background=dark
-    colorscheme solarized8
+```vim
+set background=dark
+colorscheme solarized8
+```
 
 If you opt to use some Vim plugin manager instead, the following should be
 added to your `vimrc`, rather than the above, for the color scheme to be loaded
