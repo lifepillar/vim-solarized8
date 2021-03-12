@@ -109,8 +109,8 @@ There are actually four optimized<sup>*</sup> color schemes you may load:
 
 ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-variants.png)
 
-The “flat” variant does not exist in the original Solarized. It differs
-mainly in how the status line, split bars and tab bar look like:
+The “flat” variant does not exist in the original Solarized. It differs from
+`solarized8` mainly in how the status line, split bars and tab bar look like:
 
 ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-normal-vs-flat.png)
 
