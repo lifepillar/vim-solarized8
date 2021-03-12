@@ -86,19 +86,7 @@ recommend that you use them. Just clone this repo inside `pack/*/opt`, e.g.:
     git clone https://github.com/lifepillar/vim-solarized8.git \
         ~/.vim/pack/themes/opt/solarized8
 
-Then, to load the color scheme, put a line like the following in your `vimrc`:
-
-```vim
-colorscheme solarized8
-```
-
-If you opt to use some Vim plugin manager instead, a line like the following
-should be added to your `vimrc`, rather than the above, for the color scheme to
-be loaded correctly:
-
-```vim
-autocmd vimenter * ++nested colorscheme solarized8
-```
+Otherwise, use you favourite installation method. 
 
 There are actually four optimized<sup>*</sup> color schemes you may load:
 
@@ -119,6 +107,15 @@ load the variant you want, e.g.:
 
     set background=dark
     colorscheme solarized8
+
+If you opt to use some Vim plugin manager instead, the following should be
+added to your `vimrc`, rather than the above, for the color scheme to be loaded
+correctly:
+
+```vim
+set background=dark
+autocmd vimenter * ++nested colorscheme solarized8
+```
 
 To switch the background from dark to light or vice versa, just set `background`
 accordingly.
