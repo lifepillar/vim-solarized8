@@ -86,7 +86,7 @@ recommend that you use them. Just clone this repo inside `pack/*/opt`, e.g.:
     git clone https://github.com/lifepillar/vim-solarized8.git \
         ~/.vim/pack/themes/opt/solarized8
 
-Otherwise, use you favourite installation method. 
+Otherwise, use you favourite installation method.
 
 There are actually four optimized<sup>*</sup> color schemes you may load:
 
@@ -156,9 +156,10 @@ The following options were not available in the original Solarized:
   may override the cursor's color).
 - `g:solarized_use16`: set to `1` to force using your 16 ANSI terminal colors.
 - `g:solarized_extra_hi_groups`: set to `1` to enable Solarized
-  filetype-specific syntax highlighting groups (default is `0`). Please be aware
-  that there is [a long standing issue](https://github.com/vim/vim/issues/4405)
-  with syntax items defined in color schemes.
+  filetype-specific syntax highlighting groups (default is `0`). Please be
+  aware that if your Vim is not recent enough you may encounter [an
+  issue](https://github.com/vim/vim/issues/4405) with syntax items defined in
+  color schemes.
 
 All these options may be used with any Solarized 8 variant.
 
