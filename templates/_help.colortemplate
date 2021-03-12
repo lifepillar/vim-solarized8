@@ -18,7 +18,7 @@ Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
 					*g:@optionprefix_enable_extra_hi_groups*
 Set to 1 to enable filetype-specific syntax highlight group.
 >
-	let g:@optionprefix_enable_extra_hi_groups = 0
+	let g:@optionprefix_extra_hi_groups = 0
 <
 NOTE: setting this to 1 may leave "a wake of destruction when switching away"
 (T. Pope), that is, when you switch to a different colorscheme the
