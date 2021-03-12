@@ -1,30 +1,37 @@
 auxfile scripts/@shortname.sh
 #!/bin/sh
-; Modify 256-color palette in supported terminals
-; Script adapted from https://github.com/chriskempson/base16-shell
+# Modify 256-color palette in supported terminals
+# Script adapted from https://github.com/chriskempson/base16-shell
 set -o errexit
 
 hex2rgb() {
-  local s=$1
-  local r=${s:1:2}
-  local g=${s:3:2}
-  local b=${s:5:2}
-  echo "$r/$g/$b"
+  echo "${1##\#}" | sed 's/.\{2\}/&\//g;s/\/$//'
 }
 
-if [ "${TERM%%-*}" = 'linux' ]; then
-  # This script doesn't support linux console
+tmux_term="no"
+supported="yes"
+
+# Terminal classification
+case "$TERM" in
+  screen*|tmux*)
+    tmux_term="yes"
+    ;;
+  linux*)
+    supported="no"
+    ;;
+esac
+
+if [ "$supported" = "no" ]; then
   return 2>/dev/null || exit 0
 fi
 
-if [[ "$TERM" =~ "^(tmux|screen).*" && -n "$TMUX" ]]; then
+if [ -n "$TMUX" ] && [ "$tmux_term" = "yes" ]; then
   # tell tmux to pass the escape sequences through
   # (Source: http://permalink.gmane.org/gmane.comp.terminal-emulators.tmux.user/1324)
   printf_template="\033Ptmux;\033\033]4;%d;rgb:%s\007\033\\"
   printf_template_var="\033Ptmux;\033\033]%d;rgb:%s\007\033\\"
   printf_template_custom="\033Ptmux;\033\033]%s%s\007\033\\"
 elif [ "${TERM%%-*}" = "screen" ]; then
-  # GNU screen (screen, screen-256color, screen-256color-bce)
   printf_template="\033P\033]4;%d;rgb:%s\007\033\\"
   printf_template_var="\033P\033]%d;rgb:%s\007\033\\"
   printf_template_custom="\033P\033]%s%s\007\033\\"
@@ -51,24 +58,26 @@ printf $printf_template @term256blue $(hex2rgb "@guiblue")
 printf $printf_template @term256cyan $(hex2rgb "@guicyan")
 printf $printf_template @term256green $(hex2rgb "@guigreen")
 
-; foreground / background / cursor color
-; if [ -n "$ITERM_SESSION_ID" ]; then
-;   # iTerm2 proprietary escape codes
-;   printf $printf_template_custom Pg 93a1a1 # forground
-;   printf $printf_template_custom Ph 002b36 # background
-;   printf $printf_template_custom Pi 93a1a1 # bold color
-;   printf $printf_template_custom Pj 586e75 # selection color
-;   printf $printf_template_custom Pk 93a1a1 # selected text color
-;   printf $printf_template_custom Pl 93a1a1 # cursor
-;   printf $printf_template_custom Pm 002b36 # cursor text
-; else
-;   printf $printf_template_var 10 $color_foreground
-;   printf $printf_template_var 11 $color_background
-;   printf $printf_template_var 12 $color_cursor
-; fi
+# foreground / background / cursor color
+# if [ -n "$ITERM_SESSION_ID" ]; then
+#   # iTerm2 proprietary escape codes
+#   printf $printf_template_custom Pg 93a1a1 # forground
+#   printf $printf_template_custom Ph 002b36 # background
+#   printf $printf_template_custom Pi 93a1a1 # bold color
+#   printf $printf_template_custom Pj 586e75 # selection color
+#   printf $printf_template_custom Pk 93a1a1 # selected text color
+#   printf $printf_template_custom Pl 93a1a1 # cursor
+#   printf $printf_template_custom Pm 002b36 # cursor text
+# else
+#   printf $printf_template_var 10 $color_foreground
+#   printf $printf_template_var 11 $color_background
+#   printf $printf_template_var 12 $color_cursor
+# fi
 
 unset printf_template
 unset printf_template_var
 unset printf_template_custom
+unset tmux_term
+unset supported
 endauxfile
 
