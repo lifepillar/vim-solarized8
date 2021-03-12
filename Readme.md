@@ -21,7 +21,7 @@ experience, you need:
 - a terminal supporting millions of colors (but see below for workarounds).
 
 Solarized 8 also works in any GUI version of Vim: no configuration is
-necessary.<sup>*</sup>
+necessary.<sup>*</sup> See below for installation instructions.
 
 <sup>*</sup> [VimR](https://github.com/qvacua/vimr) users must set
 `termguicolors` before loading the color scheme.
