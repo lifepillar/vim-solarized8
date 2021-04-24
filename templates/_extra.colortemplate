@@ -67,20 +67,20 @@ javaScript                 yellow          none
 jsFuncCall              -> Function
 ; }}}
 ; perl {{{
-perlHereDoc                base1           back
-perlVarPlain               yellow          back
-perlStatementFileDesc      cyan            back
+perlHereDoc                base1           none
+perlVarPlain               yellow          none
+perlStatementFileDesc      cyan            none
 ; }}}
 ; tex {{{
-texstatement               cyan            back
-texmathzonex               yellow          back
-texmathmatcher             yellow          back
-texreflabel                yellow          back
+texstatement               cyan            none
+texmathzonex               yellow          none
+texmathmatcher             yellow          none
+texreflabel                yellow          none
 ; }}}
 ; ruby {{{
-rubyDefine                 base1           back              bold
+rubyDefine                 base1           none              bold
 rubySymbol              -> Type
-rubyBoolean                magenta         back
+rubyBoolean                magenta         none
 ; }}}
 ; haskell {{{
 ; For use with syntax/haskell.vim : Haskell Syntax File
