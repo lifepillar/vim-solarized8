@@ -1,11 +1,6 @@
 ; vim: ft=colortemplate fdm=marker
-; Filetype specific highlight groups {{{
-verbatim
-if !get(g:, '@optionprefix_extra_hi_groups', 0)
-  unlet s:t_Co s:italics s:termtrans
-  finish
-endif
-endverbatim
+; Filetype specific highlight groups
+#if get(g:, '@optionprefix_extra_hi_groups', 1)
 ; vim {{{
 vimVar            -> Identifier
 vimFunc           -> Function
@@ -256,4 +251,4 @@ ALEStyleWarning             -> ALEWarning
 ALEStyleWarningSign         -> ALEWarningSign
 ALEStyleWarningSignLineNr   -> ALEWarningSignLineNr
 ; }}}
-; }}}
+#endif

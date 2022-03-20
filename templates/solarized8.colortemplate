@@ -210,7 +210,9 @@ TermCursorNC         base03            base01
 ; Extra stuff (dark) {{{
 Include: _extra.colortemplate
 ; }}}
+Variant: 256 16
 Include: _cleanup.colortemplate
+Variant: gui 256 16
 
 Background: light
 ; Light color palette {{{
@@ -418,7 +420,9 @@ TermCursorNC         base03            base01
 ; Extra stuff (light) {{{
 Include: _extra.colortemplate
 ; }}}
+Variant: 256 16
 Include: _cleanup.colortemplate
+Variant: gui 256 16
 
 Background: any
 ; B&W variant {{{

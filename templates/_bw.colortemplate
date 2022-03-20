@@ -1,7 +1,7 @@
 ; vim: ft=colortemplate fdm=marker cc=22
 
 ; Template for black & white terminals
-Variant: 2
+Variant: 0
 
 ; Default highlight groups {{{
 ; Group              Unused Unused  Term attributes
