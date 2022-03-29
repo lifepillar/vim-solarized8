@@ -6,8 +6,6 @@ vimVar            -> Identifier
 vimFunc           -> Function
 vimUserFunc       -> Function
 helpSpecial       -> Special
-vimSet            -> Normal
-vimSetEqual       -> Normal
 vimCommentString     violet            none
 vimCommand           yellow            none
 vimCmdSep            blue              none              bold
