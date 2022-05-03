@@ -15,14 +15,15 @@ Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
 >
 	let g:@optionprefix_diffmode = "normal"
 <
-					*g:@optionprefix_enable_extra_hi_groups*
-Set to 1 to enable filetype-specific syntax highlight group.
+						*g:@optionprefix_extra_hi_groups*
+Set to 0 to disable filetype-specific syntax highlight group.
 >
-	let g:@optionprefix_extra_hi_groups = 0
+	let g:@optionprefix_extra_hi_groups = 1
 <
-NOTE: setting this to 1 may leave "a wake of destruction when switching away"
-(T. Pope), that is, when you switch to a different colorscheme the
-highlighting may look wrong or disabled.
+NOTE: setting this to 0 may avoid "a wake of destruction when switching away"
+(T. Pope) in older versions of Vim—that is, when you switch to a different
+colorscheme the highlighting may look wrong or disabled.
+
 						*g:@optionprefix_italics*
 Set to 0 if you do not want to enable italics. Note that the color scheme in
 normal circumstances automatically detects whether italics is available. You

@@ -1,4 +1,4 @@
-*solarized8.txt*	For Vim version 8.2	Last change: 2022 Mar 29
+*solarized8.txt*	For Vim version 8.2	Last change: 2022 May 03
 
 
 			Solarized 8 color scheme
@@ -14,7 +14,7 @@ Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
 >
 	let g:solarized_diffmode = "normal"
 <
-					*g:solarized_enable_extra_hi_groups*
+						*g:solarized_extra_hi_groups*
 Set to 0 to disable filetype-specific syntax highlight group.
 >
 	let g:solarized_extra_hi_groups = 1
