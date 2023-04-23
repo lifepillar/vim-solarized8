@@ -1,69 +1,66 @@
-; vim: ft=colortemplate fdm=marker cc=22
+; vim: ft=colortemplate fdm=marker
 
 ; Template for black & white terminals
-Variant: 0
 
-; Default highlight groups {{{
-; Group              Unused Unused  Term attributes
-Normal               omit   omit
-ColorColumn          omit   omit    reverse
-Conceal              omit   omit
-Cursor               omit   omit
-CursorColumn         omit   omit    reverse
-CursorLine           omit   omit    underline
-CursorLineNr         omit   omit    reverse,italic,bold,underline
-DiffAdd              omit   omit    reverse,underline
-DiffChange           omit   omit    reverse,underline
-DiffDelete           omit   omit    reverse,underline
-DiffText             omit   omit    bold,reverse,underline
-Directory            omit   omit
-EndOfBuffer          omit   omit
-ErrorMsg             omit   omit    bold,reverse,italic
-FoldColumn           omit   omit    reverse
-Folded               omit   omit    italic,reverse,underline
-IncSearch            omit   omit    reverse,bold,italic
-LineNr               omit   omit    reverse
-MatchParen           omit   omit    bold,underline
-ModeMsg              omit   omit
-MoreMsg              omit   omit
-NonText              omit   omit
-Pmenu                omit   omit    reverse
-PmenuSbar            omit   omit
-PmenuSel             omit   omit
-PmenuThumb           omit   omit
-Question             omit   omit    standout
-Search               omit   omit    underline,italic
-SignColumn           omit   omit    reverse
-SpecialKey           omit   omit    bold
-SpellBad             omit   omit    underline,italic
-SpellCap             omit   omit    underline,italic
-SpellLocal           omit   omit    underline,italic
-SpellRare            omit   omit    underline,italic
-StatusLine           omit   omit    reverse,bold
-StatusLineNC         omit   omit    reverse
-TabLine              omit   omit    reverse,underline,italic
-TabLineFill          omit   omit    reverse,underline
-TabLineSel           omit   omit    bold
-Title                omit   omit    bold
-VertSplit            omit   omit    reverse
-Visual               omit   omit    reverse
-VisualNOS            omit   omit
-WarningMsg           omit   omit    standout
-WildMenu             omit   omit    bold
-; Other conventional group names (see `:help group-name`)
-Comment              omit   omit    italic
-Constant             omit   omit    bold,italic
-Error                omit   omit    reverse
-Identifier           omit   omit    italic
-Ignore               omit   omit
-PreProc              omit   omit    italic
-Special              omit   omit    bold,italic
-Statement            omit   omit    bold
-Todo                 omit   omit    bold,underline
-Type                 omit   omit    bold
-Underlined           omit   omit    underline
-CursorIM             omit   omit
-ToolbarLine          omit   omit    reverse
-ToolbarButton        omit   omit    bold,reverse
-; }}}
+; Group                Unused Unused  Term attributes
+Normal           /0    omit   omit
+ColorColumn      /0    omit   omit    reverse
+Conceal          /0    omit   omit
+Cursor           /0    omit   omit
+CursorColumn     /0    omit   omit    reverse
+CursorLine       /0    omit   omit    underline
+CursorLineNr     /0    omit   omit    reverse,italic,bold,underline
+DiffAdd          /0    omit   omit    reverse,underline
+DiffChange       /0    omit   omit    reverse,underline
+DiffDelete       /0    omit   omit    reverse,underline
+DiffText         /0    omit   omit    bold,reverse,underline
+Directory        /0    omit   omit
+EndOfBuffer      /0    omit   omit
+ErrorMsg         /0    omit   omit    bold,reverse,italic
+FoldColumn       /0    omit   omit    reverse
+Folded           /0    omit   omit    italic,reverse,underline
+IncSearch        /0    omit   omit    reverse,bold,italic
+LineNr           /0    omit   omit    reverse
+MatchParen       /0    omit   omit    bold,underline
+ModeMsg          /0    omit   omit
+MoreMsg          /0    omit   omit
+NonText          /0    omit   omit
+Pmenu            /0    omit   omit    reverse
+PmenuSbar        /0    omit   omit
+PmenuSel         /0    omit   omit
+PmenuThumb       /0    omit   omit
+Question         /0    omit   omit    standout
+Search           /0    omit   omit    underline,italic
+SignColumn       /0    omit   omit    reverse
+SpecialKey       /0    omit   omit    bold
+SpellBad         /0    omit   omit    underline,italic
+SpellCap         /0    omit   omit    underline,italic
+SpellLocal       /0    omit   omit    underline,italic
+SpellRare        /0    omit   omit    underline,italic
+StatusLine       /0    omit   omit    reverse,bold
+StatusLineNC     /0    omit   omit    reverse
+TabLine          /0    omit   omit    reverse,underline,italic
+TabLineFill      /0    omit   omit    reverse,underline
+TabLineSel       /0    omit   omit    bold
+Title            /0    omit   omit    bold
+VertSplit        /0    omit   omit    reverse
+Visual           /0    omit   omit    reverse
+VisualNOS        /0    omit   omit
+WarningMsg       /0    omit   omit    standout
+WildMenu         /0    omit   omit    bold
+
+Comment          /0    omit   omit    italic
+Constant         /0    omit   omit    bold,italic
+Error            /0    omit   omit    reverse
+Identifier       /0    omit   omit    italic
+Ignore           /0    omit   omit
+PreProc          /0    omit   omit    italic
+Special          /0    omit   omit    bold,italic
+Statement        /0    omit   omit    bold
+Todo             /0    omit   omit    bold,underline
+Type             /0    omit   omit    bold
+Underlined       /0    omit   omit    underline
+CursorIM         /0    omit   omit
+ToolbarLine      /0    omit   omit    reverse
+ToolbarButton    /0    omit   omit    bold,reverse
 
