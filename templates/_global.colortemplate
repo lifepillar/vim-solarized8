@@ -1,6 +1,5 @@
 ; vim: ft=colortemplate fdm=marker
-; FIXME
-; #const t_Co        = get(g:, '@prefix_use16', 0) ? 16 : s:t_Co
+
 #const italics     = get(g:, '@prefix_italics', 1) && ((&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim'))
 #const termtrans   = get(g:, '@prefix_termtrans', 0) && !has('gui_running')
 #const visibility  = get(g:, '@prefix_visibility', 'normal')
@@ -14,6 +13,7 @@
 #const transvis    = get(g:, '@prefix_termtrans', 0) + 2 * s:vismap[get(g:, '@prefix_visibility', 'normal')]
 #const diffmode    = get(g:, '@prefix_diffmode', 'normal')
 #const stl         = get(g:, '@prefix_statusline', 'normal')
+#const extra       = get(g:, '@prefix_extra_hi_groups', 1)
 
 Include: _linked_groups.colortemplate
 

@@ -426,10 +426,8 @@ CommandMode                      magenta           base03            reverse
 TermCursor        -> Cursor
 TermCursorNC         base03            base01
 ; }}}
-; Extra stuff (light) {{{
-; Include: _extra.colortemplate  ; FIXME
-; }}}
-
 
 Background: any
-Include:   _bw.colortemplate
+
+Include: _extra.colortemplate
+Include: _bw.colortemplate

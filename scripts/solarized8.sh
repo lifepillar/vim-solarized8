@@ -40,22 +40,22 @@ else
   printf_template_custom="\033]%s%s\033\\"
 fi
 
-printf $printf_template @term256base03 $(hex2rgb "#002b36")
-printf $printf_template @term256base02 $(hex2rgb "#073642")
-printf $printf_template @term256base01 $(hex2rgb "#586e75")
-printf $printf_template @term256base00 $(hex2rgb "#657b83")
-printf $printf_template @term256base0 $(hex2rgb "#839496")
-printf $printf_template @term256base1 $(hex2rgb "#93a1a1")
-printf $printf_template @term256base2 $(hex2rgb "#eee8d5")
-printf $printf_template @term256base3 $(hex2rgb "#fdf6e3")
-printf $printf_template @term256yellow $(hex2rgb "#b58900")
-printf $printf_template @term256orange $(hex2rgb "#cb4b16")
-printf $printf_template @term256red $(hex2rgb "#dc322f")
-printf $printf_template @term256magenta $(hex2rgb "#d33682")
-printf $printf_template @term256violet $(hex2rgb "#6c71c4")
-printf $printf_template @term256blue $(hex2rgb "#268bd2")
-printf $printf_template @term256cyan $(hex2rgb "#2aa198")
-printf $printf_template @term256green $(hex2rgb "#859900")
+printf $printf_template 235 $(hex2rgb "#002b36")
+printf $printf_template 236 $(hex2rgb "#073642")
+printf $printf_template 242 $(hex2rgb "#586e75")
+printf $printf_template 66 $(hex2rgb "#657b83")
+printf $printf_template 246 $(hex2rgb "#839496")
+printf $printf_template 247 $(hex2rgb "#93a1a1")
+printf $printf_template 254 $(hex2rgb "#eee8d5")
+printf $printf_template 230 $(hex2rgb "#fdf6e3")
+printf $printf_template 136 $(hex2rgb "#b58900")
+printf $printf_template 166 $(hex2rgb "#cb4b16")
+printf $printf_template 160 $(hex2rgb "#dc322f")
+printf $printf_template 162 $(hex2rgb "#d33682")
+printf $printf_template 61 $(hex2rgb "#6c71c4")
+printf $printf_template 32 $(hex2rgb "#268bd2")
+printf $printf_template 37 $(hex2rgb "#2aa198")
+printf $printf_template 106 $(hex2rgb "#859900")
 
 # foreground / background / cursor color
 # if [ -n "$ITERM_SESSION_ID" ]; then

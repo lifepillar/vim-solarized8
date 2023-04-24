@@ -41,22 +41,22 @@ else
   printf_template_custom="\033]%s%s\033\\"
 fi
 
-printf $printf_template @term256base03 $(hex2rgb "@guibase03")
-printf $printf_template @term256base02 $(hex2rgb "@guibase02")
-printf $printf_template @term256base01 $(hex2rgb "@guibase01")
-printf $printf_template @term256base00 $(hex2rgb "@guibase00")
-printf $printf_template @term256base0 $(hex2rgb "@guibase0")
-printf $printf_template @term256base1 $(hex2rgb "@guibase1")
-printf $printf_template @term256base2 $(hex2rgb "@guibase2")
-printf $printf_template @term256base3 $(hex2rgb "@guibase3")
-printf $printf_template @term256yellow $(hex2rgb "@guiyellow")
-printf $printf_template @term256orange $(hex2rgb "@guiorange")
-printf $printf_template @term256red $(hex2rgb "@guired")
-printf $printf_template @term256magenta $(hex2rgb "@guimagenta")
-printf $printf_template @term256violet $(hex2rgb "@guiviolet")
-printf $printf_template @term256blue $(hex2rgb "@guiblue")
-printf $printf_template @term256cyan $(hex2rgb "@guicyan")
-printf $printf_template @term256green $(hex2rgb "@guigreen")
+printf $printf_template @256base03 $(hex2rgb "@guibase03")
+printf $printf_template @256base02 $(hex2rgb "@guibase02")
+printf $printf_template @256base01 $(hex2rgb "@guibase01")
+printf $printf_template @256base00 $(hex2rgb "@guibase00")
+printf $printf_template @256base0 $(hex2rgb "@guibase0")
+printf $printf_template @256base1 $(hex2rgb "@guibase1")
+printf $printf_template @256base2 $(hex2rgb "@guibase2")
+printf $printf_template @256base3 $(hex2rgb "@guibase3")
+printf $printf_template @256yellow $(hex2rgb "@guiyellow")
+printf $printf_template @256orange $(hex2rgb "@guiorange")
+printf $printf_template @256red $(hex2rgb "@guired")
+printf $printf_template @256magenta $(hex2rgb "@guimagenta")
+printf $printf_template @256violet $(hex2rgb "@guiviolet")
+printf $printf_template @256blue $(hex2rgb "@guiblue")
+printf $printf_template @256cyan $(hex2rgb "@guicyan")
+printf $printf_template @256green $(hex2rgb "@guigreen")
 
 # foreground / background / cursor color
 # if [ -n "$ITERM_SESSION_ID" ]; then
