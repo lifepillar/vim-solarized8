@@ -4,6 +4,7 @@
 #const termtrans   = get(g:, '@prefix_termtrans', 0) && !has('gui_running')
 #const visibility  = get(g:, '@prefix_visibility', 'normal')
 #const vismap      = {"normal": 0, "high": 1, "low": 2}
+
 ; 0 = no transparency, normal visibility
 ; 1 = transparent, normal visibility
 ; 2 = no transparency, high visibility
@@ -11,9 +12,11 @@
 ; 4 = no transparency, low visibility
 ; 5 = transparent, low visibility
 #const transvis    = get(g:, '@prefix_termtrans', 0) + 2 * s:vismap[get(g:, '@prefix_visibility', 'normal')]
-#const diffmode    = get(g:, '@prefix_diffmode', 'normal')
-#const stl         = get(g:, '@prefix_statusline', 'normal')
-#const extra       = get(g:, '@prefix_extra_hi_groups', 1)
+
+#const diffmode     = get(g:, '@prefix_diffmode', 'normal')
+#const stl          = get(g:, '@prefix_statusline', 'normal')
+#const extra        = get(g:, '@prefix_extra_hi_groups', 1)
+#const extra_italic = get(g:, '@prefix_extra_hi_groups', 1) + 2 * (get(g:, '@prefix_italics', 1) && ((&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim')))
 
 Include: _linked_groups.colortemplate
 

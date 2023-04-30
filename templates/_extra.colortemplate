@@ -71,7 +71,8 @@ gitcommitDiscardedArrow -> omit
 gitcommitSelectedArrow  -> omit
 gitcommitUnmergedArrow  -> omit
 
-gitcommitComment        /gui/256/16 +extra 1    base01          none              italic
+gitcommitComment        /gui/256/16 +extra_italic 3    base01          none              italic
+gitcommitComment        /gui/256/16 +extra_italic 1    base01          none
 gitcommitUntracked      /gui/256/16 +extra 1 -> gitcommitComment
 gitcommitDiscarded      /gui/256/16 +extra 1 -> gitcommitComment
 gitcommitSelected       /gui/256/16 +extra 1 -> gitcommitComment
@@ -104,7 +105,8 @@ htmlTag            /gui/256/16 +extra  1    base01          none
 htmlEndTag         /gui/256/16 +extra  1    base01          none
 htmlTagN           /gui/256/16 +extra  1    base1           none              bold
 htmlTagName        /gui/256/16 +extra  1    blue            none              bold
-htmlSpecialTagName /gui/256/16 +extra  1    blue            none              italic
+htmlSpecialTagName /gui/256/16 +extra_italic  3    blue            none              italic
+htmlSpecialTagName /gui/256/16 +extra_italic  1    blue            none
 htmlArg            /gui/256/16 +extra  1    base00          none
 javaScript         /gui/256/16 +extra  1    yellow          none
 ; }}}
@@ -296,7 +298,8 @@ pandocVerbatimInlineTable                  -> omit
 pandocTitleBlock                /gui/256/16 +extra  1     blue               none
 pandocTitleBlockTitle           /gui/256/16 +extra  1     blue               none           bold
 pandocTitleComment              /gui/256/16 +extra  1     blue               none           bold
-pandocComment                   /gui/256/16 +extra  1     base01             none           italic
+pandocComment                   /gui/256/16 +extra_italic  3     base01             none           italic
+pandocComment                   /gui/256/16 +extra_italic  1     base01             none
 pandocVerbatimBlock             /gui/256/16 +extra  1     yellow             none
 pandocVerbatimBlockDeep         /gui/256/16 +extra  1  -> pandocVerbatimBlock
 pandocCodeBlock                 /gui/256/16 +extra  1  -> pandocVerbatimBlock
@@ -314,7 +317,8 @@ pandocListReference             /gui/256/16 +extra  1     magenta            non
 pandocDefinitionBlock                 /gui/256/16 +extra 1  violet             none
 pandocDefinitionTerm                  /gui/256/16 +extra 1  violet             none           standout
 pandocDefinitionIndctr                /gui/256/16 +extra 1  violet             none           bold
-pandocEmphasisDefinition              /gui/256/16 +extra 1  violet             none           italic
+pandocEmphasisDefinition              /gui/256/16 +extra_italic 3  violet             none           italic
+pandocEmphasisDefinition              /gui/256/16 +extra_italic 1  violet             none
 pandocEmphasisNestedDefinition        /gui/256/16 +extra 1  violet             none           bold
 pandocStrongEmphasisDefinition        /gui/256/16 +extra 1  violet             none           bold
 pandocStrongEmphasisNestedDefinition  /gui/256/16 +extra 1  violet             none           bold
@@ -331,7 +335,8 @@ pandocTableStructureTop            /gui/256/16 +extra 1 -> pandocTableStructre
 pandocTableStructureEnd            /gui/256/16 +extra 1 -> pandocTableStructre
 pandocTableZebraLight              /gui/256/16 +extra 1    blue               base03
 pandocTableZebraDark               /gui/256/16 +extra 1    blue               base02
-pandocEmphasisTable                /gui/256/16 +extra 1    blue               none           italic
+pandocEmphasisTable                /gui/256/16 +extra_italic 3    blue               none           italic
+pandocEmphasisTable                /gui/256/16 +extra_italic 1    blue               none
 pandocEmphasisNestedTable          /gui/256/16 +extra 1    blue               none           bold
 pandocStrongEmphasisTable          /gui/256/16 +extra 1    blue               none           bold
 pandocStrongEmphasisNestedTable    /gui/256/16 +extra 1    blue               none           bold
@@ -372,7 +377,8 @@ pandocCitationID                   /gui/256/16 +extra 1    magenta            no
 pandocCitationRef                  /gui/256/16 +extra 1    magenta            none
 ; Main Styles
 pandocStyleDelim                   /gui/256/16 +extra 1    base01             none
-pandocEmphasis                     /gui/256/16 +extra 1    base0              none           italic
+pandocEmphasis                     /gui/256/16 +extra_italic 3    base0              none           italic
+pandocEmphasis                     /gui/256/16 +extra_italic 1    base0              none
 pandocEmphasisNested               /gui/256/16 +extra 1    base0              none           bold
 pandocStrongEmphasis               /gui/256/16 +extra 1    base0              none           bold
 pandocStrongEmphasisNested         /gui/256/16 +extra 1    base0              none           bold
