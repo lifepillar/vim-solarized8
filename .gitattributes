@@ -1,0 +1,7 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Vim files should be checked out in unix format
+# Vim should always be able to source those
+# but e.g. Unix Vim may not able to source *.vim with crlf ending
+*.vim text eol=lf
