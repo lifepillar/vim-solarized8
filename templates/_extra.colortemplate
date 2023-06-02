@@ -363,8 +363,10 @@ pandocLinkLabel                    /gui/256/16 +extra 1    blue               no
 pandocLinkText                     /gui/256/16 +extra 1    blue               none
 pandocLinkURL                      /gui/256/16 +extra 1    base00             none
 pandocLinkTitle                    /gui/256/16 +extra 1    base00             none
-pandocLinkTitleDelim               /gui/256/16 +extra 1    base01             none  s=base00
-pandocLinkDefinition               /gui/256/16 +extra 1    cyan               none  s=base00
+pandocLinkTitleDelim                   /256/16 +extra 1    base01             none
+pandocLinkTitleDelim               /gui        +extra 1    base01             none  s=base00
+pandocLinkDefinition                   /256/16 +extra 1    cyan               none
+pandocLinkDefinition               /gui        +extra 1    cyan               none  s=base00
 pandocLinkDefinitionID             /gui/256/16 +extra 1    blue               none           bold
 pandocImageCaption                 /gui/256/16 +extra 1    violet             none           bold
 pandocFootnoteLink                 /gui/256/16 +extra 1    green              none
@@ -442,11 +444,14 @@ ALEErrorSign        /gui/256/16 +extra_stl_hl  5   base02      red              
 ALEInfoSign         /gui/256/16 +extra_stl_hl  5   base02      cyan              bold
 ALEWarningSign      /gui/256/16 +extra_stl_hl  5   base02      yellow            bold
 
-ALEError                  /gui/256/16 +extra   1   red         none   s=red      undercurl
+ALEError                      /256/16 +extra   1   red         none              underline
+ALEError                  /gui        +extra   1   red         none   s=red      undercurl
 ALEErrorLine              /gui/256/16 +extra   1   none        none
-ALEInfo                   /gui/256/16 +extra   1   cyan        none   s=cyan     undercurl
+ALEInfo                       /256/16 +extra   1   cyan        none              underline
+ALEInfo                   /gui        +extra   1   cyan        none   s=cyan     undercurl
 ALEInfoLine               /gui/256/16 +extra   1   none        none
-ALEWarning                /gui/256/16 +extra   1   yellow      none   s=yellow   undercurl
+ALEWarning                    /256/16 +extra   1   yellow      none              underline
+ALEWarning                /gui        +extra   1   yellow      none   s=yellow   undercurl
 ALEWarningLine            /gui/256/16 +extra   1   none        none
 
 ALEStyleError             /gui/256/16 +extra   1 -> ALEError

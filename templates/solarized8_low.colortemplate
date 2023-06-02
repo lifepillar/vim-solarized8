@@ -121,7 +121,7 @@ DiffChange/gui   +diffmode "low" yellow            none    s=yellow
 DiffChange/256/16+diffmode "low" yellow            none    s=none
 DiffDelete       +diffmode "low" red               none              bold
 DiffText  /gui   +diffmode "low" blue              none    s=blue
-DiffText  /256/16+diffmode "low" blue              none    s=blue
+DiffText  /256/16+diffmode "low" blue              none    s=none
 ; }}}
 ; Structural elements (dark) {{{
 StatusLine                       base0             base02            reverse
@@ -315,7 +315,7 @@ DiffChange/gui   +diffmode "low" yellow            none    s=yellow
 DiffChange/256/16+diffmode "low" yellow            none    s=none
 DiffDelete       +diffmode "low" red               none              bold
 DiffText  /gui   +diffmode "low" blue              none    s=blue
-DiffText  /256/16+diffmode "low" blue              none    s=blue
+DiffText  /256/16+diffmode "low" blue              none    s=none
 ; }}}
 ; Structural elements (light) {{{
 StatusLine                       base1             base02            reverse

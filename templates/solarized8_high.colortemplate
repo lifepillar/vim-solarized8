@@ -227,7 +227,7 @@ Include: _light_terminal.colortemplate
 Normal                           base1             back
 FoldColumn                       base0             base02
 Folded                           base0             base02 s=base03   bold
-       /256/16                   base0             base02            bold
+       /256/16                   base0             base02 s=none     bold
 LineNr                           base01            base02
 Terminal                         fg                back
 
