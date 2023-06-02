@@ -3,9 +3,10 @@
 Full name:       Solarized 8 Flat
 Short name:      solarized8_flat
 Include:        _info.colortemplate
+Include:        _global.colortemplate
+
 
 Background: dark
-Include:   _global.colortemplate
 
 ; Dark color palette {{{
 ; Color name    GUI     Base256 Base16
@@ -89,8 +90,6 @@ CursorLineNr                     base0             none              bold
                          "low"   base01            none              bold
 ; }}}
 ; Cursor style (dark) {{{
-#const oldcursor   = get(g:, '@prefix_old_cursor_style', 0)
-
 Cursor                           base3             blue
              +oldcursor 1        base03            base0
 ; }}}
@@ -183,13 +182,9 @@ CommandMode                      base02            magenta           bold,revers
 TermCursor   -> Cursor
 TermCursorNC                     base03            base01
 ; }}}
-; Extra stuff (light) {{{
-; Include: _extra.colortemplate  ; FIXME
-; }}}
 
 
 Background: light
-Include:   _global.colortemplate
 
 ; Light color palette {{{
 ; Color name    GUI     Base256 Base16
@@ -278,14 +273,6 @@ SpellRare                        cyan              none   s=cyan     undercurl
                          "low"   cyan              none   s=cyan     undercurl
 ; }}}
 ; Cursor style {{{
-; 0 = normal visibility, new cursor style (default)
-; 1 = normal visibility, old cursor style
-; 2 = high visibility, new cursor style
-; 3 = high visibility, old cursor style
-; 4 = low visibility, new cursor style
-; 5 = low visibility, old cursor style
-#const viscurs      = get(g:, '@prefix_old_cursor_style', 0) + 2 * s:vismap[get(g:, '@prefix_visibility', 'normal')]
-
 Cursor                           base03            orange
 Cursor       +viscurs 1          base03            base0
 Cursor       +viscurs 2          base03            red

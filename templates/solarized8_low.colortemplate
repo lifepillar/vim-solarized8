@@ -3,10 +3,10 @@
 Full name:       Solarized 8 Low Contrast
 Short name:      solarized8_low
 Include:        _info.colortemplate
+Include:        _global.colortemplate
 
 
 Background: dark
-Include:   _global.colortemplate
 
 ; Dark color palette {{{
 ; Color name    GUI     Base256 Base16
@@ -98,8 +98,6 @@ Title                            orange            none              bold
                          "low"   base01            none              bold
 ; }}}
 ; Cursor style (dark) {{{
-#const oldcursor   = get(g:, '@prefix_old_cursor_style', 0)
-
 Cursor                           base3             blue
 Cursor       +oldcursor  1       base03            base0
 ; }}}
@@ -138,7 +136,6 @@ StatusLineNC +stl "low"          base01            base1             reverse
 TabLine      +stl "low"          base01            base1             reverse
 TabLineFill  +stl "low"          base01            base1             reverse
 TabLineSel   +stl "low"          base01            base2             reverse
-VertSplit    +stl "low"          base1             base01
 
 StatusLine   +stl "flat"         base03            base2             reverse
 StatusLineNC +stl "flat"         base03            base1             reverse
@@ -194,13 +191,9 @@ ReplaceMode                      orange            base3             reverse
 VisualMode                       magenta           base3             reverse
 CommandMode                      magenta           base3             reverse
 ; }}}
-; Extra stuff (dark) {{{
-; Include: _extra.colortemplate  ; FIXME
-; }}}
 
 
 Background: light
-Include:   _global.colortemplate
 
 ; Light color palette {{{
 ; Color name    GUI     Base256 Base16
@@ -295,8 +288,6 @@ Title                            orange            none              bold
              +visibility "high"  orange            none              bold
                          "low"   base01            none              bold
 
-#const viscurs = get(g:, '@prefix_old_cursor_style', 0) + 2 * s:vismap[get(g:, '@prefix_visibility', 'normal')]
-
 Cursor                           base03            orange
 Cursor       +viscurs 1          base03            base0
 Cursor       +viscurs 2          base03            red
@@ -340,7 +331,6 @@ StatusLineNC +stl "low"          base01            base1             reverse
 TabLine      +stl "low"          base01            base1             reverse
 TabLineFill  +stl "low"          base01            base1             reverse
 TabLineSel   +stl "low"          base01            base02            reverse
-VertSplit    +stl "low"          base1             base01
 WildMenu     +stl "low"          base0             base02            reverse
 
 StatusLine   +stl "flat"         base03            base2             reverse

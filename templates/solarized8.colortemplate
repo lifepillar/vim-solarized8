@@ -4,10 +4,9 @@ Full name:       Solarized 8
 Short name:      solarized8
 Include:        _info.colortemplate
 Include:        _help.colortemplate
-
+Include:        _global.colortemplate
 
 Background: dark
-Include:   _global.colortemplate
 
 ; Dark color palette {{{
 ; Color name    GUI     Base256 Base16
@@ -107,8 +106,6 @@ Title                            orange            none              bold
                           "low"  base01            none              bold
 ; }}}
 ; Cursor style (dark) {{{
-#const oldcursor   = get(g:, '@prefix_old_cursor_style', 0)
-
 Cursor                           base3             blue
               +oldcursor   1     base03            base0
 ; }}}
@@ -210,13 +207,9 @@ CommandMode                      magenta           base3             reverse
 TermCursor        -> Cursor
 TermCursorNC                     base03            base01
 ; }}}
-; Extra stuff (dark) {{{
-; Include: _extra.colortemplate  ; FIXME
-; }}}
 
 
 Background: light
-Include:   _global.colortemplate
 
 ; Light color palette {{{
 ; Color name    GUI     Base256    Base16
@@ -317,14 +310,6 @@ LineNr                           base00            base02
                         5        base01            none
 ; }}}
 ; Cursor Style {{{
-; 0 = normal visibility, new cursor style (default)
-; 1 = normal visibility, old cursor style
-; 2 = high visibility, new cursor style
-; 3 = high visibility, old cursor style
-; 4 = low visibility, new cursor style
-; 5 = low visibility, old cursor style
-#const viscurs      = get(g:, '@prefix_old_cursor_style', 0) + 2 * s:vismap[get(g:, '@prefix_visibility', 'normal')]
-
 Cursor                           base03            orange
                     +viscurs  1  base03            base0
                               2  base03            red
@@ -400,7 +385,8 @@ SignColumn                       base0             none
 Visual                           base01            base03            reverse
 VisualNOS                        none              base02            reverse
 WarningMsg                       orange            none              bold
-
+; }}}
+; Other conventional groups (dark) {{{
 Comment                          base01            none              italic
              +italics 0          omit              omit  s=omit
 Constant                         cyan              none
@@ -415,6 +401,7 @@ Todo                             magenta           none              bold
 Type                             yellow            none
 Underlined                       violet            none
 ; }}}
+; }}}
 ; Additional highlight groups (light) {{{
 NormalMode                       base1             base03            reverse
 InsertMode                       cyan              base03            reverse
@@ -424,7 +411,7 @@ CommandMode                      magenta           base03            reverse
 ; }}}
 ; Neovim (light) {{{
 TermCursor        -> Cursor
-TermCursorNC         base03            base01
+TermCursorNC                     base03            base01
 ; }}}
 
 Background: any
