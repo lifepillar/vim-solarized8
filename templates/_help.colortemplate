@@ -1,4 +1,4 @@
-documentation
+helpfile
 *@shortname.txt*	For Vim version @vimversion	Last change: @date
 
 
@@ -9,61 +9,56 @@ Modernized and actively maintained Solarized color scheme for Vim.
 ==============================================================================
 Colorscheme options				*@shortname-options*
 
-						*g:@optionprefix_diffmode*
+						*g:@prefix_diffmode*
 Tweak the way diffs are displayed. Allowed values are `"normal"` (default),
 `"high"`, and `"low"`.
 >
-	let g:@optionprefix_diffmode = "normal"
+	let g:@prefix_diffmode = "normal"
 <
-						*g:@optionprefix_extra_hi_groups*
+						*g:@prefix_extra_hi_groups*
 Set to 0 to disable filetype-specific syntax highlight group.
 >
-	let g:@optionprefix_extra_hi_groups = 1
+	let g:@prefix_extra_hi_groups = 1
 <
 NOTE: setting this to 0 may avoid "a wake of destruction when switching away"
 (T. Pope) in older versions of Vim—that is, when you switch to a different
 colorscheme the highlighting may look wrong or disabled.
 
-						*g:@optionprefix_italics*
+						*g:@prefix_italics*
 Set to 0 if you do not want to enable italics. Note that the color scheme in
 normal circumstances automatically detects whether italics is available. You
 should never need to set this option explicitly. You may want to unset it if
 you do not want Vim to display italics even when the feature is available
 (e.g., in GUI versions of Vim).
 >
-	let g:@optionprefix_italics = 1
+	let g:@prefix_italics = 1
 <
 
-						*g:@optionprefix_old_cursor_style*
+						*g:@prefix_old_cursor_style*
 Set to 1 if you want to use the original Solarized's cursor style. By default,
 the cursor is blue. NOTE: your terminal may override the cursor's color.
 >
-	let g:@optionprefix_old_cursor_style = 0
+	let g:@prefix_old_cursor_style = 0
 <
-						*g:@optionprefix_statusline*
+						*g:@prefix_statusline*
 Set to `"low"` to reduce the contrast in the status line. Set to `"flat"` to
 make the status lines, tab bars and vertical splits similar to how they look
 in the flat variant (of course, `"flat"` does not have any effect in the flat
 variant).
 >
-	let g:@optionprefix_statusline = "normal"
+	let g:@prefix_statusline = "normal"
 <
-						*g:@optionprefix_termtrans*
+						*g:@prefix_termtrans*
 Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
-	let g:@optionprefix_termtrans = 0
+	let g:@prefix_termtrans = 0
 <
-						*g:@optionprefix_use16*
-Set to 1 if you want to force using the 16 ANSI terminal colors.
->
-	let g:@optionprefix_use16 = 0
-<
-						*g:@optionprefix_visibility*
+						*g:@prefix_visibility*
 Tweak the visibility of a few  elements. Allowed values are `"normal"`
 (default), `"high"`, and `"low"`.
 >
-	let g:@optionprefix_visibility = "normal"
+	let g:@prefix_visibility = "normal"
 <
 ==============================================================================
 @fullname license				*@shortname-license*
@@ -91,7 +86,7 @@ SOFTWARE.
 
  vim:tw=78:ts=8:noet:ft=help:norl:
 
-enddocumentation
+endhelpfile
 
 ; vim: ft=colortemplate fdm=marker ts=8 tw=78
 

@@ -1,6 +1,40 @@
 ; vim: ft=colortemplate fdm=marker
-#let s:t_Co = get(g:, '@optionprefix_use16', 0) ? 16 : s:t_Co
-#let s:italics = s:italics && get(g:, '@optionprefix_italics', 1)
-#let s:termtrans = get(g:, '@optionprefix_termtrans', 0) && !has('gui_running')
+
+Background: any
+
 Include: _linked_groups.colortemplate
+
+#const italics     = get(g:, '@prefix_italics', 1) && ((&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim'))
+#const termtrans   = get(g:, '@prefix_termtrans', 0) && !has('gui_running')
+#const visibility  = get(g:, '@prefix_visibility', 'normal')
+#const diffmode    = get(g:, '@prefix_diffmode', 'normal')
+#const stl         = get(g:, '@prefix_statusline', 'normal')
+#const extra       = get(g:, '@prefix_extra_hi_groups', 1)
+#const vismap      = {"normal": 0, "high": 1, "low": 2}
+
+; 0 = no transparency, normal visibility
+; 1 = transparent, normal visibility
+; 2 = no transparency, high visibility
+; 3 = transparent, high visibility
+; 4 = no transparency, low visibility
+; 5 = transparent, low visibility
+#const transvis    = s:termtrans + 2 * get(s:vismap, s:visibility, 'normal')
+
+; 0 = no extra, no italics
+; 1 = extra, no italics
+; 2 = no extra, italics
+; 3 = extra, italics
+#const extra_italic = s:extra + 2 * s:italics
+
+Background: dark
+#const oldcursor = get(g:, '@prefix_old_cursor_style', 0)
+
+Background: light
+; 0 = normal visibility, new cursor style (default)
+; 1 = normal visibility, old cursor style
+; 2 = high visibility, new cursor style
+; 3 = high visibility, old cursor style
+; 4 = low visibility, new cursor style
+; 5 = low visibility, old cursor style
+#const viscurs = get(g:, '@prefix_old_cursor_style', 0) + 2 * get(s:vismap, s:visibility, 'normal')
 
