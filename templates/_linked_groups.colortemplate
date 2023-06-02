@@ -2,6 +2,9 @@
 Boolean           -> Constant
 Character         -> Constant
 Conditional       -> Statement
+CurSearch         -> Search
+CursorLineFold    -> FoldColumn
+CursorLineSign    -> SignColumn
 Debug             -> Special
 Define            -> PreProc
 Delimiter         -> Special
@@ -11,9 +14,13 @@ Function          -> Identifier
 Include           -> PreProc
 Keyword           -> Statement
 Label             -> Statement
+LineNrAbove       -> LineNr
+LineNrBelow       -> LineNr
 Macro             -> PreProc
 Number            -> Constant
 Operator          -> Statement
+PopupNotification -> WarningMsg
+PopupSelected     -> PmenuSel
 PreCondit         -> PreProc
 QuickFixLine      -> Search
 Repeat            -> Statement
@@ -26,5 +33,7 @@ String            -> Constant
 Structure         -> Type
 Tag               -> Special
 Typedef           -> Type
+debugBreakpoint   -> SignColumn
+debugPC           -> SignColumn
 lCursor           -> Cursor
 
