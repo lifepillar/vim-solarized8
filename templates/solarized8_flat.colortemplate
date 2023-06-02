@@ -57,26 +57,25 @@ Title                            orange            none              bold
              +visibility "high"  yellow            none              bold
              +visibility "low"   base01            none              bold
 
-SpellBad                         violet            none              underline
-      /256/16+visibility "high"  omit              base2             underline,reverse
-         /gui                    omit              omit  s=violet    undercurl
-             +visibility "high"  omit              base2 s=red       undercurl,reverse
+SpellBad                         violet            none  s=violet    undercurl
+      /256/16                    violet            none  s=none      underline
+      /256/16+visibility "high"  violet            base2 s=none      underline,reverse
+      /gui   +visibility "high"  violet            base2 s=red       undercurl,reverse
 
-SpellCap                         violet            none              underline
-      /256/16+visibility "high"  omit              base2             underline,reverse
-         /gui                    omit              omit  s=violet    undercurl
-             +visibility "high"  omit              base2 s=red       undercurl,reverse
-                         "low"   omit              none  s=violet    undercurl
+SpellCap                         violet            none  s=violet    undercurl
+      /256/16                    violet            none  s=none      underline
+      /256/16+visibility "high"  violet            base2 s=none      underline,reverse
+      /gui   +visibility "high"  violet            base2 s=red       undercurl,reverse
 
-SpellLocal                       yellow            none              underline
-      /256/16+visibility "high"  omit              base2             underline,reverse
-         /gui                    omit              omit  s=yellow    undercurl
-             +visibility "high"  omit              base2 s=red       undercurl,reverse
+SpellLocal                       yellow            none  s=yellow    undercurl
+      /256/16                    yellow            none  s=none      underline
+      /256/16+visibility "high"  yellow            base2 s=none      underline,reverse
+      /gui   +visibility "high"  yellow            base2 s=red       undercurl,reverse
 
-SpellRare                        cyan              none              underline
-      /256/16+visibility "high"  omit              base2             underline,reverse
-        /gui                     omit              omit  s=cyan      undercurl
-        /gui +visibility "high"  omit              base2 s=red       undercurl,reverse
+SpellRare                        cyan              none  s=cyan      undercurl
+      /256/16                    cyan              none  s=none      underline
+      /256/16+visibility "high"  cyan              base2 s=none      underline,reverse
+      /gui   +visibility "high"  cyan              base2 s=red       undercurl,reverse
 
 CursorLineNr                     base0             none              bold
              +visibility "high"  orange            none              bold

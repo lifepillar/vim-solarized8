@@ -68,30 +68,22 @@ SpecialKey                       base00            base02            bold
 SpellBad                         violet            none  s=violet    undercurl
        /256/16                   violet            none  s=none      underline
              +visibility "high"  violet            base2 s=none      underline,reverse
-                         "low"   violet            none  s=none      underline
        /gui  +visibility "high"  violet            base2 s=red       undercurl,reverse
-                         "low"   violet            none  s=violet    undercurl
 
 SpellCap                         violet            none  s=violet    undercurl
        /256/16                   violet            none  s=none      underline
              +visibility "high"  violet            base2 s=none      underline,reverse
-                         "low"   violet            none  s=none      underline
        /gui  +visibility "high"  violet            base2 s=red       undercurl,reverse
-                         "low"   violet            none  s=violet    undercurl
 
 SpellLocal                       yellow            none  s=yellow    undercurl
        /256/16                   yellow            none  s=none      underline
              +visibility "high"  yellow            base2 s=none      underline,reverse
-                         "low"   yellow            none  s=none      underline
        /gui  +visibility "high"  yellow            base2 s=red       undercurl,reverse
-                         "low"   yellow            none  s=yellow    undercurl
 
 SpellRare                        cyan              none  s=cyan      undercurl
        /256/16                   cyan              none  s=none      underline
              +visibility "high"  cyan              base2 s=none      underline,reverse
-                         "low"   cyan              none  s=none      underline
        /gui  +visibility "high"  cyan              base2 s=red       undercurl,reverse
-                         "low"   cyan              none  s=cyan      undercurl
 
 Title                            orange            none              bold
              +visibility "high"  yellow            none              bold
@@ -106,7 +98,7 @@ DiffAdd                          green             base02  s=green
         /256/16                  green             base02  s=none
 DiffChange                       yellow            base02  s=yellow
         /256/16                  yellow            base02  s=none
-DiffDelete                       red               base02            bold
+DiffDelete                       red               base02  s=none    bold
 DiffText                         blue              base02  s=blue
         /256/16                  blue              base02  s=none
 
@@ -119,7 +111,7 @@ DiffAdd   /gui   +diffmode "low" green             none    s=green
 DiffAdd   /256/16+diffmode "low" green             none    s=none
 DiffChange/gui   +diffmode "low" yellow            none    s=yellow
 DiffChange/256/16+diffmode "low" yellow            none    s=none
-DiffDelete       +diffmode "low" red               none              bold
+DiffDelete       +diffmode "low" red               none    s=none    bold
 DiffText  /gui   +diffmode "low" blue              none    s=blue
 DiffText  /256/16+diffmode "low" blue              none    s=none
 ; }}}
@@ -149,7 +141,7 @@ ColorColumn                      none              base01
 Conceal                          blue              none
 CursorColumn                     none              base01
 CursorLine                       none              none   s=base1    underline
-             /256/16             none              none              underline
+             /256/16             none              none   s=none     underline
 Directory                        blue              none
 EndOfBuffer                      none              none
 ErrorMsg                         red               base3             reverse

@@ -73,26 +73,25 @@ SpecialKey                       base00            base02            bold
              +visibility "high"  orange            none              reverse
                          "low"   base02            none              reverse
 
-SpellBad                         violet            none              underline
-       /256/16+visibility "high" omit              base3             underline,reverse
-       /gui                      omit              omit  s=violet    undercurl
-              +visibility "high" omit              base3 s=red       undercurl,reverse
+SpellBad                         violet            none  s=violet    undercurl
+       /256/16                   violet            none  s=none      underline
+       /256/16+visibility "high" violet            base3 s=none      underline,reverse
+       /gui   +visibility "high" violet            base3 s=red       undercurl,reverse
 
-SpellCap                         violet            none              underline
-       /256/16+visibility "high" omit              base3             underline,reverse
-                          "low"  omit              omit              underline
-       /gui                      omit              omit  s=violet    undercurl
-              +visibility "high" omit              base3 s=red       undercurl,reverse
+SpellCap                         violet            none  s=violet    undercurl
+       /256/16                   violet            none  s=none      underline
+       /256/16+visibility "high" violet            base3 s=none      underline,reverse
+       /gui   +visibility "high" violet            base3 s=red       undercurl,reverse
 
-SpellLocal                       yellow            none              underline
-       /256/16+visibility "high" omit              base3             underline,reverse
-       /gui                      omit              omit  s=yellow    undercurl
-              +visibility "high" omit              base3 s=red       undercurl,reverse
+SpellLocal                       yellow            none  s=yellow    undercurl
+       /256/16                   yellow            none  s=none      underline
+       /256/16+visibility "high" yellow            base3 s=none      underline,reverse
+       /gui   +visibility "high" yellow            base3 s=red       undercurl,reverse
 
-SpellRare                        cyan              none              underline
-       /256/16+visibility "high" omit              base3             underline,reverse
-       /gui                      omit              omit  s=cyan      undercurl
-              +visibility "high" omit              base3 s=red       undercurl,reverse
+SpellRare                        cyan              none  s=cyan      undercurl
+       /256/16                   cyan              none  s=none      underline
+       /256/16+visibility "high" cyan              base3 s=none      underline,reverse
+       /gui   +visibility "high" cyan              base3 s=red       undercurl,reverse
 
 Title                            orange            none              bold
               +visibility "high" yellow            none              bold
@@ -103,13 +102,13 @@ Cursor                           base3             blue
               +oldcursor   1     base03            base0
 ; }}}
 ; Diff mode (dark) {{{
-DiffAdd                          green             base02
-        /gui                     omit              omit    s=green
-DiffChange                       yellow            base02  s=none
-        /gui                     omit              omit    s=yellow
-DiffDelete                       red               base02            bold
-DiffText                         blue              base02
-        /gui                     omit              omit    s=blue
+DiffAdd                          green             base02  s=green
+        /256/16/8                green             base02  s=none
+DiffChange                       yellow            base02  s=yellow
+        /256/16/8                yellow            base02  s=none
+DiffDelete                       red               base02  s=none    bold
+DiffText                         blue              base02  s=blue
+        /256/16/8                blue              base02  s=none
 
 DiffAdd       +diffmode "high"   green             none              reverse
 DiffChange    +diffmode "high"   yellow            none              reverse
@@ -120,7 +119,7 @@ DiffAdd   /gui   +diffmode "low" green             none    s=green
 DiffAdd   /256/16+diffmode "low" green             none    s=none
 DiffChange/gui   +diffmode "low" yellow            none    s=yellow
 DiffChange/256/16+diffmode "low" yellow            none    s=none
-DiffDelete       +diffmode "low" red               none              bold
+DiffDelete       +diffmode "low" red               none    s=none    bold
 DiffText  /gui   +diffmode "low" blue              none    s=blue
 DiffText  /256/16+diffmode "low" blue              none    s=none
 ; }}}
@@ -232,7 +231,7 @@ Include: _light_terminal.colortemplate
 Normal                           base1             back
 FoldColumn                       base0             base02
 Folded                           base0             base02  s=base03  bold
-             /256/16             base0             base02            bold
+             /256/16             base0             base02  s=none    bold
 Terminal                         fg                back
 ToolbarButton                    base1             base02            bold
 ToolbarLine                      none              base02
@@ -260,25 +259,25 @@ Title                            orange            none              bold
               +visibility "high" orange            none              bold
                           "low"  base01            none              bold
 
-SpellBad                         magenta           none              underline
-       /256/16+visibility "high" omit              base03            underline,reverse
-       /gui                      omit              omit   s=violet   undercurl
-              +visibility "high" omit              base03 s=violet   undercurl,reverse
+SpellBad                         magenta           none   s=violet   undercurl
+       /256/16                   magenta           none   s=none     underline
+       /256/16+visibility "high" magenta           base03 s=none     underline,reverse
+       /gui   +visibility "high" magenta           base03 s=violet   undercurl,reverse
 
-SpellCap                         magenta           none              underline
-       /256/16+visibility "high" omit              base03            underline,reverse
-       /gui                      omit              omit   s=violet   undercurl
-              +visibility "high" omit              base03 s=violet   undercurl,reverse
+SpellCap                         magenta           none   s=violet   undercurl
+       /256/16                   magenta           none   s=none     underline
+       /256/16+visibility "high" magenta           base03 s=none     underline,reverse
+       /gui   +visibility "high" magenta           base03 s=violet   undercurl,reverse
 
-SpellLocal                       yellow            none              underline
-       /256/16+visibility "high" omit              base03            underline,reverse
-       /gui                      omit              omit   s=yellow   undercurl
-              +visibility "high" omit              base03 s=orange   undercurl,reverse
+SpellLocal                       yellow            none   s=yellow   undercurl
+       /256/16                   yellow            none   s=none     underline
+       /256/16+visibility "high" yellow            base03 s=none     underline,reverse
+       /gui   +visibility "high" yellow            base03 s=orange   undercurl,reverse
 
-SpellRare                        cyan              none              underline
-       /256/16+visibility "high" omit              base03            underline,reverse
-       /gui                      omit              omit   s=cyan     undercurl
-              +visibility "high" omit              base03 s=orange   undercurl,reverse
+SpellRare                        cyan              none   s=cyan     undercurl
+       /256/16                   cyan              none   s=none     underline
+       /256/16+visibility "high" cyan              base03 s=none     underline,reverse
+       /gui   +visibility "high" cyan              base03 s=orange   undercurl,reverse
 
 CursorLineNr                     base0             base02            bold
               +transvis 2        red               base02            bold
