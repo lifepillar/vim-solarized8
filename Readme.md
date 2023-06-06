@@ -57,10 +57,10 @@ you have two possibilities:
 
 2. Set your terminal's 16 ANSI colors (the colors in the range 0–15) to the
    Solarized palette (how to do that depends on the terminal) *and* `set
-   t_Co=16` in Vim (or `let g:solarized_use16=1`) to instruct Vim to use your
-   terminal's colors. Be aware that, if you force the use of your terminal
-   colors in Vim with any of these settings, but your terminal is not
-   configured to use the Solarized palette, your colors will be completely off!
+   t_Co=16` in Vim to instruct Vim to use your terminal's colors. Be aware
+   that, if you force the use of your terminal colors in Vim with any of these
+   settings, but your terminal is not configured to use the Solarized palette,
+   your colors will be completely off!
 
 **Note:** whatever method you choose, keep in mind that if your terminal does
 not support millions of colors, you must *not* set `termguicolors` (i.e., make
@@ -154,7 +154,6 @@ The following options were not available in the original Solarized:
   Solarized's cursor style (default: `0`). By default, the cursor is orange/red
   in light themes, and blue in dark themes (but please note that your terminal
   may override the cursor's color).
-- `g:solarized_use16`: set to `1` to force using your 16 ANSI terminal colors.
 - `g:solarized_extra_hi_groups`: set to `1` to enable Solarized
   filetype-specific syntax highlighting groups (default is `0`). Please be
   aware that if your Vim is not recent enough you may encounter [an
