@@ -1,8 +1,10 @@
-# Solarized 8: True Colors
+# Solarized 8 for Vim
 
 Solarized 8 Flat Dark      |  Solarized 8 Flat Light
 :-------------------------:|:-------------------------:
 ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_dark_flat.png)  |  ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8_light_flat.png)
+
+**Note: if you are using Neovim, checkout the `neovim` branch of this repo.**
 
 This is yet another Solarized theme for Vim. It places itself half way between
 the original [Solarized](https://github.com/altercation/vim-colors-solarized)
@@ -17,7 +19,7 @@ for versions of Vim supporting true-color (i.e., 24-bit color) terminals.
 Instead, this color scheme works **out of the box everywhere**. For the best
 experience, you need:
 
-- Vim ≥7.4.1799, or NeoVim, with `termguicolors` set, **and**
+- Vim ≥7.4.1799 with `termguicolors` set, **and**
 - a terminal supporting millions of colors (but see below for workarounds).
 
 Solarized 8 also works in any GUI version of Vim: no configuration is
