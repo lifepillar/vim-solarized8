@@ -1,7 +1,7 @@
-*solarized8.txt*	For Vim version 9.0	Last change: 2023 Jun 06
+*solarized8.txt*	For Neovim 		Last change: 2023 Jun 07
 
 
-			Solarized 8 color scheme
+			Solarized 8 for Neovim color scheme
 
 Modernized and actively maintained Solarized color scheme for Vim.
 
@@ -24,11 +24,7 @@ NOTE: setting this to 0 may avoid "a wake of destruction when switching away"
 colorscheme the highlighting may look wrong or disabled.
 
 						*g:solarized_italics*
-Set to 0 if you do not want to enable italics. Note that the color scheme in
-normal circumstances automatically detects whether italics is available. You
-should never need to set this option explicitly. You may want to unset it if
-you do not want Vim to display italics even when the feature is available
-(e.g., in GUI versions of Vim).
+Set to 0 if you do not want to enable italics.
 >
 	let g:solarized_italics = 1
 <
@@ -63,7 +59,7 @@ Tweak the visibility of a few  elements. Allowed values are `"normal"`
 	let g:solarized_visibility = "normal"
 <
 ==============================================================================
-Solarized 8 license				*solarized8-license*
+Solarized 8 for Neovim license				*solarized8-license*
 
 Copyright (c) 2011 Ethan Schoonover
 

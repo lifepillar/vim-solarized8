@@ -1,14 +1,10 @@
 ; vim: ft=colortemplate fdm=marker
 
-; Information {{{
-Full name:       Solarized 8
-Short name:      solarized8
-Include:        _info.colortemplate
-; }}}
-; Documentation {{{
-Include: _help.colortemplate
-; }}}
+Full name:  Solarized 8 for Neovim
+Short name: solarized8
 
+Include: _info.colortemplate
+Include: _help.colortemplate
 Include: _global.colortemplate
 
 Variant: gui 256 16

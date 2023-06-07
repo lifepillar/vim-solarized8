@@ -1,11 +1,9 @@
 ; vim: ft=colortemplate fdm=marker
 
-; Information {{{
-Full name:       Solarized 8 High Contrast
-Short name:      solarized8_high
-Include:        _info.colortemplate
-; }}}
+Full name:  Solarized 8 for Neovim - High Contrast
+Short name: solarized8_high
 
+Include: _info.colortemplate
 Include: _global.colortemplate
 
 Variant: gui 256 16
