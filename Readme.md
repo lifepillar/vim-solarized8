@@ -160,6 +160,25 @@ The following options were not available in the original Solarized:
 All these options may be used with any Solarized 8 variant.
 
 
+## Troubleshooting
+
+**Hey, I do not get the right colors when running Vim inside tmux or in my
+favourite true-color enabled terminal!**
+
+It may also be necessary to add the following to your `tmux.conf`:
+
+```
+# Add truecolor support
+set-option -ga terminal-overrides ",xterm-256color:Tc"
+# Default terminal is 256 colors
+set -g default-terminal "screen-256color"
+```
+
+See also `:h xterm-true-color`.
+
+See the discussion [here](https://github.com/lifepillar/vim-solarized8/issues/4#issuecomment-985416964) for context.
+
+
 ## Hacking
 
 Do you want to hack the theme? Install
