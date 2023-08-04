@@ -141,10 +141,14 @@ If you use Vim packages, there is no need to `packadd solarized8`. Keep your
 
 ## Options
 
-The following options are inherited from Solarized:
+The following options are inherited from Solarized, although their effects may
+be slightly different from those in the original Solarized:
 
-- `g:solarized_visibility`: one of `"normal"` (default), `"low"`, `"high"`;
-- `g:solarized_diffmode`: one of `"normal"` (default), `"low"`, `"high"`;
+- `g:solarized_visibility`: one of `"normal"` (default), `"low"`, `"high"`:
+  controls `CursorLineNr`, `LineNr`, `NonText`, `SpecialKey`, `Title`, and all
+  the `Spell*` highlight groups; in light mode, it may also slightly change the
+  color for `Cursor` and `MatchParen`;
+- `g:solarized_diffmode`: one of `"normal"` (default), `"low"`, `"high"`: controls the style of `DiffAdd`, `DiffChange`, `DiffDelete`, and `DiffText`.
 - `g:solarized_termtrans`: make terminal background transparent if set to `1`
   (default: `0`).
 
