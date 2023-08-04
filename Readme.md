@@ -135,25 +135,35 @@ If you use Vim packages, there is no need to `packadd solarized8`. Keep your
 
 ## Options
 
-The following options are inherited from Solarized:
+The following options are inherited from Solarized, although their effects may
+be slightly different from those in the original Solarized:
 
-- `g:solarized_visibility`: one of `"normal"` (default), `"low"`, `"high"`;
-- `g:solarized_diffmode`: one of `"normal"` (default), `"low"`, `"high"`;
+- `g:solarized_visibility`: one of `"normal"` (default), `"low"`, `"high"`:
+  controls `CursorLineNr`, `LineNr`, `NonText`, `SpecialKey`, `Title`, and all
+  the `Spell*` highlight groups; in light mode, it may also slightly change the
+  color for `Cursor` and `MatchParen`;
+- `g:solarized_diffmode`: one of `"normal"` (default), `"low"`, `"high"`:
+  controls the style of `DiffAdd`, `DiffChange`, `DiffDelete`, and `DiffText`.
 - `g:solarized_termtrans`: make terminal background transparent if set to `1`
   (default: `0`).
 
 The following options were not available in the original Solarized:
 
-- `g:solarized_statusline`: one of `"normal"` (default), `"low"` or `"flat"`;
-- `g:solarized_italics`: set to `0` to suppress italics (default is `1`).
+- `g:solarized_statusline`: one of `"normal"` (default), `"low"` or `"flat"`.
+  This affects the “structural” elements of your editor: `StatusLine`,
+  `StatusLineNC`, `TabLine`, `TablineFill`, `TabLineSel`, and `VertSplit`.
+- `g:solarized_italics`: set to `0` to suppress italics (default is `1`). Note
+  that in the terminal whether italics is actually used depends also on the
+  font and the terminal environment: setting this option to `1` is not
+  guaranteed to work.
 - `g:solarized_old_cursor_style`: set to `1` if you want to use the original
-  Solarized's cursor style (default: `0`). By default, the cursor is orange/red
-  in light themes, and blue in dark themes (but please note that your terminal
-  may override the cursor's color).
-- `g:solarized_t_Co`: set to the number of colors your terminal supports.
+  Solarized's cursor style (default: `0`). By default, the cursor is orange or
+  red in light themes (depending on `g:solarized_visibility`), and blue in dark
+  themes. Please note that your terminal may override the cursor's color, so
+  this option is not guaranteed to change the cursor's color.
 - `g:solarized_extra_hi_groups`: set to `1` to enable Solarized
   filetype-specific syntax highlighting groups (default is `0`). Please be
-  aware that if your Vim is not recent enough you may encounter [an
+  aware that if your Vim is very old you may encounter [an
   issue](https://github.com/vim/vim/issues/4405) with syntax items defined in
   color schemes.
 
