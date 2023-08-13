@@ -181,12 +181,14 @@ It may also be necessary to add the following to your `tmux.conf`:
 # Add truecolor support
 set-option -ga terminal-overrides ",xterm-256color:Tc"
 # Default terminal is 256 colors
-set -g default-terminal "screen-256color"
+set -g default-terminal "tmux-256color"
 ```
 
-See also `:h xterm-true-color`.
+See also these threads:
 
-See the discussion [here](https://github.com/lifepillar/vim-solarized8/issues/4#issuecomment-985416964) for context.
+- [Colors are off when running Vim via SSH inside tmux](https://github.com/lifepillar/vim-solarized8/issues/4#issuecomment-985416964)
+- [Comments look weird in tmux](https://github.com/lifepillar/vim-solarized8/issues/109)
+
 
 
 ## Hacking
