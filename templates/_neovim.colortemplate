@@ -1,0 +1,6 @@
+TermCursor        -> Cursor
+TermCursorNC         base03            base01
+
+@text.strong    fg   none  bold
+@text.emphasis  fg   none  italic
+

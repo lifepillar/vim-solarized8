@@ -168,8 +168,7 @@ VisualMode           base02            magenta           bold,reverse
 CommandMode          base02            magenta           bold,reverse
 ; }}}
 ; Neovim (dark) {{{
-TermCursor        -> Cursor
-TermCursorNC         base03            base01
+Include: _neovim.colortemplate
 ; }}}
 ; Extra stuff (light) {{{
 Include: _extra.colortemplate
@@ -348,8 +347,7 @@ VisualMode           base02            magenta           bold,reverse
 CommandMode          base02            magenta           bold,reverse
 ; }}}
 ; Neovim (light) {{{
-TermCursor        -> Cursor
-TermCursorNC         base03            base01
+Include: _neovim.colortemplate
 ; }}}
 ; Extra stuff (light) {{{
 Include: _extra.colortemplate
