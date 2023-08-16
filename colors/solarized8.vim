@@ -68,6 +68,7 @@ if &background == 'dark'
   hi! link debugBreakpoint SignColumn
   hi! link debugPC SignColumn
   hi! link lCursor Cursor
+  hi! link CocMenuSel PmenuSel
 
   hi Normal guifg=#93a1a1 guibg=#002b36 guisp=NONE gui=NONE
   hi ColorColumn guifg=NONE guibg=#073642 guisp=NONE gui=NONE
@@ -1341,6 +1342,7 @@ if &background == 'light'
   hi! link debugBreakpoint SignColumn
   hi! link debugPC SignColumn
   hi! link lCursor Cursor
+  hi! link CocMenuSel PmenuSel
 
   hi Normal guifg=#586e75 guibg=#fdf6e3 guisp=NONE gui=NONE
   hi ColorColumn guifg=NONE guibg=#eee8d5 guisp=NONE gui=NONE
