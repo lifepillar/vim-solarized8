@@ -249,4 +249,7 @@ ALEStyleWarning             -> ALEWarning
 ALEStyleWarningSign         -> ALEWarningSign
 ALEStyleWarningSignLineNr   -> ALEWarningSignLineNr
 ; }}}
+; coc.nvim {{{
+CocMenuSel -> PmenuSel
+; }}}
 #endif
