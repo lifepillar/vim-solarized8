@@ -162,7 +162,7 @@ PmenuSel                         base2             base01
 PmenuThumb                       none              base01
 Question                         cyan              none              bold
 Search                           yellow            none              reverse
-SignColumn                       base0             none
+SignColumn                       base0             base02
 Visual                           base01            base03            reverse
 VisualNOS                        none              base02            reverse
 WarningMsg                       orange            none              bold
@@ -352,7 +352,7 @@ PmenuSel                         base2             base01
 PmenuThumb                       none              base00
 Question                         cyan              none              bold
 Search                           yellow            none              reverse
-SignColumn                       base0             none
+SignColumn                       base0             base02
 Visual                           base01            base03            reverse
 VisualNOS                        none              base02            reverse
 WarningMsg                       orange            none              bold
