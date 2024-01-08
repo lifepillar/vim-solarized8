@@ -461,3 +461,7 @@ ALEStyleWarning           /gui/256/16 +extra   1 -> ALEWarning
 ALEStyleWarningSign       /gui/256/16 +extra   1 -> ALEWarningSign
 ALEStyleWarningSignLineNr /gui/256/16 +extra   1 -> ALEWarningSignLineNr
 ; }}}
+; coc.nvim {{{
+CocMenuSel -> omit
+CocMenuSel /gui/256/16 +extra 1 -> PmenuSel
+; }}}
