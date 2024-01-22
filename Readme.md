@@ -54,7 +54,7 @@ you have two possibilities:
    sh /path/to/scripts/solarized.sh
    ```
 
-   **Note:** this method is supported only by some, but not all, terminals. For
+   **Note:** this method is supported only by some terminals. For
    instance, in Apple's Terminal.app, running `solarized.sh` has no effect.
 
 2. Set your terminal's 16 ANSI colors (the colors in the range 0–15) to the
@@ -92,10 +92,10 @@ Otherwise, use you favourite installation method.
 
 There are actually four optimized<sup>*</sup> color schemes you may load:
 
-- `solarized8_high`: high-contrast variant (screenshow below, first column);
+- `solarized8_high`: high-contrast variant (screenshot below, first column);
 - `solarized8`: the default Solarized theme (screenshot below, second column);
-- `solarized8_low`: low-contrast variant (screenshow below, third column);
-- `solarized8_flat`: “flat” variant (screenshow below, fourth column).
+- `solarized8_low`: low-contrast variant (screenshot below, third column);
+- `solarized8_flat`: “flat” variant (screenshot below, fourth column).
 
 ![](https://raw.github.com/lifepillar/Resources/master/solarized8/solarized8-variants.png)
 
