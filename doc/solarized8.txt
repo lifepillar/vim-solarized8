@@ -1,4 +1,4 @@
-*solarized8.txt*	For Neovim 		Last change: 2024 Jan 08
+*solarized8.txt*	For Neovim 		Last change: 2024 Jan 22
 
 
 			Solarized 8 for Neovim color scheme
