@@ -94,6 +94,10 @@ Cursor                           base3             blue
 Cursor       +oldcursor  1       base03            base0
 ; }}}
 ; Diff mode (dark) {{{
+Added                            green            none
+Changed                          yellow           none
+Removed                          red              none
+
 DiffAdd                          green             base02  s=green
         /256/16                  green             base02  s=none
 DiffChange                       yellow            base02  s=yellow
@@ -288,6 +292,10 @@ Cursor       +viscurs 4          base03            orange
 Cursor       +viscurs 5          base03            base0
 ; }}}
 ; Diff mode (light) {{{
+Added                            green            none
+Changed                          yellow           none
+Removed                          red              none
+
 DiffAdd                          green             base02  s=green
         /256/16                  green             base02  s=none
 DiffChange                       yellow            base02  s=yellow

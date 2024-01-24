@@ -4,6 +4,8 @@
 
 ; Group                Unused Unused  Term attributes
 Normal           /0    omit   omit
+Added            /0    omit   omit    bold
+Changed          /0    omit   omit    bold,italic
 ColorColumn      /0    omit   omit    reverse
 Conceal          /0    omit   omit
 Cursor           /0    omit   omit
@@ -30,6 +32,7 @@ PmenuSbar        /0    omit   omit
 PmenuSel         /0    omit   omit
 PmenuThumb       /0    omit   omit
 Question         /0    omit   omit    standout
+Removed          /0    omit   omit    strikethrough,reverse
 Search           /0    omit   omit    underline,italic
 SignColumn       /0    omit   omit    reverse
 SpecialKey       /0    omit   omit    bold
