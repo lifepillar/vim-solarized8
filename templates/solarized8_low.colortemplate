@@ -377,10 +377,6 @@ ReplaceMode                      orange            base03            reverse
 VisualMode                       magenta           base03            reverse
 CommandMode                      magenta           base03            reverse
 ; }}}
-; Neovim (light) {{{
-TermCursor   -> Cursor
-TermCursorNC                     base03            base01
-; }}}
 
 
 Background: any

@@ -170,10 +170,6 @@ ReplaceMode                      base02            orange            bold,revers
 VisualMode                       base02            magenta           bold,reverse
 CommandMode                      base02            magenta           bold,reverse
 ; }}}
-; Neovim (dark) {{{
-TermCursor   -> Cursor
-TermCursorNC                     base03            base01
-; }}}
 
 
 Background: light
@@ -356,10 +352,6 @@ InsertMode                       base02            cyan              bold,revers
 ReplaceMode                      base02            orange            bold,reverse
 VisualMode                       base02            magenta           bold,reverse
 CommandMode                      base02            magenta           bold,reverse
-; }}}
-; Neovim (light) {{{
-TermCursor   -> Cursor
-TermCursorNC                     base03            base01
 ; }}}
 
 
