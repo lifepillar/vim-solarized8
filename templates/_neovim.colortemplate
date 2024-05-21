@@ -1,6 +1,6 @@
-TermCursor        -> Cursor
-TermCursorNC         base03            base01
+TermCursorNC         base03       base01
+WinBar               none         none     bold
 
-@markup.strong    fg   none  bold
-@markup.emphasis  fg   none  italic
+@markup.strong       fg           none     bold
+@markup.emphasis     fg           none     italic
 
