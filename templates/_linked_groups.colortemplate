@@ -19,6 +19,8 @@ LineNrBelow       -> LineNr
 Macro             -> PreProc
 Number            -> Constant
 Operator          -> Statement
+PmenuMatch        -> Pmenu
+PmenuMatchSel     -> PmenuSel
 PopupNotification -> WarningMsg
 PopupSelected     -> PmenuSel
 PreCondit         -> PreProc
