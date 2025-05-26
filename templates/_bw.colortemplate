@@ -23,6 +23,8 @@ FoldColumn       /0    omit   omit    reverse
 Folded           /0    omit   omit    italic,reverse,underline
 IncSearch        /0    omit   omit    reverse,bold,italic
 LineNr           /0    omit   omit    reverse
+LineNrAbove      /0    omit   omit    reverse
+LineNrBelow      /0    omit   omit    reverse
 MatchParen       /0    omit   omit    bold,underline
 ModeMsg          /0    omit   omit
 MoreMsg          /0    omit   omit
@@ -31,6 +33,7 @@ Pmenu            /0    omit   omit    reverse
 PmenuSbar        /0    omit   omit
 PmenuSel         /0    omit   omit
 PmenuThumb       /0    omit   omit
+PopupNotification/0    omit   omit
 Question         /0    omit   omit    standout
 Removed          /0    omit   omit    strikethrough,reverse
 Search           /0    omit   omit    underline,italic
@@ -42,9 +45,14 @@ SpellLocal       /0    omit   omit    underline,italic
 SpellRare        /0    omit   omit    underline,italic
 StatusLine       /0    omit   omit    reverse,bold
 StatusLineNC     /0    omit   omit    reverse
+StatusLineTerm   /0    omit   omit    reverse,bold
+StatusLineTermNC /0    omit   omit    reverse
 TabLine          /0    omit   omit    reverse,underline,italic
 TabLineFill      /0    omit   omit    reverse,underline
 TabLineSel       /0    omit   omit    bold
+TabPanel         /0    omit   omit    reverse,underline,italic
+TabPanelFill     /0    omit   omit    reverse,underline
+TabPanelSel      /0    omit   omit    bold
 Title            /0    omit   omit    bold
 VertSplit        /0    omit   omit    reverse
 Visual           /0    omit   omit    reverse

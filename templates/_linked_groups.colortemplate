@@ -33,6 +33,9 @@ StatusLineTermNC  -> StatusLineNC
 StorageClass      -> Type
 String            -> Constant
 Structure         -> Type
+TabPanel          -> TabLine
+TabPanelFill      -> TabLineFill
+TabPanelSel       -> TabLineSel
 Tag               -> Special
 Typedef           -> Type
 debugBreakpoint   -> SignColumn
