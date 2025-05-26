@@ -5,6 +5,5 @@ URL:             https://github.com/lifepillar/vim-solarized8
 Description:     Precision colors for machines and people
 Prefix:          solarized
 License:         OSI approved MIT license
-Variants:        256 16 0
 Options:         backend=legacy
-
+Environments:    gui 256 16 8 0

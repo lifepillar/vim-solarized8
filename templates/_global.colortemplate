@@ -4,7 +4,7 @@ Background: any
 
 Include: _linked_groups.colortemplate
 
-#const italics     = get(g:, '@prefix_italics', 1) && ((&t_ZH != '' && &t_ZH != '[7m') || has('gui_running') || has('nvim'))
+#const italics     = get(g:, '@prefix_italics', 1) && (has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32')))
 #const termtrans   = get(g:, '@prefix_termtrans', 0) && !has('gui_running')
 #const visibility  = get(g:, '@prefix_visibility', 'normal')
 #const diffmode    = get(g:, '@prefix_diffmode', 'normal')
