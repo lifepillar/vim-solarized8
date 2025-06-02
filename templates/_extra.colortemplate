@@ -171,7 +171,6 @@ hsDelimTypeExport  -> omit
 hsModuleStartLabel -> omit
 hsModuleWhereLabel -> omit
 hsNiceOperator     -> omit
-hsniceoperator     -> omit
 
 cPreCondit         /gui/256/16 +extra  1    orange          none
 VarId              /gui/256/16 +extra  1    blue            none
@@ -195,7 +194,6 @@ hsModuleWhereLabel /gui/256/16 +extra  1 -> hsModuleStartLabel
 ; following is for the haskell-conceal plugin
 ; the first two items don't have an impact, but better safe
 hsNiceOperator     /gui/256/16 +extra  1    cyan            none
-hsniceoperator     /gui/256/16 +extra  1    cyan            none
 verbatim
 let hs_highlight_boolean=1
 let hs_highlight_delimiters=1
