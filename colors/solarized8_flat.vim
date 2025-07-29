@@ -61,6 +61,15 @@ hi! link TermCursor Cursor
 hi! link WinBarNC WinBar
 hi! link WinSeparator VertSplit
 
+hi! link @variable Normal
+hi! link @variable.builtin Identifier
+hi! link @keyword Keyword
+hi! link @function Function
+hi! link @type Type
+hi! link @constant Constant
+hi! link @string String
+hi! link @comment Comment
+
 if &background ==# 'dark'
   let g:terminal_color_0 = '#073642'
   let g:terminal_color_1 = '#dc322f'
