@@ -47,3 +47,11 @@ TermCursor        -> Cursor
 WinBarNC          -> WinBar
 WinSeparator      -> VertSplit
 
+@variable         -> Normal
+@variable.builtin -> Identifier
+@keyword          -> Keyword
+@function         -> Function
+@type             -> Type
+@constant         -> Constant
+@string           -> String
+@comment          -> Comment
