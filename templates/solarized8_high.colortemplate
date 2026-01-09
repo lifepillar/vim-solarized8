@@ -126,6 +126,8 @@ Variant: gui 256 16
   TabLineFill        base01            base02            reverse
   TabLineSel         base0             base3             reverse
   VertSplit          base02            base01
+  FloatBorder        base02            base01
+  WinSeparator       base02            base01
 #elseif get(g:, '@optionprefix_statusline', '') ==# 'flat'
   StatusLine         base02            base2             reverse
   StatusLineNC       base02            base1             reverse
@@ -133,6 +135,8 @@ Variant: gui 256 16
   TabLine            base01            base02
   TabLineFill        base01            base02
   VertSplit          base01            base02
+  FloatBorder        base01            base02
+  WinSeparator       base01            base02
 #else
   StatusLine         base0             base02            reverse
   StatusLineNC       base01            base02            reverse
@@ -140,6 +144,8 @@ Variant: gui 256 16
   TabLineFill        base01            base02            reverse
   TabLineSel         base0             base02            reverse
   VertSplit          base02            base01
+  FloatBorder        base02            base01
+  WinSeparator       base02            base01
 #endif
 ; }}}
 ; Base groups (dark) {{{
@@ -194,7 +200,13 @@ VisualMode           magenta           base3             reverse
 CommandMode          magenta           base3             reverse
 ; }}}
 ; Neovim (dark) {{{
-Include: _neovim.colortemplate
+NormalFloat          base1        base02
+TermCursorNC         base03       base01
+WinBar               none         none     bold
+WinBarNC             none         none     bold
+
+@markup.strong       fg           none     bold
+@markup.emphasis     fg           none     italic
 ; }}}
 ; Extra stuff (dark) {{{
 Include: _extra.colortemplate
@@ -332,6 +344,8 @@ Variant: gui 256 16
   TabLineFill        base01            base1             reverse
   TabLineSel         base1             base03            reverse
   VertSplit          base1             base01
+  FloatBorder        base1             base01
+  WinSeparator       base1             base01
   WildMenu           base1             base03            reverse
 #elseif get(g:, '@optionprefix_statusline', '') ==# 'flat'
   StatusLine         base02            base2             reverse
@@ -340,6 +354,8 @@ Variant: gui 256 16
   TabLine            base01            base02
   TabLineFill        base01            base02
   VertSplit          base01            base02
+  FloatBorder        base01            base02
+  WinSeparator       base01            base02
   WildMenu           base0             base03            reverse
 #else
   StatusLine         base1             base02            reverse
@@ -348,6 +364,8 @@ Variant: gui 256 16
   TabLineFill        base00            base02            reverse
   TabLineSel         base1             base02            reverse
   VertSplit          base1             base01
+  FloatBorder        base1             base01
+  WinSeparator       base1             base01
   WildMenu           base00            base03            reverse
 #endif
 ; }}}
@@ -398,7 +416,13 @@ VisualMode           magenta           base03            reverse
 CommandMode          magenta           base03            reverse
 ; }}}
 ; Neovim (light) {{{
-Include: _neovim.colortemplate
+NormalFloat          base1        base02
+TermCursorNC         base03       base01
+WinBar               none         none     bold
+WinBarNC             none         none     bold
+
+@markup.strong       fg           none     bold
+@markup.emphasis     fg           none     italic
 ; }}}
 ; Extra stuff (light) {{{
 Include: _extra.colortemplate

@@ -168,7 +168,15 @@ VisualMode           base02            magenta           bold,reverse
 CommandMode          base02            magenta           bold,reverse
 ; }}}
 ; Neovim (dark) {{{
-Include: _neovim.colortemplate
+FloatBorder          base01       base02
+NormalFloat          base0        base02
+TermCursorNC         base03       base01
+WinBar               none         none     bold
+WinBarNC             none         none     bold
+WinSeparator         base01       base02
+
+@markup.strong       fg           none     bold
+@markup.emphasis     fg           none     italic
 ; }}}
 ; Extra stuff (light) {{{
 Include: _extra.colortemplate
@@ -347,7 +355,15 @@ VisualMode           base02            magenta           bold,reverse
 CommandMode          base02            magenta           bold,reverse
 ; }}}
 ; Neovim (light) {{{
-Include: _neovim.colortemplate
+FloatBorder          base01       base02
+NormalFloat          base0        base02
+TermCursorNC         base03       base01
+WinBar               none         none     bold
+WinBarNC             none         none     bold
+WinSeparator         base01       base02
+
+@markup.strong       fg           none     bold
+@markup.emphasis     fg           none     italic
 ; }}}
 ; Extra stuff (light) {{{
 Include: _extra.colortemplate

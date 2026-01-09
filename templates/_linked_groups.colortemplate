@@ -36,16 +36,12 @@ debugPC           -> SignColumn
 lCursor           -> Cursor
 
 ; Neovim
-FloatBorder       -> WinSeparator
 FloatFooter       -> Title
 FloatTitle        -> Title
 MsgArea           -> Normal
 MsgSeparator      -> StatusLine
-NormalFloat       -> Pmenu
 NormalNC          -> Normal
 TermCursor        -> Cursor
-WinBarNC          -> WinBar
-WinSeparator      -> VertSplit
 
 @variable         -> Normal
 @variable.builtin -> Identifier
