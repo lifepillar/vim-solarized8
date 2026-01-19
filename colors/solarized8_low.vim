@@ -252,7 +252,7 @@ if &background ==# 'dark'
     hi vimHiLink guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
     hi vimHiGroup guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
     hi vimGroup guifg=#268bd2 guibg=NONE gui=bold cterm=bold
-    hi! link diffAdded Statement
+    hi! link diffAdded Added
     hi! link diffRemoved Removed
     hi! link diffLine Identifier
     hi gitcommitComment guifg=#586e75 guibg=NONE gui=italic cterm=italic
@@ -656,7 +656,7 @@ else
     hi vimHiLink guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
     hi vimHiGroup guifg=#268bd2 guibg=NONE gui=NONE cterm=NONE
     hi vimGroup guifg=#268bd2 guibg=NONE gui=bold cterm=bold
-    hi! link diffAdded Statement
+    hi! link diffAdded Added
     hi! link diffRemoved Removed
     hi! link diffLine Identifier
     hi gitcommitComment guifg=#93a1a1 guibg=NONE gui=italic cterm=italic
@@ -1031,7 +1031,7 @@ if s:t_Co >= 256
       hi vimHiLink ctermfg=32 ctermbg=NONE cterm=NONE
       hi vimHiGroup ctermfg=32 ctermbg=NONE cterm=NONE
       hi vimGroup ctermfg=32 ctermbg=NONE cterm=bold
-      hi! link diffAdded Statement
+      hi! link diffAdded Added
       hi! link diffRemoved Removed
       hi! link diffLine Identifier
       hi gitcommitComment ctermfg=242 ctermbg=NONE cterm=italic
@@ -1419,7 +1419,7 @@ if s:t_Co >= 256
       hi vimHiLink ctermfg=32 ctermbg=NONE cterm=NONE
       hi vimHiGroup ctermfg=32 ctermbg=NONE cterm=NONE
       hi vimGroup ctermfg=32 ctermbg=NONE cterm=bold
-      hi! link diffAdded Statement
+      hi! link diffAdded Added
       hi! link diffRemoved Removed
       hi! link diffLine Identifier
       hi gitcommitComment ctermfg=247 ctermbg=NONE cterm=italic
@@ -1798,7 +1798,7 @@ if s:t_Co >= 16
       hi vimHiLink ctermfg=4 ctermbg=NONE cterm=NONE
       hi vimHiGroup ctermfg=4 ctermbg=NONE cterm=NONE
       hi vimGroup ctermfg=4 ctermbg=NONE cterm=bold
-      hi! link diffAdded Statement
+      hi! link diffAdded Added
       hi! link diffRemoved Removed
       hi! link diffLine Identifier
       hi gitcommitComment ctermfg=10 ctermbg=NONE cterm=italic
@@ -2186,7 +2186,7 @@ if s:t_Co >= 16
       hi vimHiLink ctermfg=4 ctermbg=NONE cterm=NONE
       hi vimHiGroup ctermfg=4 ctermbg=NONE cterm=NONE
       hi vimGroup ctermfg=4 ctermbg=NONE cterm=bold
-      hi! link diffAdded Statement
+      hi! link diffAdded Added
       hi! link diffRemoved Removed
       hi! link diffLine Identifier
       hi gitcommitComment ctermfg=14 ctermbg=NONE cterm=italic

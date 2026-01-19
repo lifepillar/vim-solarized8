@@ -23,7 +23,7 @@ vimHiGroup           blue              none
 vimGroup             blue              none              bold
 ; }}}
 ; diff {{{
-diffAdded         -> Statement
+diffAdded         -> Added
 diffRemoved       -> Removed
 diffLine          -> Identifier
 ; }}}
