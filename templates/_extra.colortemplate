@@ -24,6 +24,7 @@ vimGroup             blue              none              bold
 ; }}}
 ; diff {{{
 diffAdded         -> Statement
+diffRemoved       -> Removed
 diffLine          -> Identifier
 ; }}}
 ; git {{{
