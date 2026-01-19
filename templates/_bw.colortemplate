@@ -6,6 +6,8 @@ Variant: 0
 ; Default highlight groups {{{
 ; Group              Unused Unused  Term attributes
 Normal               omit   omit
+Added                omit   omit    bold
+Changed              omit   omit    bold,italic
 ColorColumn          omit   omit    reverse
 Conceal              omit   omit
 Cursor               omit   omit
@@ -32,6 +34,7 @@ PmenuSbar            omit   omit
 PmenuSel             omit   omit
 PmenuThumb           omit   omit
 Question             omit   omit    standout
+Removed              omit   omit    strikethrough,reverse
 Search               omit   omit    underline,italic
 SignColumn           omit   omit    reverse
 SpecialKey           omit   omit    bold

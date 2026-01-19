@@ -101,6 +101,10 @@ Variant: gui 256 16
 #endif
 ; }}}
 ; Diff mode (dark) {{{
+Added                green             none
+Changed              yellow            none
+Removed              red               none
+
 #if get(g:, '@optionprefix_diffmode', '') ==# 'high'
   DiffAdd            green             none              reverse
   DiffChange         yellow            none              reverse
@@ -319,6 +323,10 @@ endverbatim
 Variant: gui 256 16
 ; }}}
 ; Diff mode (light) {{{
+Added                green             none
+Changed              yellow            none
+Removed              red               none
+
 #if get(g:, '@optionprefix_diffmode', '') ==# 'high'
   DiffAdd            green             none              reverse
   DiffChange         yellow            none              reverse

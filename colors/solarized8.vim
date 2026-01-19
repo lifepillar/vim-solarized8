@@ -138,6 +138,9 @@ if &background ==# 'dark'
   else
     hi Cursor guifg=#fdf6e3 guibg=#268bd2 gui=NONE cterm=NONE
   endif
+  hi Added guifg=#859900 guibg=NONE gui=NONE cterm=NONE
+  hi Changed guifg=#b58900 guibg=NONE gui=NONE cterm=NONE
+  hi Removed guifg=#dc322f guibg=NONE gui=NONE cterm=NONE
   if get(g:, 'solarized_diffmode', '') ==# 'high'
     hi DiffAdd guifg=#859900 guibg=NONE gui=reverse cterm=reverse
     hi DiffChange guifg=#b58900 guibg=NONE gui=reverse cterm=reverse
@@ -540,6 +543,9 @@ else
     hi CursorLineNr guibg=NONE
     hi LineNr guibg=NONE
   endif
+  hi Added guifg=#859900 guibg=NONE gui=NONE cterm=NONE
+  hi Changed guifg=#b58900 guibg=NONE gui=NONE cterm=NONE
+  hi Removed guifg=#dc322f guibg=NONE gui=NONE cterm=NONE
   if get(g:, 'solarized_diffmode', '') ==# 'high'
     hi DiffAdd guifg=#859900 guibg=NONE gui=reverse cterm=reverse
     hi DiffChange guifg=#b58900 guibg=NONE gui=reverse cterm=reverse
@@ -915,6 +921,9 @@ if s:t_Co >= 256
     else
       hi Cursor ctermfg=230 ctermbg=32 cterm=NONE
     endif
+    hi Added ctermfg=106 ctermbg=NONE cterm=NONE
+    hi Changed ctermfg=136 ctermbg=NONE cterm=NONE
+    hi Removed ctermfg=160 ctermbg=NONE cterm=NONE
     if get(g:, 'solarized_diffmode', '') ==# 'high'
       hi DiffAdd ctermfg=106 ctermbg=NONE cterm=reverse
       hi DiffChange ctermfg=136 ctermbg=NONE cterm=reverse
@@ -1301,6 +1310,9 @@ if s:t_Co >= 256
       hi CursorLineNr ctermbg=NONE
       hi LineNr ctermbg=NONE
     endif
+    hi Added ctermfg=106 ctermbg=NONE cterm=NONE
+    hi Changed ctermfg=136 ctermbg=NONE cterm=NONE
+    hi Removed ctermfg=160 ctermbg=NONE cterm=NONE
     if get(g:, 'solarized_diffmode', '') ==# 'high'
       hi DiffAdd ctermfg=106 ctermbg=NONE cterm=reverse
       hi DiffChange ctermfg=136 ctermbg=NONE cterm=reverse
@@ -1680,6 +1692,9 @@ if s:t_Co >= 16
     else
       hi Cursor ctermfg=15 ctermbg=4 cterm=NONE
     endif
+    hi Added ctermfg=2 ctermbg=NONE cterm=NONE
+    hi Changed ctermfg=3 ctermbg=NONE cterm=NONE
+    hi Removed ctermfg=1 ctermbg=NONE cterm=NONE
     if get(g:, 'solarized_diffmode', '') ==# 'high'
       hi DiffAdd ctermfg=2 ctermbg=NONE cterm=reverse
       hi DiffChange ctermfg=3 ctermbg=NONE cterm=reverse
@@ -2066,6 +2081,9 @@ if s:t_Co >= 16
       hi CursorLineNr ctermbg=NONE
       hi LineNr ctermbg=NONE
     endif
+    hi Added ctermfg=2 ctermbg=NONE cterm=NONE
+    hi Changed ctermfg=3 ctermbg=NONE cterm=NONE
+    hi Removed ctermfg=1 ctermbg=NONE cterm=NONE
     if get(g:, 'solarized_diffmode', '') ==# 'high'
       hi DiffAdd ctermfg=2 ctermbg=NONE cterm=reverse
       hi DiffChange ctermfg=3 ctermbg=NONE cterm=reverse
@@ -2390,6 +2408,8 @@ endif
 
 if s:t_Co >= 0
   hi Normal term=NONE
+  hi Added term=bold
+  hi Changed term=bold,italic
   hi ColorColumn term=reverse
   hi Conceal term=NONE
   hi Cursor term=NONE
@@ -2416,6 +2436,7 @@ if s:t_Co >= 0
   hi PmenuSel term=NONE
   hi PmenuThumb term=NONE
   hi Question term=standout
+  hi Removed term=reverse,strikethrough
   hi Search term=italic,underline
   hi SignColumn term=reverse
   hi SpecialKey term=bold
@@ -2449,6 +2470,7 @@ if s:t_Co >= 0
   hi ToolbarLine term=reverse
   hi ToolbarButton term=bold,reverse
   if !s:italics
+    hi Changed term=bold
     hi CursorLineNr term=bold,reverse,underline
     hi ErrorMsg term=bold,reverse
     hi Folded term=reverse,underline

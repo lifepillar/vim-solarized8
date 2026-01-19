@@ -86,6 +86,10 @@ Include: _dark_terminal.colortemplate
 #endif
 ; }}}
 ; Diff mode (dark) {{{
+Added                green             none
+Changed              yellow            none
+Removed              red               none
+
 #if get(g:, '@optionprefix_diffmode', '') ==# 'high'
   DiffAdd            green             none              reverse
   DiffChange         yellow            none              reverse
@@ -274,6 +278,10 @@ Include: _light_terminal.colortemplate
 #endif
 ; }}}
 ; Diff mode (light) {{{
+Added                green             none
+Changed              yellow            none
+Removed              red               none
+
 #if get(g:, '@optionprefix_diffmode', '') ==# 'high'
   DiffAdd            green             none              reverse
   DiffChange         yellow            none              reverse
