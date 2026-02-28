@@ -14,7 +14,15 @@ let g:colors_name = 'solarized8_flat'
 let hs_highlight_boolean=1
 let hs_highlight_delimiters=1
 
-let s:t_Co = has('gui_running') ? 16777216 : str2nr(&t_Co)
+" set color capability order: gui --> user request (guarded) --> terminal
+if has('gui_running')
+  let s:t_Co = 16777216
+elseif get(g:, 'solarized_use16', 0) && str2nr(&t_Co) >= 16
+  let s:t_Co = 16
+else
+  let s:t_Co = str2nr(&t_Co)
+endif
+
 let s:tgc = has('termguicolors') && &termguicolors
 
 hi! link Boolean Constant
