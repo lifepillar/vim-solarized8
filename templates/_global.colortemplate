@@ -4,6 +4,7 @@ Background: any
 
 Include: _linked_groups.colortemplate
 
+#const t_Co        = has('gui_running') ? 16777216 : get(g:, '@prefix_use16', 0) && str2nr(&t_Co) >= 16 ? 16 : str2nr(&t_Co)
 #const italics     = get(g:, '@prefix_italics', 1) && (has('gui_running') || has('nvim') || (&t_ZH != '' && &t_ZH != '[7m' && !has('win32')))
 #const termtrans   = get(g:, '@prefix_termtrans', 0) && !has('gui_running')
 #const visibility  = get(g:, '@prefix_visibility', 'normal')

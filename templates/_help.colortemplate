@@ -54,6 +54,13 @@ terminal.
 >
 	let g:@prefix_termtrans = 0
 <
+						*g:@prefix_use16*
+Set to 1 to use ANSI colors in the range 0–15 even if your terminal supports
+more colors. This option has no effect in GUI Vim or if your terminal has less
+than 16 colors.
+>
+	let g:@prefix_use16 = 0
+<
 						*g:@prefix_visibility*
 Tweak the visibility of a few  elements. Allowed values are `"normal"`
 (default), `"high"`, and `"low"`.

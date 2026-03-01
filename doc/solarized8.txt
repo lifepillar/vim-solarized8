@@ -1,4 +1,4 @@
-*solarized8.txt*	For Vim version 9	Last change: 2026 Jan 19
+*solarized8.txt*	For Vim version 9	Last change: 2026 Mar 01
 
 
 			Solarized 8 color scheme
@@ -52,6 +52,13 @@ Set to 1 if you want a transparent background. Takes effect only in the
 terminal.
 >
 	let g:solarized_termtrans = 0
+<
+						*g:solarized_use16*
+Set to 1 to use ANSI colors in the range 0–15 even if your terminal supports
+more colors. This option has no effect in GUI Vim or if your terminal has less
+than 16 colors.
+>
+	let g:solarized_use16 = 0
 <
 						*g:solarized_visibility*
 Tweak the visibility of a few  elements. Allowed values are `"normal"`
