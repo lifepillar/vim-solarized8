@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **As of March 11, 2026, this repository is on [Codeberg](https://codeberg.org/lifepillar/vim-solarized8).**
+
 # Solarized 8 for Vim
 
 Solarized 8 Flat Dark      |  Solarized 8 Flat Light
